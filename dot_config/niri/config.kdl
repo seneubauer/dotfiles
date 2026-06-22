@@ -1,0 +1,263 @@
+
+spawn-at-startup "noctalia"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+screenshot-path "~/pictures/niri-screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+
+environment {
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+}
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+overview {
+    zoom 0.5
+    
+    workspace-shadow {
+        softness 40
+        spread 10
+        offset x=0 y=10
+    }
+}
+
+input {
+    keyboard {
+        xkb {
+            
+        }
+
+        // numlock
+    }
+
+    mouse {
+	    accel-profile "flat"
+	    accel-speed 0.0
+    }
+}
+
+cursor {
+    xcursor-theme "Oxygen_Zion"
+    xcursor-size 28
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+
+output "DP-1" {
+    mode "3440x1440@143.975"
+    scale 1
+    transform "normal"
+    position x=1920 y=0
+}
+
+layout {
+    gaps 16
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 2
+    }
+
+    border {
+        off
+    }
+
+    shadow {
+        on
+        softness 30
+        spread 5
+        offset x=0 y=5
+    }
+
+    struts {
+        
+    }
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+animations {
+    slowdown 1
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
+}
+
+binds {
+
+    // helpers
+    Mod+Shift+Slash             hotkey-overlay-title="keybinds"                 { show-hotkey-overlay; }
+
+    // application keybinds
+    Mod+M                       hotkey-overlay-title="center"                   { center-column; }
+    Mod+F                       hotkey-overlay-title="maximize"                 { maximize-column; }
+    Mod+Shift+F                 hotkey-overlay-title="fullscreen"               { fullscreen-window; }
+    Mod+Ctrl+F                  hotkey-overlay-title="expand"                   { expand-column-to-available-width; }
+    Mod+Return                  hotkey-overlay-title="alacritty"                { spawn "alacritty"; }
+    Mod+Q                       hotkey-overlay-title="close" repeat=false       { close-window; }
+
+    // noctalia keybinds
+    Mod+D                       hotkey-overlay-title="noctalia launcher"        { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Z                       hotkey-overlay-title="noctalia control-center"  { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+S                       hotkey-overlay-title="noctalia settings"        { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+C                       hotkey-overlay-title="noctalia clipboard"       { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+W                       hotkey-overlay-title="noctalia wallpaper"       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+N                       hotkey-overlay-title="noctalia session"         { spawn-sh "noctalia msg panel-toggle session"; }
+
+    // monitor focus keybinds
+    Mod+Shift+H                 hotkey-overlay-title="focus-monitor-left"       { focus-monitor-left; }
+    Mod+Shift+J                 hotkey-overlay-title="focus-monitor-down"       { focus-monitor-down; }
+    Mod+Shift+K                 hotkey-overlay-title="focus-monitor-up"         { focus-monitor-up; }
+    Mod+Shift+L                 hotkey-overlay-title="focus-monitor-up"         { focus-monitor-right; }
+
+    // workspace move keybinds
+    Mod+Shift+I                 hotkey-overlay-title="move-ws-up"               { move-workspace-up; }
+    Mod+Shift+U                 hotkey-overlay-title="move-ws-down"             { move-workspace-down; }
+
+    // workspace focus keybinds
+    Mod+1                                                                       { focus-workspace 1; }
+    Mod+2                                                                       { focus-workspace 2; }
+    Mod+3                                                                       { focus-workspace 3; }
+    Mod+4                                                                       { focus-workspace 4; }
+    Mod+5                                                                       { focus-workspace 5; }
+    Mod+6                                                                       { focus-workspace 6; }
+    Mod+7                                                                       { focus-workspace 7; }
+    Mod+8                                                                       { focus-workspace 8; }
+    Mod+9                                                                       { focus-workspace 9; }
+    Mod+I                       hotkey-overlay-title="focus-ws-up"              { focus-workspace-up; }
+    Mod+U                       hotkey-overlay-title="focus-ws-down"            { focus-workspace-down; }
+    Mod+WheelScrollDown         cooldown-ms=150                                 { focus-workspace-down; }
+    Mod+WheelScrollUp           cooldown-ms=150                                 { focus-workspace-up; }
+
+    // window move keybinds
+    Mod+Ctrl+J                  hotkey-overlay-title="move-ws-down"             { move-window-down; }
+    Mod+Ctrl+K                  hotkey-overlay-title="move-ws-up"               { move-window-up; }
+
+    // window focus keybinds
+    Mod+J                       hotkey-overlay-title="focus-ws-down"            { focus-window-down; }
+    Mod+K                       hotkey-overlay-title="focus-ws-up"              { focus-window-up; }
+
+    // column move keybinds
+    Mod+Ctrl+Home               hotkey-overlay-title="move-col-to-first"        { move-column-to-first; }
+    Mod+Ctrl+End                hotkey-overlay-title="move-col-to-last"         { move-column-to-last; }
+    Mod+Ctrl+H                  hotkey-overlay-title="move-col-left"            { move-column-left; }
+    Mod+Ctrl+L                  hotkey-overlay-title="move-col-right"           { move-column-right; }   
+    Mod+Shift+Ctrl+H            hotkey-overlay-title="move-col-monitor-left"    { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+J            hotkey-overlay-title="move-col-monitor-down"    { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+K            hotkey-overlay-title="move-col-monitor-up"      { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+L            hotkey-overlay-title="move-col-monitor-right"   { move-column-to-monitor-right; }
+    Mod+Ctrl+1                                                                  { move-column-to-workspace 1; }
+    Mod+Ctrl+2                                                                  { move-column-to-workspace 2; }
+    Mod+Ctrl+3                                                                  { move-column-to-workspace 3; }
+    Mod+Ctrl+4                                                                  { move-column-to-workspace 4; }
+    Mod+Ctrl+5                                                                  { move-column-to-workspace 5; }
+    Mod+Ctrl+6                                                                  { move-column-to-workspace 6; }
+    Mod+Ctrl+7                                                                  { move-column-to-workspace 7; }
+    Mod+Ctrl+8                                                                  { move-column-to-workspace 8; }
+    Mod+Ctrl+9                                                                  { move-column-to-workspace 9; }
+    Mod+Ctrl+U                  hotkey-overlay-title="move-col-ws-down"         { move-column-to-workspace-down; }
+    Mod+Ctrl+I                  hotkey-overlay-title="move-col-ws-up"           { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollDown    cooldown-ms=150                                 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp      cooldown-ms=150                                 { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollRight                                                   { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft                                                    { move-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown                                              { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp                                                { move-column-left; }
+
+    // column focus keybinds
+    Mod+Home                    hotkey-overlay-title="focus-col-first"          { focus-column-first; }
+    Mod+End                     hotkey-overlay-title="focus-col-last"           { focus-column-last; }
+    Mod+H                       hotkey-overlay-title="focus-col-left"           { focus-column-left; }
+    Mod+L                       hotkey-overlay-title="focus-col-right"          { focus-column-right; }
+    Mod+WheelScrollRight                                                        { focus-column-right; }
+    Mod+WheelScrollLeft                                                         { focus-column-left; }
+    Mod+Shift+WheelScrollDown                                                   { focus-column-right; }
+    Mod+Shift+WheelScrollUp                                                     { focus-column-left; }
+
+    // join && split columns
+    Mod+Comma                   hotkey-overlay-title="join-col"                 { consume-window-into-column; }
+    Mod+Period                  hotkey-overlay-title="leave-col"                { expel-window-from-column; }
+    Mod+BracketLeft             hotkey-overlay-title="joinleave-left"           { consume-or-expel-window-left; }
+    Mod+BracketRight            hotkey-overlay-title="joinleave-right"          { consume-or-expel-window-right; }
+
+    // floating
+    Mod+V                       hotkey-overlay-title="toggle-floating"          { toggle-window-floating; }
+    Mod+Shift+V                 hotkey-overlay-title="toggle-floating-focus"    { switch-focus-between-floating-and-tiling; }
+
+    // resize keybinds
+    Mod+R                       hotkey-overlay-title="cycle-width"              { switch-preset-column-width; }
+    Mod+Shift+R                 hotkey-overlay-title="revert-width"             { switch-preset-column-width-back; }
+    Mod+Ctrl+Shift+R            hotkey-overlay-title="cycle-height"             { switch-preset-window-height; }
+    Mod+Ctrl+R                  hotkey-overlay-title="revert-height"            { reset-window-height; }
+    Mod+Minus                   hotkey-overlay-title="decrement-width"          { set-column-width "-10%"; }
+    Mod+Equal                   hotkey-overlay-title="increment-width"          { set-column-width "+10%"; }
+    Mod+Shift+Minus             hotkey-overlay-title="decrement-height"         { set-window-height "-10%"; }
+    Mod+Shift+Equal             hotkey-overlay-title="increment-height"         { set-window-height "+10%"; }
+
+    // overview
+    Mod+O                       hotkey-overlay-title="toggle-overview"          { toggle-overview; }
+
+    // tabbed display
+    Mod+T                       hotkey-overlay-title="toggle-tabs"              { toggle-column-tabbed-display; }
+    Mod+Escape                  allow-inhibiting=false                          { toggle-keyboard-shortcuts-inhibit; }
+
+    // sleep monitors
+    Mod+Shift+P                 hotkey-overlay-title="sleep-monitors"           { power-off-monitors; }
+
+    // volume control
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+
+    // audio control
+    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+
+    // brightness control
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    // screenshots
+    Print { screenshot; }
+    Ctrl+Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    // lifecycle
+    Mod+Shift+E { quit; }
+    Ctrl+Alt+Delete { quit; }
+}
+
+layer-rule {
+    match namespace="^noctalia$"
+    place-within-backdrop true
+}
+
+include "./noctalia.kdl"

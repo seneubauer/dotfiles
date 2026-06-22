@@ -1,0 +1,56 @@
+[bar]
+order = [ "main" ]
+
+    [bar.main]
+    auto_hide = false
+    background_opacity = 1.0
+    border = "outline"
+    border_width = 0.0
+    capsule = true
+    capsule_fill = "surface_variant"
+    capsule_opacity = 1.0
+    capsule_padding = 6.0
+    capsule_thickness = 0.75999999046325684
+    center = [ "control-center", "group:g2", "session" ]
+    contact_shadow = false
+    enabled = true
+    end = [ "notifications", "clipboard", "volume", "group:g3" ]
+    font_weight = 500
+    layer = "top"
+    margin_edge = 10
+    margin_ends = 180
+    padding = 14
+    panel_overlap = 1
+    position = "top"
+    radius = 12
+    radius_bottom_left = 12
+    radius_bottom_right = 12
+    radius_top_left = 12
+    radius_top_right = 12
+    reserve_space = true
+    scale = 1.0
+    shadow = true
+    start = [ "launcher", "workspaces", "active_window", "media", "tray" ]
+    thickness = 34
+    widget_spacing = 9
+
+        [[bar.main.capsule_group]]
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "date", "clock" ]
+        opacity = 1.0
+        padding = 12.0
+
+        [[bar.main.capsule_group]]
+        fill = "surface_variant"
+        id = "g2"
+        members = [ "cpu", "temp", "sysmon", "ram" ]
+        opacity = 1.0
+        padding = 6.0
+
+        [[bar.main.capsule_group]]
+        fill = "surface_variant"
+        id = "g3"
+        members = [ "date", "clock" ]
+        opacity = 1.0
+        padding = 6.0

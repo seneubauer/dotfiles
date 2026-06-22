@@ -1,0 +1,13 @@
+[theme]
+builtin = "Gruvbox"
+community_palette = "GitHub Dark"
+custom_palette = ""
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "hyprland", "niri" ]
+    community_ids = [ "zen-browser", "neovim", "obsidian", "fuzzel", "papirus-icons", "steam", "yazi" ]
+    enable_builtin_templates = true
+    enable_community_templates = true
