@@ -40,7 +40,7 @@ input {
 }
 
 cursor {
-    xcursor-theme "Oxygen_Zion"
+    xcursor-theme "Vimix-cursors"
     xcursor-size 28
 }
 
@@ -101,6 +101,11 @@ animations {
 window-rule {
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     block-out-from "screen-capture"
+}
+
+window-rule {
+    match app-id=r#"^zen-browser$"#
+    draw-border-with-background false
 }
 
 window-rule {
