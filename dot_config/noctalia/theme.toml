@@ -1,13 +1,23 @@
 [theme]
-builtin = "Gruvbox"
-community_palette = "GitHub Dark"
+builtin = "Eldritch"
+community_palette = "Everforest"
 custom_palette = ""
 mode = "dark"
 source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
-    [theme.templates]
-    builtin_ids = [ "alacritty", "hyprland", "niri" ]
-    community_ids = [ "zen-browser", "neovim", "obsidian", "fuzzel", "papirus-icons", "steam", "yazi" ]
-    enable_builtin_templates = true
-    enable_community_templates = true
+[theme.templates]
+builtin_ids = [ "niri", "cava", "starship", "qt" ]
+community_ids = [ "zen-browser", "neovim", "obsidian", "papirus-icons", "steam", "yazi" ]
+enable_builtin_templates = true
+enable_community_templates = true
+
+[theme.templates.user.alacritty]
+input_path = "~/.config/noctalia/templates/alacritty.toml"
+output_path = "~/.config/alacritty/themes/noctalia.toml"
+enabled = true
+
+[theme.templates.user.ncspot]
+input_path = "~/.config/noctalia/templates/ncspot.toml"
+output_path = "~/.config/ncspot/config.toml"
+enabled = true

@@ -1,0 +1,12 @@
+[location]
+address = "Minneapolis, MN"
+
+[brightness]
+enable_ddcutil = true
+
+[weather]
+unit = "Imperial"
+
+[nightlight]
+enabled = true
+temperature_night = 5000

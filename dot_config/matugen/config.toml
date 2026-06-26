@@ -1,5 +1,0 @@
-[config]
-
-[templates.ncspot]
-input_path = "~/.config/matugen/templates/ncspot.toml"
-output_path = "~/.config/ncspot/config.toml"

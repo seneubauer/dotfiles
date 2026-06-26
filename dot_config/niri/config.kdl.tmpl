@@ -44,6 +44,7 @@ cursor {
     xcursor-size 28
 }
 
+{{- if eq .chezmoi.hostname "dwarrowdelf" }}
 output "HDMI-A-1" {
     mode "1920x1080@60.000"
     scale 1
@@ -57,6 +58,15 @@ output "DP-1" {
     transform "normal"
     position x=1920 y=0
 }
+{{- else if eq .chezmoi.hostname "ainulindale" }}
+output "eDP-1" {
+    mode "1920x1080@60.010"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+{{- end}}
+
 
 layout {
     gaps 16

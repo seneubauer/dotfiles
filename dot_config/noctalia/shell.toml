@@ -1,101 +1,44 @@
 [shell]
-app_icon_colorize = false
-avatar_path = "/home/scottn/projects/dotfiles/icons/avatar.jpg"
-clipboard_auto_paste = "ctrl_v"
-clipboard_confirm_clear_history = true
-clipboard_enabled = true
-clipboard_history_max_entries = 100
-clipboard_image_action_command = ""
-corner_radius_scale = 1.0
-date_format = "%A, %x"
-disable_mipmaps = false
-font_family = "sans-serif"
-launch_apps_as_systemd_services = false
-middle_click_opens_widget_settings = true
-niri_overview_type_to_launch_enabled = false
-offline_mode = false
-password_style = "default"
-polkit_agent = true
-screen_time_enabled = false
-settings_show_advanced = false
-setup_wizard_enabled = true
-shared_gl_context = true
-show_location = true
-telemetry_enabled = false
-time_format = "{:%H:%M}"
-ui_scale = 1.0
+font_family = "DejaVu Sans"
+avatar_path = "~/pictures/avatars/avatar.jpg"
+middle_click_opens_widget_settings = false
 
-    [shell.animation]
-    enabled = true
-    speed = 1.5
+[shell.panel]
+transparency_mode = "soft"
+control_center_placement = "centered"
+launcher_placement = "centered"
+wallpaper_placement = "centered"
+session_placement = "centered"
 
-    [shell.mpris]
-    blacklist = []
+[shell.screenshot]
+directory = "~/pictures/noctalia-screenshots"
 
-    [shell.panel]
-    borders = true
-    clipboard_placement = "centered"
-    control_center_placement = "attached"
-    floating_offset = 8
-    launcher_categories = true
-    launcher_compact = true
-    launcher_placement = "centered"
-    launcher_session_search = false
-    launcher_show_icons = true
-    launcher_sort_by_usage = false
-    open_near_click_clipboard = false
-    open_near_click_control_center = false
-    open_near_click_launcher = false
-    open_near_click_session = false
-    open_near_click_wallpaper = false
-    session_placement = "attached"
-    shadow = true
-    transparency_mode = "solid"
-    wallpaper_placement = "attached"
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+shortcut = "1"
+variant = "default"
 
-    [shell.screen_corners]
-    enabled = false
-    size = 32
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+shortcut = "2"
+variant = "default"
 
-    [shell.screenshot]
-    copy_to_clipboard = true
-    directory = "/home/scottn/pictures/noctalia-screenshots"
-    filename_pattern = ""
-    freeze_screen = true
-    pipe_command = ""
-    pipe_to_command = false
-    save_to_file = true
+[[shell.session.actions]]
+action = "lock_and_suspend"
+enabled = false
+shortcut = "3"
+variant = "default"
 
-    [shell.session.power]
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+shortcut = "4"
+variant = "default"
 
-    [[shell.session.actions]]
-    action = "lock"
-    command = ""
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "1"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "logout"
-    command = ""
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "2"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "reboot"
-    command = ""
-    enabled = true
-    glyph = ""
-    label = ""
-    shortcut = "4"
-    variant = "default"
-
-    [[shell.session.actions]]
-    action = "shutdown"
-    command = ""
-    enabled = true
+[[shell.session.actions]]
+action = "shutdown"
+enabled = true
+shortcut = "5"
+variant = "destructive"

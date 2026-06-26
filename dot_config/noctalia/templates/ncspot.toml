@@ -1,3 +1,7 @@
+initial_screen = "library"
+use_nerdfont = true
+notify = false
+
 [theme]
 background = "{{ colors.background.default.hex }}"
 primary = "{{ colors.primary.default.hex }}"
