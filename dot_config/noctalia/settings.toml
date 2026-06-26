@@ -10,3 +10,6 @@ unit = "Imperial"
 [nightlight]
 enabled = true
 temperature_night = 5000
+
+[backdrop]
+enabled = true

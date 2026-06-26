@@ -29,6 +29,10 @@ opacity = 1.0
 padding = 6.0
 members = [ "date", "clock" ]
 
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
+
 [widget.cpu]
 display = "text"
 

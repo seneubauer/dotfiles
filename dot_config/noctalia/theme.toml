@@ -21,3 +21,8 @@ enabled = true
 input_path = "~/.config/noctalia/templates/ncspot.toml"
 output_path = "~/.config/ncspot/config.toml"
 enabled = true
+
+[theme.templates.user.starship]
+input_path = "~/.config/noctalia/templates/starship.toml"
+output_path = "~/.config/starship.toml"
+enabled = true
