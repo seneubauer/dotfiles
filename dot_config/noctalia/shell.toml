@@ -2,6 +2,7 @@
 font_family = "DejaVu Sans"
 avatar_path = "~/pictures/avatars/avatar.jpg"
 middle_click_opens_widget_settings = false
+screen_time_enabled = true
 
 [shell.panel]
 transparency_mode = "soft"

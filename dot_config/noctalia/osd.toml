@@ -1,0 +1,8 @@
+[osd]
+
+[osd.kinds]
+bluetooth = false
+lock_keys = false
+media = false
+power_profile = false
+wifi = false
