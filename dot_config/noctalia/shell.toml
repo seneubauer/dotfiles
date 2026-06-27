@@ -11,6 +11,7 @@ launcher_placement = "centered"
 wallpaper_placement = "centered"
 session_placement = "centered"
 launcher_categories = false
+launcher_sort_by_usage = false
 
 [shell.screenshot]
 directory = "~/pictures/noctalia-screenshots"
