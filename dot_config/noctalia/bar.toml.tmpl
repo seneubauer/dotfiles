@@ -13,7 +13,11 @@ id = "g1"
 fill = "surface_variant"
 opacity = 1.0
 padding = 6.0
+{{- if eq .chezmoi.hostname "dwarrowdelf" }}
 members = [ "cpu", "temp", "sysmon", "ram", "network_tx", "network_rx" ]
+{{- else if eq .chezmoi.hostname "ainulindale" }}
+members = [ "battery", "cpu", "temp", "sysmon", "ram", "network_tx", "network_rx" ]
+{{- end }}
 
 [[bar.main.capsule_group]]
 id = "g2"
@@ -28,6 +32,11 @@ fill = "surface_variant"
 opacity = 1.0
 padding = 6.0
 members = [ "date", "clock" ]
+
+{{- if eq .chezmoi.hostname "ainulindale" }}
+[widget.battery]
+show_label = true
+{{- end }}
 
 [widget.media]
 album_art_only = true

@@ -6,14 +6,12 @@ transition_duration = 1000
 per_monitor_directories = true
 
 [wallpaper.monitor.DP-1]
-directory = "~/pictures/wallpapers/3440x1440"
+directory = "~/pictures/images/wallpapers/3440x1440"
 
 [wallpaper.monitor.HDMI-A-1]
-directory = "~/pictures/wallpapers/1920x1080"
+directory = "~/pictures/images/wallpapers/1920x1080"
 {{- else if eq .chezmoi.hostname "ainulindale" }}
-
-[wallpaper.monitor.eDP-1]
-directory = "~/pictures/wallpapers/1920x1080"
+directory = "~/pictures/images/wallpapers/1920x1080"
 {{- end }}
 
 [wallpaper.automation]

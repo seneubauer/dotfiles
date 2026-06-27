@@ -10,6 +10,7 @@ control_center_placement = "centered"
 launcher_placement = "centered"
 wallpaper_placement = "centered"
 session_placement = "centered"
+launcher_categories = false
 
 [shell.screenshot]
 directory = "~/pictures/noctalia-screenshots"
