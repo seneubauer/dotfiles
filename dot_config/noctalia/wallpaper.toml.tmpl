@@ -2,17 +2,25 @@
 transition = [ "honeycomb" ]
 transition_on_startup = true
 transition_duration = 1000
+
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
+
 per_monitor_directories = true
 
 [wallpaper.monitor.DP-1]
-directory = "~/pictures/images/wallpapers/3440x1440"
+directory = {{ .wallpaperpath3440 | quote }}
 
 [wallpaper.monitor.HDMI-A-1]
-directory = "~/pictures/images/wallpapers/1920x1080"
+directory = {{ .wallpaperpath1920 | quote }}
+
 {{- else if eq .chezmoi.hostname "ainulindale" }}
-directory = "~/pictures/images/wallpapers/1920x1080"
-{{- end }}
+
+per_monitor_directories = false
+
+[wallpaper.monitor.eDP-1]
+directory = {{ .wallpaperpath1920 | quote }}
+
+{{- end}}
 
 [wallpaper.automation]
 enabled = true

@@ -1,17 +1,23 @@
 [shell]
 font_family = "DejaVu Sans"
-avatar_path = "~/pictures/avatars/avatar.jpg"
+avatar_path = {{ .avatarpath | quote }}
 middle_click_opens_widget_settings = false
 screen_time_enabled = true
+polkit_agent = true
 
 [shell.panel]
 transparency_mode = "soft"
 control_center_placement = "centered"
-launcher_placement = "centered"
-wallpaper_placement = "centered"
-session_placement = "centered"
-launcher_categories = false
-launcher_sort_by_usage = false
+launcher_placement = "floating"
+launcher_position = "center"
+wallpaper_placement = "floating"
+wallpaper_position = "center"
+session_placement = "floating"
+session_position = "center"
+
+[shell.launcher]
+sort_by_usage = false
+categories = false
 
 [shell.screenshot]
 directory = "~/pictures/noctalia-screenshots"
