@@ -2,20 +2,14 @@
 palette = "noctalia"
 add_newline = false
 
-format = """
-$username\
-$hostname\
-$directory
-"""
+format = "$all"
 
 [username]
 show_always = true
-format = '[$user]($style)'
 style_user = "bold green"
 
 [hostname]
-ssh_only = false
-format = '[@$hostname]($style)'
+ssh_only = true
 style = "bold green"
 
 [directory]
