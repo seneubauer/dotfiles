@@ -2,11 +2,17 @@
 order = [ "main" ]
 
 [bar.main]
+margin_edge = 0
+margin_ends = 0
+radius_bottom_left = -12
+radius_bottom_right = -12
+radius_top_left = 0
+radius_top_right = 0
 capsule = true
 widget_spacing = 9
 start = [ "launcher", "workspaces", "active_window", "media", "tray" ]
 center = [ "control-center", "group:g1", "session" ]
-end = [ "notifications", "clipboard", "group:g2", "group:g3" ]
+end = [ "notifications", "clipboard", "fuzzel-shell-commands", "group:g2", "group:g3" ]
 
 [[bar.main.capsule_group]]
 id = "g1"
@@ -82,3 +88,8 @@ tooltip_format = "{:%Y-%m-%d}"
 
 [widget.clock]
 format = "{:%H:%M}"
+
+[widget.fuzzel-shell-commands]
+command = "~/.config/fuzzel/fuzzel-shell-commands.sh"
+glyph = "grid-4x4"
+type = "custom_button"

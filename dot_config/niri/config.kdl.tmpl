@@ -67,7 +67,6 @@ output "eDP-1" {
 }
 {{- end}}
 
-
 layout {
     gaps 16
     center-focused-column "never"
@@ -134,25 +133,24 @@ binds {
     Mod+Shift+F                 hotkey-overlay-title="fullscreen"               { fullscreen-window; }
     Mod+Ctrl+F                  hotkey-overlay-title="expand"                   { expand-column-to-available-width; }
     Mod+Return                  hotkey-overlay-title="alacritty"                { spawn "alacritty"; }
+    Mod+I                       hotkey-overlay-title="shell commands"           { spawn "fuzzel"; }
     Mod+Q                       hotkey-overlay-title="close" repeat=false       { close-window; }
 
     // noctalia keybinds
-    Mod+D                       hotkey-overlay-title="noctalia launcher"        { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+Z                       hotkey-overlay-title="noctalia control-center"  { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+S                       hotkey-overlay-title="noctalia settings"        { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+C                       hotkey-overlay-title="noctalia clipboard"       { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+W                       hotkey-overlay-title="noctalia wallpaper"       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
-    Mod+N                       hotkey-overlay-title="noctalia session"         { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+D                       hotkey-overlay-title="launcher"                 { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Z                       hotkey-overlay-title="control-center"           { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+S                       hotkey-overlay-title="settings"                 { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+C                       hotkey-overlay-title="clipboard"                { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+W                       hotkey-overlay-title="wallpaper"                { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+N                       hotkey-overlay-title="session"                  { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+Shift+T                 hotkey-overlay-title="template reload"          { spawn-sh "noctalia msg templates-apply"; }
+    Mod+Shift+D                 hotkey-overlay-title="desktop widget toggle"    { spawn-sh "noctalia msg desktop-widgets-toggle"; }
 
     // monitor focus keybinds
-    Mod+Shift+H                 hotkey-overlay-title="focus-monitor-left"       { focus-monitor-left; }
-    Mod+Shift+J                 hotkey-overlay-title="focus-monitor-down"       { focus-monitor-down; }
-    Mod+Shift+K                 hotkey-overlay-title="focus-monitor-up"         { focus-monitor-up; }
-    Mod+Shift+L                 hotkey-overlay-title="focus-monitor-up"         { focus-monitor-right; }
-
-    // workspace move keybinds
-    Mod+Shift+I                 hotkey-overlay-title="move-ws-up"               { move-workspace-up; }
-    Mod+Shift+U                 hotkey-overlay-title="move-ws-down"             { move-workspace-down; }
+    Mod+Alt+H                   hotkey-overlay-title="focus-monitor-left"        { focus-monitor-left; }
+    Mod+Alt+J                   hotkey-overlay-title="focus-monitor-down"        { focus-monitor-down; }
+    Mod+Alt+K                   hotkey-overlay-title="focus-monitor-up"          { focus-monitor-up; }
+    Mod+Alt+L                   hotkey-overlay-title="focus-monitor-up"          { focus-monitor-right; }
 
     // workspace focus keybinds
     Mod+1                                                                       { focus-workspace 1; }
@@ -164,14 +162,12 @@ binds {
     Mod+7                                                                       { focus-workspace 7; }
     Mod+8                                                                       { focus-workspace 8; }
     Mod+9                                                                       { focus-workspace 9; }
-    Mod+I                       hotkey-overlay-title="focus-ws-up"              { focus-workspace-up; }
-    Mod+U                       hotkey-overlay-title="focus-ws-down"            { focus-workspace-down; }
     Mod+WheelScrollDown         cooldown-ms=150                                 { focus-workspace-down; }
     Mod+WheelScrollUp           cooldown-ms=150                                 { focus-workspace-up; }
 
     // window move keybinds
-    Mod+Ctrl+J                  hotkey-overlay-title="move-ws-down"             { move-window-down; }
-    Mod+Ctrl+K                  hotkey-overlay-title="move-ws-up"               { move-window-up; }
+    Mod+Shift+J                  hotkey-overlay-title="move-ws-down"             { move-window-down; }
+    Mod+Shift+K                  hotkey-overlay-title="move-ws-up"               { move-window-up; }
 
     // window focus keybinds
     Mod+J                       hotkey-overlay-title="focus-ws-down"            { focus-window-down; }
@@ -180,8 +176,8 @@ binds {
     // column move keybinds
     Mod+Ctrl+Home               hotkey-overlay-title="move-col-to-first"        { move-column-to-first; }
     Mod+Ctrl+End                hotkey-overlay-title="move-col-to-last"         { move-column-to-last; }
-    Mod+Ctrl+H                  hotkey-overlay-title="move-col-left"            { move-column-left; }
-    Mod+Ctrl+L                  hotkey-overlay-title="move-col-right"           { move-column-right; }   
+    Mod+Shift+H                 hotkey-overlay-title="move-col-left"            { move-column-left; }
+    Mod+Shift+L                 hotkey-overlay-title="move-col-right"           { move-column-right; }   
     Mod+Shift+Ctrl+H            hotkey-overlay-title="move-col-monitor-left"    { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+J            hotkey-overlay-title="move-col-monitor-down"    { move-column-to-monitor-down; }
     Mod+Shift+Ctrl+K            hotkey-overlay-title="move-col-monitor-up"      { move-column-to-monitor-up; }
@@ -195,8 +191,8 @@ binds {
     Mod+Ctrl+7                                                                  { move-column-to-workspace 7; }
     Mod+Ctrl+8                                                                  { move-column-to-workspace 8; }
     Mod+Ctrl+9                                                                  { move-column-to-workspace 9; }
-    Mod+Ctrl+U                  hotkey-overlay-title="move-col-ws-down"         { move-column-to-workspace-down; }
-    Mod+Ctrl+I                  hotkey-overlay-title="move-col-ws-up"           { move-column-to-workspace-up; }
+    Mod+Ctrl+J                  hotkey-overlay-title="move-col-ws-down"         { move-column-to-workspace-down; }
+    Mod+Ctrl+K                  hotkey-overlay-title="move-col-ws-up"           { move-column-to-workspace-up; }
     Mod+Ctrl+WheelScrollDown    cooldown-ms=150                                 { move-column-to-workspace-down; }
     Mod+Ctrl+WheelScrollUp      cooldown-ms=150                                 { move-column-to-workspace-up; }
     Mod+Ctrl+WheelScrollRight                                                   { move-column-right; }

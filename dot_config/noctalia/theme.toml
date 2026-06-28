@@ -26,3 +26,8 @@ enabled = true
 input_path = "~/.config/noctalia/templates/starship.toml"
 output_path = "~/.config/starship.toml"
 enabled = true
+
+[theme.templates.user.fuzzel]
+input_path = "~/.config/noctalia/templates/fuzzel.ini"
+output_path = "~/.config/fuzzel/fuzzel.ini"
+enabled = true
