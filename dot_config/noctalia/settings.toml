@@ -5,7 +5,7 @@ address = "Minneapolis, MN"
 enable_ddcutil = true
 
 [weather]
-unit = "Imperial"
+unit = "imperial"
 
 [nightlight]
 enabled = true
