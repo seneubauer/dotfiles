@@ -2,10 +2,12 @@
 order = [ "main" ]
 
 [bar.main]
+concave_edge_corners = true
 margin_edge = 0
 margin_ends = 0
-radius_bottom_left = -12
-radius_bottom_right = -12
+radius = 0
+radius_bottom_left = 12
+radius_bottom_right = 12
 radius_top_left = 0
 radius_top_right = 0
 capsule = true
@@ -76,7 +78,7 @@ show_label = false
 show_label = false
 
 [widget.date]
-format = "{:%B%e, %A} {:%H:%M}"
+format = "{:%B %e, %A} {:%H:%M}"
 tooltip_format = "{:%Y-%m-%d}"
 
 [widget.clock]
