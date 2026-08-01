@@ -16,6 +16,8 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/scottn/.zshrc'
 
+alias drogonctll="drogon_ctl"
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
