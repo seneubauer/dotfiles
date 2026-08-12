@@ -13,7 +13,7 @@ ssh_only = true
 style = "bold green"
 
 [directory]
-read_only = ''
+read_only = '  '
 
 [character]
 success_symbol = '[->](bold green)'

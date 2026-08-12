@@ -11,80 +11,95 @@ radius_bottom_right = 12
 radius_top_left = 0
 radius_top_right = 0
 capsule = true
+capsule_padding = 9.0
 widget_spacing = 9
-start = [ "launcher", "workspaces", "active_window", "media", "tray" ]
-center = [ "control-center", "group:g1", "session" ]
-end = [ "notifications", "clipboard", "fuzzel-shell-commands", "group:g2", "date" ]
+start = [ "workspaces", "tray", "media" ]
+center = [ "group:g1", "audio_visualizer", "group:g2" ]
+end = [ "group:g3", "group:g4", "weather", "date" ]
+
+[bar.main.actions]
+middle = "none"
 
 [[bar.main.capsule_group]]
 id = "g1"
+accordion = true
+accordion_direction = "start"
+enabled = true
 fill = "surface_variant"
+members = [ "cpu", "temp", "sysmon", "ram" ]
 opacity = 1.0
 padding = 6.0
-{{- if eq .chezmoi.hostname "dwarrowdelf" }}
-members = [ "cpu", "temp", "sysmon", "ram", "network_tx", "network_rx" ]
-{{- else if eq .chezmoi.hostname "ainulindale" }}
-members = [ "battery", "cpu", "temp", "sysmon", "ram", "network_tx", "network_rx" ]
-{{- end }}
+widget_spacing = 18
 
 [[bar.main.capsule_group]]
 id = "g2"
+accordion = true
+accordion_direction = "end"
+enabled = true
 fill = "surface_variant"
+members = [ "control-center", "launcher", "widget-editor", "settings", "session" ]
 opacity = 1.0
 padding = 6.0
-members = [ "network", "brightness", "input_volume", "output_volume" ]
+widget_spacing = 18
 
-{{- if eq .chezmoi.hostname "ainulindale" }}
-[widget.battery]
-show_label = true
-{{- end }}
+[[bar.main.capsule_group]]
+id = "g3"
+accordion = true
+accordion_direction = "start"
+enabled = true
+fill = "surface_variant"
+members = [ "input_volume", "output_volume" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
 
-[widget.media]
-album_art_only = true
-hide_when_no_media = true
+[[bar.main.capsule_group]]
+id = "g4"
+accordion = true
+accordion_direction = "start"
+enabled = true
+members = [ "notifications", "clipboard", "network" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
 
 [widget.cpu]
-display = "text"
+visualization = "none"
 
-[widget.temp]
-display = "text"
-
-[widget.sysmon]
-stat = "gpu_temp"
-display = "text"
-
-[widget.ram]
-stat = "ram_pct"
-display = "text"
-
-[widget.network_tx]
-display = "gauge"
-show_label = false
-
-[widget.network_rx]
-display = "gauge"
-show_label = false
+[widget.audio_visualizer]
+anchor = true
+show_when_idle = true
+width = 256
+bands = 64
 
 [widget.network]
 show_label = false
 
-[widget.brightness]
-show_label = false
+[widget.ram]
+stat = "ram_pct"
+visualization = "none"
+
+[widget.sysmon]
+stat = "gpu_temp"
+visualization = "none"
+
+[widget.widget-editor]
+glyph = "home-edit"
+type = "custom_button"
+
+[widget.widget-editor.actions]
+left = "exec ~/.config/fuzzel/fuzzel-noctalia-commands.sh"
+
+[widget.date]
+format = " {:%B %e, %A} {:%H:%M} "
+tooltip_format = "{:%Y-%m-%d}"
+
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
 
 [widget.input_volume]
 show_label = false
 
 [widget.output_volume]
 show_label = false
-
-[widget.date]
-format = "{:%B %e, %A} {:%H:%M}"
-tooltip_format = "{:%Y-%m-%d}"
-
-[widget.clock]
-format = "{:%H:%M}"
-
-[widget.fuzzel-shell-commands]
-command = "~/.config/fuzzel/fuzzel-noctalia-commands.sh"
-glyph = "grid-4x4"
-type = "custom_button"
