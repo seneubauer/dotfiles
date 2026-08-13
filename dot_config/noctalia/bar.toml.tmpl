@@ -15,7 +15,7 @@ capsule_padding = 9.0
 widget_spacing = 9
 start = [ "workspaces", "tray", "media" ]
 center = [ "group:g1", "audio_visualizer", "group:g2" ]
-end = [ "group:g3", "group:g4", "weather", "date" ]
+end = [ "status", "group:g3", "date" ]
 
 [bar.main.actions]
 middle = "none"
@@ -44,21 +44,15 @@ widget_spacing = 18
 
 [[bar.main.capsule_group]]
 id = "g3"
-accordion = true
+accordion = false
 accordion_direction = "start"
 enabled = true
 fill = "surface_variant"
-members = [ "input_volume", "output_volume" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 18
-
-[[bar.main.capsule_group]]
-id = "g4"
-accordion = true
-accordion_direction = "start"
-enabled = true
-members = [ "notifications", "clipboard", "network" ]
+{{- if eq .chezmoi.hostname "ainulindale" }}
+members = [ "volume", "notifications", "clipboard", "network", "battery" ]
+{{- else if eq .chezmoi.hostname "dwarrowdelf" }}
+members = [ "volume", "notifications", "clipboard", "network" ]
+{{- end }}
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
@@ -71,6 +65,9 @@ anchor = true
 show_when_idle = true
 width = 256
 bands = 64
+
+[widget.status]
+type = "davemhammer/obsidian:status"
 
 [widget.network]
 show_label = false
@@ -98,8 +95,8 @@ tooltip_format = "{:%Y-%m-%d}"
 album_art_only = true
 hide_when_no_media = true
 
-[widget.input_volume]
+[widget.battery]
 show_label = false
 
-[widget.output_volume]
+[widget.volume]
 show_label = false

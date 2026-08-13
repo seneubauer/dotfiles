@@ -1,14 +1,17 @@
 [plugins]
-enabled = [ "noctalia/translator" ]
+enabled = [ "noctalia/translator", "davemhammer/obsidian" ]
 
-    [[plugins.source]]
-    enabled = true
-    kind = "git"
-    location = "https://github.com/noctalia-dev/official-plugins"
-    name = "official"
+[[plugins.source]]
+enabled = true
+kind = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+name = "official"
 
-    [[plugins.source]]
-    enabled = true
-    kind = "git"
-    location = "https://github.com/noctalia-dev/community-plugins"
-    name = "community"
+[[plugins.source]]
+enabled = true
+kind = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+name = "community"
+
+[plugin_settings."davemhammer/obsidian"]
+vault_path = "~/documents/notes/main"
