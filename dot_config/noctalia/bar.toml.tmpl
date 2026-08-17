@@ -49,9 +49,9 @@ accordion_direction = "start"
 enabled = true
 fill = "surface_variant"
 {{- if eq .chezmoi.hostname "ainulindale" }}
-members = [ "volume", "notifications", "clipboard", "network", "battery" ]
+members = [ "keybinds", "volume", "notifications", "clipboard", "network", "battery" ]
 {{- else if eq .chezmoi.hostname "dwarrowdelf" }}
-members = [ "volume", "notifications", "clipboard", "network" ]
+members = [ "keybinds", "volume", "notifications", "clipboard", "network" ]
 {{- end }}
 opacity = 1.0
 padding = 6.0
@@ -69,6 +69,9 @@ bands = 64
 [widget.status]
 type = "davemhammer/obsidian:status"
 
+[widget.keybinds]
+type = "kenn/keybind-cheatshet:keybinds"
+
 [widget.network]
 show_label = false
 
@@ -85,7 +88,7 @@ glyph = "home-edit"
 type = "custom_button"
 
 [widget.widget-editor.actions]
-left = "exec ~/.config/fuzzel/fuzzel-noctalia-commands.sh"
+left = {{ .fuzzel_noctalia_command | quote }}
 
 [widget.date]
 format = " {:%B %e, %A} {:%H:%M} "

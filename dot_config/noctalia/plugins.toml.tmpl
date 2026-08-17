@@ -1,5 +1,5 @@
 [plugins]
-enabled = [ "noctalia/translator", "davemhammer/obsidian" ]
+enabled = [ "noctalia/translator", "davemhammer/obsidian", "kenn/keybind-cheatsheet" ]
 
 [[plugins.source]]
 enabled = true
@@ -14,4 +14,7 @@ location = "https://github.com/noctalia-dev/community-plugins"
 name = "community"
 
 [plugin_settings."davemhammer/obsidian"]
-vault_path = "~/documents/notes/main"
+vault_path = {{ .notepath_daily | quote }}
+
+[plugin_settings."kenn/keybind-cheatsheet"]
+compositor = "niri"
