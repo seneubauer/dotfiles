@@ -14,7 +14,10 @@ location = "https://github.com/noctalia-dev/community-plugins"
 name = "community"
 
 [plugin_settings."davemhammer/obsidian"]
-vault_path = {{ .notepath_daily | quote }}
+vault_path = {{ .notepath | quote }}
+daily_folder = "daily"
+git_commit_message = "from daily"
+show_dirty = true
 
 [plugin_settings."kenn/keybind-cheatsheet"]
 compositor = "niri"
