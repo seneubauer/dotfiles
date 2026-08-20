@@ -1,7 +1,7 @@
 [bar]
-order = [ "main" ]
+order = [ "top", "bottom" ]
 
-[bar.main]
+[bar.top]
 concave_edge_corners = true
 margin_edge = 0
 margin_ends = 0
@@ -13,52 +13,106 @@ radius_top_right = 0
 capsule = true
 capsule_padding = 9.0
 widget_spacing = 9
-start = [ "workspaces", "tray", "media" ]
-center = [ "group:g1", "audio_visualizer", "group:g2" ]
-end = [ "status", "group:g3", "date" ]
+position = "top"
+start = [ "group:g1", "group:g2", "group:g3", "group:g4", "status" ]
+center = [ "audio_visualizer", "media" ]
+end = [ "group:g5", "group:g6" ]
 
-[bar.main.actions]
+[bar.top.actions]
 middle = "none"
 
-[[bar.main.capsule_group]]
+[[bar.top.capsule_group]]
 id = "g1"
 accordion = true
-accordion_direction = "start"
+accordion_direction = "end"
 enabled = true
 fill = "surface_variant"
-members = [ "cpu", "temp", "sysmon", "ram" ]
+members = [ "control-center", "launcher", "session" ]
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
 
-[[bar.main.capsule_group]]
+[[bar.top.capsule_group]]
 id = "g2"
 accordion = true
 accordion_direction = "end"
 enabled = true
 fill = "surface_variant"
-members = [ "control-center", "launcher", "widget-editor", "settings", "session" ]
+members = [ "wallpaper", "theme_mode" ]
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
 
-[[bar.main.capsule_group]]
+[[bar.top.capsule_group]]
 id = "g3"
+accordion = true
+accordion_direction = "end"
+fill = "surface_variant"
+members = [ "power_profile", "gamermode" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
+
+[[bar.top.capsule_group]]
+id = "g4"
+accordion = true
+accordion_direction = "end"
+fill = "surface_variant"
+members = [ "keybinds", "bar", "widget-editor" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
+
+[[bar.top.capsule_group]]
+id = "g5"
+accordion = true
+accordion_direction = "start"
+fill = "surface_variant"
+members = [ "volume", "notifications", "clipboard", "network" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
+
+[[bar.top.capsule_group]]
+id = "g6"
 accordion = false
 accordion_direction = "start"
-enabled = true
+fill = "surface_variant"
+members = [ "date", "clock" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
+
+[bar.bottom]
+concave_edge_corners = true
+margin_edge = 0
+margin_ends = 0
+radius = 0
+radius_bottom_left = 0
+radius_bottom_right = 0
+radius_top_left = 12
+radius_top_right = 12
+capsule = true
+capsule_padding = 9.0
+widget_spacing = 9
+position = "bottom"
+start = [ "tray", "taskbar" ]
+center = [ "workspaces" ]
+end = [ "group:g1" ]
+
+[[bar.bottom.capsule_group]]
+id = "g1"
+accordion = false
+accordion_direction = "start"
 fill = "surface_variant"
 {{- if eq .chezmoi.hostname "ainulindale" }}
-members = [ "keybinds", "volume", "notifications", "clipboard", "network", "battery" ]
+members = [ "cpu_usage", "cpu_temp", "gpu_usage", "gpu_temp", "gpu_vram", "ram", "swap", "battery" ]
 {{- else if eq .chezmoi.hostname "dwarrowdelf" }}
-members = [ "keybinds", "volume", "notifications", "clipboard", "network" ]
+members = [ "cpu_usage", "cpu_temp", "gpu_usage", "gpu_temp", "gpu_vram", "ram", "swap" ]
 {{- end }}
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
-
-[widget.cpu]
-visualization = "none"
 
 [widget.audio_visualizer]
 anchor = true
@@ -66,40 +120,77 @@ show_when_idle = true
 width = 256
 bands = 64
 
-[widget.status]
-type = "davemhammer/obsidian:status"
+[widget.media]
+album_art_only = false
+hide_artist = true
+hide_when_no_media = true
+
+[widget.gamermode]
+type = "nomadcxx/gamer-mode:gamermode"
 
 [widget.keybinds]
 type = "kenn/keybind-cheatsheet:keybinds"
 
-[widget.network]
-show_label = false
-
-[widget.ram]
-stat = "ram_pct"
-visualization = "none"
-
-[widget.sysmon]
-stat = "gpu_temp"
-visualization = "none"
+[widget.bar]
+type = "yuuto/calculator:bar"
 
 [widget.widget-editor]
-glyph = "home-edit"
 type = "custom_button"
+glyph = "home-edit"
 
 [widget.widget-editor.actions]
 left = {{ .fuzzel_noctalia_command | quote }}
 
-[widget.date]
-format = " {:%B %e, %A} {:%H:%M} "
-tooltip_format = "{:%Y-%m-%d}"
-
-[widget.media]
-album_art_only = true
-hide_when_no_media = true
-
-[widget.battery]
-show_label = false
+[widget.status]
+type = "davemhammer/obsidia:status"
 
 [widget.volume]
 show_label = false
+
+[widget.network]
+show_label = false
+
+[widget.date]
+format = "{:%B %e, %A}"
+tooltip_format = "{:%Y-%m-%d}"
+
+[widget.clock]
+format = "{:%H:%M}"
+
+[widget.cpu_usage]
+type = "sysmon"
+visualization = "none"
+stat = "cpu_usage"
+
+[widget.cpu_temp]
+type = "sysmon"
+visualization = "none"
+stat = "cpu_temp"
+
+[widget.gpu_usage]
+type = "sysmon"
+visualization = "none"
+stat = "gpu_usage"
+
+[widget.gpu_temp]
+type = "sysmon"
+visualization = "none"
+stat = "gpu_temp"
+
+[widget.gpu_vram]
+type = "sysmon"
+visualization = "none"
+stat = "gpu_vram"
+
+[widget.ram]
+type = "sysmon"
+visualization = "none"
+stat = "ram_pct"
+
+[widget.swap]
+type = "sysmon"
+visualization = "none"
+stat = "swap_pct"
+
+[widget.battery]
+show_label = true

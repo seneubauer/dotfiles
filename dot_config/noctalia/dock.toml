@@ -1,6 +1,6 @@
 [dock]
 background_opacity = 0.85
-enabled = true
+enabled = false
 icon_size = 36
 launcher_position = "start"
 magnification = false
