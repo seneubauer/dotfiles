@@ -81,7 +81,7 @@ fill = "surface_variant"
 members = [ "date", "clock" ]
 opacity = 1.0
 padding = 6.0
-widget_spacing = 18
+widget_spacing = 9
 
 [bar.bottom]
 concave_edge_corners = true
@@ -161,36 +161,44 @@ format = "{:%H:%M}"
 type = "sysmon"
 visualization = "none"
 stat = "cpu_usage"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.cpu_temp]
 type = "sysmon"
 visualization = "none"
 stat = "cpu_temp"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.gpu_usage]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_usage"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.gpu_temp]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_temp"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.gpu_vram]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_vram"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.ram]
 type = "sysmon"
 visualization = "none"
 stat = "ram_pct"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.swap]
 type = "sysmon"
 visualization = "none"
 stat = "swap_pct"
+font_family = {{ .widgetmonofont | quote }}
 
 [widget.battery]
 show_label = true
+font_family = {{ .widgetmonofont | quote }}
