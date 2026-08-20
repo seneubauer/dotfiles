@@ -68,7 +68,7 @@ id = "g5"
 accordion = true
 accordion_direction = "start"
 fill = "surface_variant"
-members = [ "volume", "notifications", "clipboard", "network" ]
+members = [ "volume", "brightness", "notifications", "clipboard", "network" ]
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
@@ -145,6 +145,9 @@ left = {{ .fuzzel_noctalia_command | quote }}
 type = "davemhammer/obsidian:status"
 
 [widget.volume]
+show_label = false
+
+[widget.brightness]
 show_label = false
 
 [widget.network]
