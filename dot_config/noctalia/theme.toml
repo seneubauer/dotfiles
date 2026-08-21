@@ -4,7 +4,7 @@ community_palette = "Everforest"
 custom_palette = ""
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-tonal-spot"
+wallpaper_scheme = "soft"
 
 [theme.templates]
 builtin_ids = [ "niri", "cava", "starship", "qt" ]
