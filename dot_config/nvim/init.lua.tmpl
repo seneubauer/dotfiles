@@ -20,6 +20,23 @@ vim.lsp.enable({"clangd"})
 
 -- set custom keymaps
 
+-- enable treesitting
+require('nvim-treesitter').setup({
+    ensure_installed = { "hpp", "cpp" },
+    highlight = {
+        enable = true
+    }
+})
+
+-- enable autocompletion w/ blink.cmp
+require('blink.cmp').setup({
+    keypam = { preset = "default" },
+    sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' }
+    },
+    signature = { enabled = true }
+})
+
 -- add transparency plugin
 vim.g.transparent_enabled = true
 require("transparent").setup({
