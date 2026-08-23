@@ -6,8 +6,8 @@ concave_edge_corners = true
 margin_edge = 0
 margin_ends = 0
 radius = 0
-radius_bottom_left = 12
-radius_bottom_right = 12
+radius_bottom_left = 6
+radius_bottom_right = 6
 radius_top_left = 0
 radius_top_right = 0
 capsule = true
@@ -15,8 +15,8 @@ capsule_padding = 9.0
 widget_spacing = 9
 position = "top"
 start = [ "group:g1", "group:g2", "group:g3", "group:g4", "status" ]
-center = [ "audio_visualizer", "media" ]
-end = [ "group:g5", "group:g6" ]
+center = [ "group:g5", "audio_visualizer", "media" ]
+end = [ "group:g6", "group:g7" ]
 
 [bar.top.actions]
 middle = "none"
@@ -58,7 +58,7 @@ id = "g4"
 accordion = true
 accordion_direction = "end"
 fill = "surface_variant"
-members = [ "keybinds", "bar", "widget-editor" ]
+members = [ "keybinds", "bar" ]
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
@@ -68,13 +68,23 @@ id = "g5"
 accordion = true
 accordion_direction = "start"
 fill = "surface_variant"
-members = [ "volume", "brightness", "notifications", "clipboard", "network" ]
+members = [ "websearch", "update_templates", "toggle_widget_edit" ]
 opacity = 1.0
 padding = 6.0
 widget_spacing = 18
 
 [[bar.top.capsule_group]]
 id = "g6"
+accordion = true
+accordion_direction = "start"
+fill = "surface_variant"
+members = [ "volume", "brightness", "notifications", "clipboard", "network" ]
+opacity = 1.0
+padding = 6.0
+widget_spacing = 18
+
+[[bar.top.capsule_group]]
+id = "g7"
 accordion = false
 accordion_direction = "start"
 fill = "surface_variant"
@@ -90,8 +100,8 @@ margin_ends = 0
 radius = 0
 radius_bottom_left = 0
 radius_bottom_right = 0
-radius_top_left = 12
-radius_top_right = 12
+radius_top_left = 6
+radius_top_right = 6
 capsule = true
 capsule_padding = 9.0
 widget_spacing = 9
@@ -121,9 +131,9 @@ width = 256
 bands = 64
 
 [widget.media]
-album_art_only = false
+album_art_only = true
 hide_artist = true
-hide_when_no_media = true
+hide_when_no_media = false
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
@@ -134,15 +144,30 @@ type = "kenn/keybind-cheatsheet:keybinds"
 [widget.bar]
 type = "yuuto/calculator:bar"
 
-[widget.widget-editor]
-type = "custom_button"
-glyph = "home-edit"
-
-[widget.widget-editor.actions]
-left = {{ .fuzzel_noctalia_command | quote }}
-
 [widget.status]
 type = "davemhammer/obsidian:status"
+
+[widget.websearch]
+type = "custom_button"
+glyph = "world-search"
+
+[widget.websearch.actions]
+# left = "exec fuzzel --dmenu --lines 0 --placeholder "enter your search" --config ~/.config/fuzzel/websearch.ini | sed 's/^/"/;s/$/"/'  "
+left = "exec zen-browser --new-tab https://google.com(fuzzel --dmenu --placeholder 'enter your search: ' --config ~/.config/fuzzel/websearch.ini)"
+
+[widget.update_templates]
+type = "custom_button"
+glyph = "toml"
+
+[widget.update_templates.actions]
+left = "exec noctalia msg templates-apply"
+
+[widget.toggle_widget_edit]
+type = "custom_button"
+glyph = "device-desktop-cog"
+
+[widget.toggle_widget_edit.actions]
+left = "exec noctalia msg desktop-widgets-toggle-edit"
 
 [widget.volume]
 show_label = false

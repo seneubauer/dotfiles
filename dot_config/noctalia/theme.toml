@@ -29,5 +29,5 @@ enabled = true
 
 [theme.templates.user.fuzzel]
 input_path = "~/.config/noctalia/templates/fuzzel.ini"
-output_path = "~/.config/fuzzel/fuzzel.ini"
+output_path = "~/.config/fuzzel/themes/noctalia"
 enabled = true

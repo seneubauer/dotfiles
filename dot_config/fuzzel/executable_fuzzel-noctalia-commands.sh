@@ -14,6 +14,6 @@ run_command() {
     esac
 }
 
-selection=$(commands | fuzzel --dmenu)
+selection=$(commands | fuzzel --config ~/.config/fuzzel/editor.ini --dmenu)
 
 [ -n "$selection" ] && run_command "$selection"
