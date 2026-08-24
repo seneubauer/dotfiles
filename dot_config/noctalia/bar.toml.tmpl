@@ -14,23 +14,23 @@ capsule = true
 capsule_padding = 9.0
 widget_spacing = 9
 position = "top"
-start = [ "group:g1", "group:g2", "group:g3", "group:g4", "status" ]
-center = [ "group:g5", "audio_visualizer", "media" ]
-end = [ "group:g6", "group:g7" ]
+start = [ "group:g1" ]
+center = [ "group:g2", "audio_visualizer", "media" ]
+end = [ "group:g3", "group:g4" ]
 
 [bar.top.actions]
 middle = "none"
 
 [[bar.top.capsule_group]]
 id = "g1"
-accordion = true
+accordion = false
 accordion_direction = "end"
 enabled = true
 fill = "surface_variant"
-members = [ "control-center", "launcher", "session" ]
+members = [ "control-center", "gamermode", "wallpaper", "bar", "keybinds", "status" ]
 opacity = 1.0
 padding = 6.0
-widget_spacing = 18
+widget_spacing = 9
 
 [[bar.top.capsule_group]]
 id = "g2"
@@ -38,55 +38,25 @@ accordion = true
 accordion_direction = "end"
 enabled = true
 fill = "surface_variant"
-members = [ "wallpaper", "theme_mode" ]
+members = [ "launcher", "websearch", "update_templates", "toggle_widget_edit" ]
 opacity = 1.0
 padding = 6.0
-widget_spacing = 18
+widget_spacing = 9
 
 [[bar.top.capsule_group]]
 id = "g3"
-accordion = true
+accordion = false
 accordion_direction = "end"
 fill = "surface_variant"
-members = [ "power_profile", "gamermode" ]
+members = [ "volume", "brightness", "notifications", "clipboard", "network", "power_profile" ]
 opacity = 1.0
 padding = 6.0
-widget_spacing = 18
+widget_spacing = 9
 
 [[bar.top.capsule_group]]
 id = "g4"
 accordion = true
 accordion_direction = "end"
-fill = "surface_variant"
-members = [ "keybinds", "bar" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 18
-
-[[bar.top.capsule_group]]
-id = "g5"
-accordion = true
-accordion_direction = "start"
-fill = "surface_variant"
-members = [ "websearch", "update_templates", "toggle_widget_edit" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 18
-
-[[bar.top.capsule_group]]
-id = "g6"
-accordion = true
-accordion_direction = "start"
-fill = "surface_variant"
-members = [ "volume", "brightness", "notifications", "clipboard", "network" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 18
-
-[[bar.top.capsule_group]]
-id = "g7"
-accordion = false
-accordion_direction = "start"
 fill = "surface_variant"
 members = [ "date", "clock" ]
 opacity = 1.0
@@ -122,7 +92,7 @@ members = [ "cpu_usage", "cpu_temp", "gpu_usage", "gpu_temp", "gpu_vram", "ram",
 {{- end }}
 opacity = 1.0
 padding = 6.0
-widget_spacing = 18
+widget_spacing = 9
 
 [widget.audio_visualizer]
 anchor = true
@@ -152,8 +122,7 @@ type = "custom_button"
 glyph = "world-search"
 
 [widget.websearch.actions]
-# left = "exec fuzzel --dmenu --lines 0 --placeholder "enter your search" --config ~/.config/fuzzel/websearch.ini | sed 's/^/"/;s/$/"/'  "
-left = "exec zen-browser --new-tab https://google.com(fuzzel --dmenu --placeholder 'enter your search: ' --config ~/.config/fuzzel/websearch.ini)"
+left = {{ .websearch_command | quote }}
 
 [widget.update_templates]
 type = "custom_button"
