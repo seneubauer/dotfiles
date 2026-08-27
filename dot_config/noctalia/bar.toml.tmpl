@@ -114,13 +114,6 @@ type = "kenn/keybind-cheatsheet:keybinds"
 [widget.status]
 type = "davemhammer/obsidian:status"
 
-[widget.websearch]
-type = "custom_button"
-glyph = "world-search"
-
-[widget.websearch.actions]
-left = {{ .websearch_command | quote }}
-
 [widget.update_templates]
 type = "custom_button"
 glyph = "toml"
@@ -155,44 +148,44 @@ format = "{:%H:%M}"
 type = "sysmon"
 visualization = "none"
 stat = "cpu_usage"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.cpu_temp]
 type = "sysmon"
 visualization = "none"
 stat = "cpu_temp"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.gpu_usage]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_usage"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.gpu_temp]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_temp"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.gpu_vram]
 type = "sysmon"
 visualization = "none"
 stat = "gpu_vram"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.ram]
 type = "sysmon"
 visualization = "none"
 stat = "ram_pct"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.swap]
 type = "sysmon"
 visualization = "none"
 stat = "swap_pct"
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}
 
 [widget.battery]
 show_label = true
-font_family = {{ .widgetmonofont | quote }}
+font_family = {{ .font.widget_mono | quote }}

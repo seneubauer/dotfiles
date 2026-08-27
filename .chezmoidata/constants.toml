@@ -1,0 +1,17 @@
+[font]
+terminal = "ZedMono NFM"
+widget_mono = "JetBrainsMonoNL NFM"
+
+[images]
+avatar = "~/pictures/images/icons/avatar.jpg"
+
+[directory.document]
+notes = "~/documents/notes/main"
+
+[directory.wallpaper.dark]
+wp3440 = "~/pictures/images/wallpapers/dark/3440x1440"
+wp1920 = "~/pictures/images/wallpapers/dark/1920x1080"
+
+[directory.wallpaper.light]
+wp3440 = "~/pictures/images/wallpapers/light/3440x1440"
+wp1920 = "~/pictures/images/wallpapers/light/1920x1080"

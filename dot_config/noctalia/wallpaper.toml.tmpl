@@ -8,18 +8,18 @@ transition_duration = 1000
 per_monitor_directories = true
 
 [wallpaper.monitor.DP-1]
-directory_dark = {{ .wallpaperpath3440_dark | quote }}
-directory_light = {{ .wallpaperpath3440_light | quote }}
+directory_dark = {{ .directory.wallpaper.dark.wp3440 | quote }}
+directory_light = {{ .directory.wallpaper.light.wp3440 | quote }}
 
 [wallpaper.monitor.HDMI-A-1]
-directory_dark = {{ .wallpaperpath1920_dark | quote }}
-directory_light = {{ .wallpaperpath1920_light | quote }}
+directory_dark = {{ .directory.wallpaper.dark.wp1920 | quote }}
+directory_light = {{ .directory.wallpaper.light.wp1920 | quote }}
 
 {{- else if eq .chezmoi.hostname "ainulindale" }}
 
 per_monitor_directories = false
-directory_dark = {{ .wallpaperpath1920_dark | quote }}
-directory_light = {{ .wallpaperpath1920_light | quote }}
+directory_dark = {{ .directory.wallpaper.dark.wp1920 | quote }}
+directory_light = {{ .directory.wallpaper.light.wp1920 | quote }}
 
 {{- end}}
 
