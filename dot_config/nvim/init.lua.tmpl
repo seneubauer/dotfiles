@@ -11,6 +11,17 @@ vim.opt.wildoptions:append("pum")
 -- show errors on next-line for cursor attention
 
 -- enable code-completion
+local capabilities = vim.tbl_deep_extend(
+    'force',
+    vim.lsp.protocol.make_client_capabilities(),
+    require('blink.cmp').get_lsp_capabilities()
+)
+
+-- configure lsp
+vim.lsp.config['clangd'] = {
+    cmd = { 'clangd', '--background-index', '--clang-tidy' },
+    capabilities = capabilities
+}
 
 -- enable lsp
 vim.lsp.enable({"lua_ls"})
@@ -30,11 +41,15 @@ require('nvim-treesitter').setup({
 
 -- enable autocompletion w/ blink.cmp
 require('blink.cmp').setup({
-    keypam = { preset = "default" },
+    keymap = { preset = "default" },
     sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' }
     },
-    signature = { enabled = true }
+    signature = { enabled = true },
+    appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = 'mono'
+    }
 })
 
 -- add transparency plugin
