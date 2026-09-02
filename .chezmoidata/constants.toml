@@ -1,5 +1,6 @@
 [font]
-terminal = "ZedMono NFM"
+terminal = "ZedMono Extd NFM"
+terminal_size = 11
 widget_mono = "JetBrainsMonoNL NFM"
 
 [images]
