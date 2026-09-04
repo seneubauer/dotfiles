@@ -1,0 +1,286 @@
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "dw-datetime",
+    "dw-weather",
+    "dw-audio-visualizer",
+    "dw-media-player",
+    "dw-cpu-freq",
+    "dw-cpu-usage",
+    "dw-cpu-temp",
+    "dw-gpu-usage",
+    "dw-gpu-temp",
+    "dw-gpu-vram",
+    "dw-swap-usage",
+    "dw-ramp-usage"
+]
+
+{{- $radius := 6 }}
+{{- $opacity := 0.6 }}
+{{- $monitor := "" }} 
+{{- if eq .chezmoi.hostname "dwarrowdelf" }}
+{{- $monitor = "HDMI-A-1" }}
+{{- else if eq .chezmoi.hostname "ainulindale" }}
+{{- $monitor = "eDP-1" }}
+{{- end }}
+
+[desktop_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[desktop_widgets.widget.dw-datetime]
+box_height = 128.0
+box_width = 320.0
+cx = 1750.0
+cy = 108.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "clock"
+
+[desktop_widgets.widget.dw-datetime.settings]
+background_radius = {{ $radius }}
+font_family = {{ .font.widget_mono | quote }}
+format = "{:%a, %b%e}\\n{:%H:%M}"
+shadow = true
+
+[desktop_widgets.widget.dw-weather]
+box_height = 256.0
+box_width = 320.0
+cx = 1750.0
+cy = 310.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "weather"
+
+[desktop_widgets.widget.dw-weather.settings]
+background_color = "surface"
+background_opacity = {{ $opacity }}
+background_radius = {{ $radius }}
+font_family = {{ .font.widget_mono | quote }}
+forecast_days = 5
+shadow = true
+show_forecast = true
+
+[desktop_widgets.widget.dw-audio-visualizer]
+box_height = 64.0
+box_width = 320.0
+cx = 1750.0
+cy = 480.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "audio_visualizer"
+
+[desktop_widgets.widget.dw-audio-visualizer.settings]
+background_radius = {{ $radius }}
+background_opacity = {{ $opacity }}
+bands = 64
+centered = true
+show_when_idle = true
+
+[desktop_widgets.widget.dw-media-player]
+box_height = 128.0
+box_width = 320.0
+cx = 1750.0
+cy = 586.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "media_player"
+
+[desktop_widgets.widget.dw-media-player.settings]
+background_radius = {{ $radius }}
+background_opacity = {{ $opacity }}
+hide_when_no_media = true
+font_family = {{ .font.widget_mono | quote }}
+
+[desktop_widgets.widget.dw-cpu-freq]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 840.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-cpu-freq.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "cpu_freq"
+
+[desktop_widgets.widget.dw-cpu-usage]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 872.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-cpu-usage.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "cpu_usage"
+
+[desktop_widgets.widget.dw-cpu-temp]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 904.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-cpu-temp.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "cpu_temp"
+
+[desktop_widgets.widget.dw-gpu-usage]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 936.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-gpu-usage.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "gpu_usage"
+
+[desktop_widgets.widget.dw-gpu-temp]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 968.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-gpu-temp.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "gpu_temp"
+
+[desktop_widgets.widget.dw-gpu-vram]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 1000.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-gpu-vram.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "gpu_vram"
+
+[desktop_widgets.widget.dw-swap-usage]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 1032.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-swap-usage.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "swap_pct"
+
+[desktop_widgets.widget.dw-ramp-usage]
+box_height = 32.0
+box_width = 164.0
+cx = 1838.0
+cy = 1064.0
+output = {{ $monitor | quote }}
+placement_height = 1080.0
+placement_width = 1920.0
+rotation = 0.0
+type = "sysmon"
+
+[desktop_widgets.widget.dw-ramp-usage.settings]
+background = true
+background_padding = 3
+background_radius = 0
+background_opacity = {{ $opacity }}
+display = "gauge"
+font_family = {{ .font.widget_mono | quote }}
+gauge_layout = "horizontal"
+label_min_width = 64
+show_label = true
+stat = "ram_pct"

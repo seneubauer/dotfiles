@@ -1,5 +1,5 @@
 [bar]
-order = [ "top", "bottom" ]
+order = [ "top", "side" ]
 
 [bar.top]
 concave_edge_corners = true
@@ -10,113 +10,99 @@ radius_bottom_left = 6
 radius_bottom_right = 6
 radius_top_left = 0
 radius_top_right = 0
-capsule = true
+capsule = false
 capsule_padding = 9.0
-widget_spacing = 9
+widget_spacing = 12
 position = "top"
-start = [ "group:g1" ]
-center = [ "group:g2", "audio_visualizer", "media" ]
-end = [ "group:g3", "group:g4" ]
+start = [ "workspaces", "taskbar", "tray" ]
+center = [ "control-center", "audio_visualizer", "session" ]
+{{- if eq .chezmoi.hostname "dwarrowdelf" }}
+end = [ "volume", "brightness", "notifications", "clipboard", "network", "date" ]
+{{- else if eq .chezmoi.hostname "ainulindale" }}
+end = [ "battery", "volume", "brightness", "notifications", "clipboard", "network", "date" ]
+{{- end }}
 
 [bar.top.actions]
 middle = "none"
 
-[[bar.top.capsule_group]]
-id = "g1"
-accordion = false
-accordion_direction = "end"
-enabled = true
-fill = "surface_variant"
-members = [ "control-center", "gamermode", "wallpaper", "keybinds", "status" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 9
-
-[[bar.top.capsule_group]]
-id = "g2"
-accordion = true
-accordion_direction = "start"
-enabled = true
-fill = "surface_variant"
-members = [ "launcher", "update_templates", "toggle_widget_edit" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 9
-
-[[bar.top.capsule_group]]
-id = "g3"
-accordion = false
-accordion_direction = "end"
-fill = "surface_variant"
-members = [ "volume", "brightness", "notifications", "clipboard", "network" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 9
-
-[[bar.top.capsule_group]]
-id = "g4"
-accordion = false
-accordion_direction = "end"
-fill = "surface_variant"
-members = [ "date", "clock" ]
-opacity = 1.0
-padding = 6.0
-widget_spacing = 9
-
-[bar.bottom]
+[bar.side]
 concave_edge_corners = true
 margin_edge = 0
-margin_ends = 0
 radius = 0
-radius_bottom_left = 0
+auto_hide = true
+show_on_workspace_switch = true
+reserve_space = false
+widget_spacing = 12
+
+{{- if eq .chezmoi.hostname "dwarrowdelf" }}
+
+[bar.side.monitor.DP-1]
+position = "right"
+margin_ends = 300
+radius_bottom_left = 6
 radius_bottom_right = 0
 radius_top_left = 6
-radius_top_right = 6
-capsule = true
-capsule_padding = 9.0
-widget_spacing = 9
-position = "bottom"
-start = [ "taskbar", "tray" ]
-center = [ "workspaces" ]
-end = [ "group:g1" ]
+radius_top_right = 0
 
-[[bar.bottom.capsule_group]]
-id = "g1"
-accordion = false
-accordion_direction = "start"
-fill = "surface_variant"
-{{- if eq .chezmoi.hostname "ainulindale" }}
-members = [ "cpu_usage", "cpu_temp", "gpu_usage", "gpu_temp", "gpu_vram", "ram", "swap", "battery" ]
-{{- else if eq .chezmoi.hostname "dwarrowdelf" }}
-members = [ "cpu_usage", "cpu_temp", "gpu_usage", "gpu_temp", "gpu_vram", "ram", "swap" ]
+[bar.side.monitor.HDMI-A-1]
+position = "left"
+margin_ends = 300
+radius_bottom_left = 0
+radius_bottom_right = 6
+radius_top_left = 0
+radius_top_right = 6
+
+{{- else if eq .chezmoi.hostname "ainulindale" }}
+
+position = "right"
+margin_ends = 300
+radius_bottom_left = 6
+radius_bottom_right = 0
+radius_top_left = 6
+radius_top_right = 0
+
 {{- end }}
-opacity = 1.0
-padding = 6.0
-widget_spacing = 9
+
+capsule = false
+start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
+center = [ "launcher", "wallpaper", "gamermode", "keybinds", "open_notes" ]
+end = [ "settings" ]
+
+[widget.workspaces]
+style = "minimal"
+
+[widget.control-center]
+glyph = "navigation"
 
 [widget.audio_visualizer]
 anchor = true
 show_when_idle = true
 width = 256
 bands = 64
+capsule = true
 
-[widget.media]
-album_art_only = true
-hide_artist = true
-hide_when_no_media = false
+[widget.battery]
+show_label = false
 
-[widget.gamermode]
-type = "nomadcxx/gamer-mode:gamermode"
+[widget.volume]
+show_label = false
 
-[widget.keybinds]
-type = "kenn/keybind-cheatsheet:keybinds"
+[widget.brightness]
+show_label = false
 
-[widget.status]
-type = "davemhammer/obsidian:status"
+[widget.network]
+show_label = false
+
+[widget.clock]
+format = "{:%H:%M}"
+
+[widget.date]
+format = "{:%Y-%m-%d %H:%M}"
+tooltip_format = "{:%Y-%m-%d}"
 
 [widget.update_templates]
 type = "custom_button"
-glyph = "toml"
+glyph = "file-settings"
 
 [widget.update_templates.actions]
 left = "exec noctalia msg templates-apply"
@@ -128,64 +114,12 @@ glyph = "device-desktop-cog"
 [widget.toggle_widget_edit.actions]
 left = "exec noctalia msg desktop-widgets-toggle-edit"
 
-[widget.volume]
-show_label = false
+[widget.toggle_widget_visibility]
+type = "custom_button"
+glyph = "device-desktop"
 
-[widget.brightness]
-show_label = false
+[widget.keybinds]
+type = "kenn/keybind-cheatsheet:keybinds"
 
-[widget.network]
-show_label = false
-
-[widget.date]
-format = "{:%B %e, %A}"
-tooltip_format = "{:%Y-%m-%d}"
-
-[widget.clock]
-format = "{:%H:%M}"
-
-[widget.cpu_usage]
-type = "sysmon"
-visualization = "none"
-stat = "cpu_usage"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.cpu_temp]
-type = "sysmon"
-visualization = "none"
-stat = "cpu_temp"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.gpu_usage]
-type = "sysmon"
-visualization = "none"
-stat = "gpu_usage"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.gpu_temp]
-type = "sysmon"
-visualization = "none"
-stat = "gpu_temp"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.gpu_vram]
-type = "sysmon"
-visualization = "none"
-stat = "gpu_vram"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.ram]
-type = "sysmon"
-visualization = "none"
-stat = "ram_pct"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.swap]
-type = "sysmon"
-visualization = "none"
-stat = "swap_pct"
-font_family = {{ .font.widget_mono | quote }}
-
-[widget.battery]
-show_label = true
-font_family = {{ .font.widget_mono | quote }}
+[widget.gamermode]
+type = "nomadcxx/gamer-mode:gamermode"

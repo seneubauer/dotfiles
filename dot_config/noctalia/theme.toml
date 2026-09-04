@@ -7,8 +7,8 @@ source = "wallpaper"
 wallpaper_scheme = "soft"
 
 [theme.templates]
-builtin_ids = [ "niri", "cava", "starship", "qt" ]
-community_ids = [ "zen-browser", "neovim", "obsidian", "papirus-icons", "steam", "yazi" ]
+builtin_ids = [ "niri", "cava", "qt" ]
+community_ids = [ "brave-origin", "neovim", "obsidian", "steam", "fastfetch", "papirus-icons", "yazi" ]
 enable_builtin_templates = true
 enable_community_templates = true
 
