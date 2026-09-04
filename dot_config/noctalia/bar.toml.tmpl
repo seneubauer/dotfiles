@@ -14,12 +14,12 @@ capsule = false
 capsule_padding = 9.0
 widget_spacing = 12
 position = "top"
-start = [ "workspaces", "taskbar", "tray" ]
+start = [ "workspaces", "taskbar" ]
 center = [ "control-center", "audio_visualizer", "session" ]
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
-end = [ "volume", "brightness", "notifications", "clipboard", "network", "date" ]
+end = [ "tray", "volume", "brightness", "notifications", "clipboard", "network" ]
 {{- else if eq .chezmoi.hostname "ainulindale" }}
-end = [ "battery", "volume", "brightness", "notifications", "clipboard", "network", "date" ]
+end = [ "tray", "battery", "volume", "brightness", "notifications", "clipboard", "network" ]
 {{- end }}
 
 [bar.top.actions]
@@ -65,8 +65,8 @@ radius_top_right = 0
 
 capsule = false
 start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
-center = [ "launcher", "wallpaper", "gamermode", "keybinds", "open_notes" ]
-end = [ "settings" ]
+center = [ "clock" ]
+end = [ "open_notes", "gamermode", "keybinds" ]
 
 [widget.workspaces]
 style = "minimal"
@@ -93,13 +93,6 @@ show_label = false
 [widget.network]
 show_label = false
 
-[widget.clock]
-format = "{:%H:%M}"
-
-[widget.date]
-format = "{:%Y-%m-%d %H:%M}"
-tooltip_format = "{:%Y-%m-%d}"
-
 [widget.update_templates]
 type = "custom_button"
 glyph = "file-settings"
@@ -114,12 +107,26 @@ glyph = "device-desktop-cog"
 [widget.toggle_widget_edit.actions]
 left = "exec noctalia msg desktop-widgets-toggle-edit"
 
+[widget.open_notes]
+type = "custom_button"
+glyph = "notes"
+
+[widget.open_notes.actions]
+left = "exec noctalia msg panel-toggle davemhammer/obsidian:manager"
+
 [widget.toggle_widget_visibility]
 type = "custom_button"
 glyph = "device-desktop"
+
+[widget.toggle_widget_visibility.actions]
+left = "exec noctalia msg desktop-widgets-toggle"
 
 [widget.keybinds]
 type = "kenn/keybind-cheatsheet:keybinds"
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
+
+[widget.clock]
+format = "{:%H:%M}"
+tooltip_format = "{:%Y-%m-%d}"
