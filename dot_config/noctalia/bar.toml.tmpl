@@ -33,6 +33,10 @@ auto_hide = true
 show_on_workspace_switch = true
 reserve_space = false
 widget_spacing = 12
+capsule = false
+start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
+center = [ "clock" ]
+end = [ "open_notes", "gamermode", "keybinds" ]
 
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
 
@@ -62,11 +66,6 @@ radius_top_left = 6
 radius_top_right = 0
 
 {{- end }}
-
-capsule = false
-start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
-center = [ "clock" ]
-end = [ "open_notes", "gamermode", "keybinds" ]
 
 [widget.workspaces]
 style = "minimal"
