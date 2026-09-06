@@ -76,12 +76,15 @@ placement_height = 1080.0
 placement_width = 1920.0
 rotation = 0.0
 type = "audio_visualizer"
+flip_y = true
 
 [desktop_widgets.widget.dw-audio-visualizer.settings]
 background_radius = {{ $radius }}
 background_opacity = {{ $opacity }}
 bands = 64
-centered = true
+centered = false
+mirrored = true
+reversed = false
 show_when_idle = true
 
 [desktop_widgets.widget.dw-media-player]
