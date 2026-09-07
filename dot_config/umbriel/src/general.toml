@@ -1,5 +1,9 @@
 [general]
-autostart               = [ "noctalia" ]
+autostart = [
+    "noctalia",
+    "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+]
+
 mod_key                 = "Super"
 xwayland                = true
 show_cheatsheet         = false
