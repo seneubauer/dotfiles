@@ -10,11 +10,9 @@ files = [
     "src/outputs.toml",
     "src/overview.toml",
     "src/rules.toml",
-    "src/workspaces.toml"
+    "src/workspaces.toml",
+    "noctalia.toml"
 ]
-
-[include.optional]
-files = [ "noctalia.toml" ]
 
 [events]
 lid_close = "notify-send 'lid closed'"
