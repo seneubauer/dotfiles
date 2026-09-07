@@ -11,7 +11,8 @@ tearing = true
 direct_scanout = true
 hdr = "auto"
 sdr_white = 203
-workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+workspaces = 5
 
 {{- else if eq .chezmoi.hostname "dwarrowdelf" }}
 
@@ -26,7 +27,8 @@ tearing = true
 direct_scanout = true
 hdr = "auto"
 sdr_white = 203
-workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT", "GAM" ]
+# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT", "GAM" ]
+workspaces = 5
 
 [output.HDMI-A-1]
 enabled = true
@@ -39,6 +41,7 @@ tearing = true
 direct_scanout = true
 hdr = "auto"
 sdr_white = 203
-workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+workspaces = 5
 
 {{- end }}
