@@ -5,7 +5,8 @@
 
 # noctalia shell
 "Mod"                   = "spawn:noctalia msg panel-toggle launcher"
-"Mod+Z"                 = "spawn:noctalia msg panel-toggle launcher /emo"
+"Mod+I"                 = "spawn:noctalia msg panel-toggle control-center"
+"Mod+Z"                 = "spawn:noctalia msg settings-toggle"
 "Mod+V"                 = "spawn:noctalia msg panel-toggle clipboard"
 "Mod+W"                 = "spawn:noctalia msg panel-toggle wallpaper"
 
@@ -52,6 +53,9 @@
 "Mod+R"                 = "window-cycle-width"
 "Mod+T"                 = "window-cycle-height"
 "Mod+M"                 = "column-center"
+
+# system manip
+"Mod+Shift+minus"       = "cheatsheet-toggle"
 
 # volume control
 "XF86AudioRaiseVolume"  = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"

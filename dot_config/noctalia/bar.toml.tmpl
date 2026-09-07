@@ -1,3 +1,5 @@
+{{- $desktop := env "XDG_CURRENT_DESKTOP" -}}
+
 [bar]
 order = [ "top", "side" ]
 
@@ -14,8 +16,8 @@ capsule = false
 capsule_padding = 9.0
 widget_spacing = 12
 position = "top"
-start = [ "workspaces", "taskbar" ]
-center = [ "control-center", "audio_visualizer", "session" ]
+start = [ "control-center", "taskbar" ]
+center = [ "workspaces" ]
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
 end = [ "tray", "volume", "brightness", "notifications", "clipboard", "network" ]
 {{- else if eq .chezmoi.hostname "ainulindale" }}
@@ -69,17 +71,19 @@ radius_top_right = 0
 
 [widget.workspaces]
 style = "minimal"
+max_label_chars = 3
+anchor = true
 
 [widget.control-center]
 glyph = "navigation"
 
-[widget.audio_visualizer]
-anchor = true
-show_when_idle = true
-width = 256
-bands = 128
-capsule = true
-mirrored = false
+# [widget.audio_visualizer]
+# anchor = true
+# show_when_idle = true
+# width = 256
+# bands = 128
+# capsule = true
+# mirrored = false
 
 [widget.battery]
 show_label = false
@@ -122,11 +126,20 @@ glyph = "device-desktop"
 left = "exec noctalia msg desktop-widgets-toggle"
 
 [widget.keybinds]
-type = "kenn/keybind-cheatsheet:keybinds"
+type = "custom_button"
+glyph = "keyboard"
+
+[widget.keybinds.actions]
+{{- if eq $desktop "umbriel" }}
+left = "exec umbriel msg cheatsheet-toggle"
+{{- else if eq $desktop "niri" }}
+left = "exec niri msg action show-hotkey-overlay"
+{{- end }}
 
 [widget.gamermode]
 type = "nomadcxx/gamer-mode:gamermode"
 
 [widget.clock]
+anchor = true
 format = "{:%H:%M}"
 tooltip_format = "{:%Y-%m-%d}"
