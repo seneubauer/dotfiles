@@ -1,27 +1,32 @@
 [plugins]
 enabled = [
     "noctalia/translator",
+    "noctalia/umbriel-companion",
     "davemhammer/obsidian",
     "nomadcxx/gamer-mode"
 ]
 
 [[plugins.source]]
-enabled = true
-kind = "git"
-location = "https://github.com/noctalia-dev/official-plugins"
-name = "official"
+enabled             = true
+kind                = "git"
+location            = "https://github.com/noctalia-dev/official-plugins"
+name                = "official"
 
 [[plugins.source]]
-enabled = true
-kind = "git"
-location = "https://github.com/noctalia-dev/community-plugins"
-name = "community"
+enabled             = true
+kind                = "git"
+location            = "https://github.com/noctalia-dev/community-plugins"
+name                = "community"
+
+[plugin_settings."noctalia/umbriel-companion"]
+panel_placement     = "floating"
+panel_position      = "center"
 
 [plugin_settings."davemhammer/obsidian"]
-vault_path = {{ .directory.document.notes | quote }}
-daily_folder = "daily"
-git_commit_message = "from daily"
-show_dirty = true
+vault_path          = {{ .directory.document.notes | quote }}
+daily_folder        = "daily"
+git_commit_message  = "from daily"
+show_dirty          = true
 
 [plugin_settings."nomadcxx/gamer-mode"]
-main_placement = "center"
+main_placement      = "center"

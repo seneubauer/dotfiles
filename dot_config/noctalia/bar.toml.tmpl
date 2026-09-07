@@ -38,7 +38,11 @@ widget_spacing = 12
 capsule = false
 start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
 center = [ "clock" ]
+{{- if eq $desktop "umbriel" }}
+end = [ "open_notes", "gamermode", "keybinds", "bar" ]
+{{- else }}
 end = [ "open_notes", "gamermode", "keybinds" ]
+{{- end }}
 
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
 
@@ -143,3 +147,6 @@ type = "nomadcxx/gamer-mode:gamermode"
 anchor = true
 format = "{:%H:%M}"
 tooltip_format = "{:%Y-%m-%d}"
+
+[widget.bar]
+type = "noctalia/umbriel-companion:bar"

@@ -10,17 +10,23 @@
 "Mod+V"                 = "spawn:noctalia msg panel-toggle clipboard"
 "Mod+W"                 = "spawn:noctalia msg panel-toggle wallpaper"
 
+# column manip
+"Mod+Shift+H"           = "column-move-left"
+"Mod+Shift+L"           = "column-move-right"
+"Mod+Shift+J"           = "column-move-to-workspace-next"
+"Mod+Shift+K"           = "column-move-to-workspace-previous"
+"Mod+Shift+Alt+H"       = "column-move-to-output-left"
+"Mod+Shift+Alt+L"       = "column-move-to-output-right"
+"Mod+Shift+Alt+K"       = "column-move-to-output-up"
+"Mod+Shift+Alt+J"       = "column-move-to-output-down"
+
 # workspace manip
-"Mod+Ctrl+J"            = "column-move-to-workspace-next"
-"Mod+Ctrl+K"            = "column-move-to-workspace-previous"
-"Mod+Shift+J"           = "window-move-to-workspace-next"
-"Mod+Shift+K"           = "window-move-to-workspace-previous"
 "Mod+Ctrl+Shift+H"      = "workspace-move-to-output-left"
 "Mod+Ctrl+Shift+L"      = "workspace-move-to-output-right"
 "Mod+Ctrl+Shift+K"      = "workspace-move-to-output-up"
 "Mod+Ctrl+Shift+J"      = "workspace-move-to-output-down"
-"Mod+Page_Down"         = "workspace-next"
-"Mod+Page_Up"           = "workspace-previous"
+"Mod+Alt+J"             = "workspace-next"
+"Mod+Alt+K"             = "workspace-previous"
 "Mod+Alt+S"             = "workspace-set-layout:scrolling"
 "Mod+Alt+D"             = "workspace-set-layout:dwindle"
 "Mod+Alt+M"             = "workspace-set-layout:master"
@@ -29,6 +35,8 @@
 "Mod+O"                 = "overview-toggle"
 
 # window manip
+"Mod+Ctrl+J"            = "window-move-to-workspace-next"
+"Mod+Ctrl+K"            = "window-move-to-workspace-previous"
 "Mod+Shift+A"           = "window-toggle-floating"
 "Mod+Shift+S"           = "window-toggle-fullscreen"
 "Mod+Shift+D"           = "window-toggle-maximize"

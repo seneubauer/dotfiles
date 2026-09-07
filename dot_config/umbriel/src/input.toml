@@ -27,7 +27,7 @@ scroll_wheel_step           = 60
 
 [input.cursor]
 theme                       = "Vimix-cursors"
-size                        = 24
+size                        = 28
 hardware_cursor             = true
 follows_focus               = false
 hide_when_typing            = false
