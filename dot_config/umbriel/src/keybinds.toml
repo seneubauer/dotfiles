@@ -1,0 +1,68 @@
+[keybinds]
+
+# generics
+"Mod+Return"            = "spawn:alacritty"
+
+# noctalia shell
+"Mod"                   = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Z"                 = "spawn:noctalia msg panel-toggle launcher /emo"
+"Mod+V"                 = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+W"                 = "spawn:noctalia msg panel-toggle wallpaper"
+
+# workspace manip
+"Mod+Ctrl+J"            = "column-move-to-workspace-next"
+"Mod+Ctrl+K"            = "column-move-to-workspace-previous"
+"Mod+Shift+J"           = "window-move-to-workspace-next"
+"Mod+Shift+K"           = "window-move-to-workspace-previous"
+"Mod+Ctrl+Shift+H"      = "workspace-move-to-output-left"
+"Mod+Ctrl+Shift+L"      = "workspace-move-to-output-right"
+"Mod+Ctrl+Shift+K"      = "workspace-move-to-output-up"
+"Mod+Ctrl+Shift+J"      = "workspace-move-to-output-down"
+"Mod+Page_Down"         = "workspace-next"
+"Mod+Page_Up"           = "workspace-previous"
+"Mod+Alt+S"             = "workspace-set-layout:scrolling"
+"Mod+Alt+D"             = "workspace-set-layout:dwindle"
+"Mod+Alt+M"             = "workspace-set-layout:master"
+
+# overview manip
+"Mod+O"                 = "overview-toggle"
+
+# window manip
+"Mod+Shift+A"           = "window-toggle-floating"
+"Mod+Shift+S"           = "window-toggle-fullscreen"
+"Mod+Shift+D"           = "window-toggle-maximize"
+"Mod+Q"                 = "window-close"
+"Mod+H"                 = "window-focus-left"
+"Mod+L"                 = "window-focus-right"
+"Mod+K"                 = "window-focus-up"
+"Mod+J"                 = "window-focus-down"
+"Mod+bracketleft"       = "window-consume-or-expel-left"
+"Mod+bracketright"      = "window-consume-or-expel-right"
+
+# scratchpad mapip
+"Mod+Space"             = "scratchpad-toggle"
+"Mod+Shift+Space"       = "window-toggle-scratchpad"
+"Mod+Tab"               = "scratchpad-focus-next"
+
+# column manip
+"Mod+A"                 = "window-set-width:0.333"
+"Mod+S"                 = "window-set-width:0.5"
+"Mod+D"                 = "window-set-width:0.667"
+"Mod+F"                 = "window-set-width:1.0"
+"Mod+R"                 = "window-cycle-width"
+"Mod+T"                 = "window-cycle-height"
+"Mod+M"                 = "column-center"
+
+# volume control
+"XF86AudioRaiseVolume"  = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume"  = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioMute"         = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+# playback control
+"XF86AudioPlay"         = "spawn:playerctl play-pause"
+"XF86AudioNext"         = "spawn:playerctl next"
+"XF86AudioPrev"         = "spawn:playerctl previous"
+
+# brightness control
+"XF86MonBrightnessUp"   = "spawn:brightnessctl set +5%"
+"XF86MonBrightnessDown" = "spawn:brightnessctl set -5%"

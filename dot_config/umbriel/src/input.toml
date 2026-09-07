@@ -1,0 +1,38 @@
+[input]
+middle_click_paste = false
+window_drag_toggle = "none"
+
+[input.keyboard]
+layout = "us"
+variant = ""
+options = ""
+repeat_rate = 25
+repeat_delay = 600
+numlock_toggle = true
+track_layout = "global"
+
+[input.touchpad]
+tap = false
+natural_scroll = true
+accel_profile = "flat"
+sensitivity = 0
+scroll_factor = 1.5
+disable_on_external_mouse = true
+
+[input.mouse]
+natural_scroll = false
+accel_profile = "flat"
+sensitivity = 0
+scroll_wheel_step = 60
+
+[input.cursor]
+theme = "Vimix-cursor"
+size = 24
+hardware_cursor = true
+follows_focus = false
+hide_when_typing = false
+hide_timeout_ms = 0
+
+[input.focus]
+follows_mouse = false
+follows_mouse_max_scroll = 0.5

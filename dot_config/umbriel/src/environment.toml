@@ -1,0 +1,3 @@
+[environment]
+GTK_THEME = "Papirus:dark"
+QT_QPA_PLATFORMTHEME = "qt6ct"
