@@ -1,0 +1,51 @@
+{{- $display        := "" -}}
+{{- $display_width  := 0 -}}
+{{- $display_height := 0 -}}
+{{- $object_width   := 820 -}}
+{{- $object_height  := 230 -}}
+
+{{- if eq .chezmoi.hostname "dwarrowdelf" -}}
+{{- $display        = "DP-1" -}}
+{{- $display_width  = 3440.0 -}}
+{{- $display_height = 1440.0 -}}
+{{- else if eq .chezmoi.hostname "ainulindale" -}}
+{{- $display        = "eDP-1" -}}
+{{- $display_width  = 1920.0 -}}
+{{- $display_height = 1080.0 -}}
+{{- end -}}
+
+[lockscreen_widgets]
+enabled                 = false
+schema_version          = 2
+widget_order            = [ "ls-login-box" ]
+
+[lockscreen_widgets.grid]
+cell_size               = 16
+major_interval          = 4
+visible                 = true
+
+[lockscreen_widgets.widget."ls-login-box"]
+box_height              = {{ $object_height }}
+box_width               = {{ $object_width }}
+cx                      = {{ div $display_width 2 }}
+cy                      = {{ sub $display_height (div $display_height 5) }}
+output                  = {{ $display | quote }}
+placement_height        = {{ $display_height }}
+placement_width         = {{ $display_width }}
+rotation                = 0.0
+type                    = "login_box"
+
+[lockscreen_widgets.widget."ls-login-box".settings]
+background_color        = "surface_variant"
+background_opacity      = 0.90
+background_radius       = 6.0
+center_password_text    = false
+input_opacity           = 1.0
+input_radius            = 6.0
+show_caps_lock          = true
+show_keyboard_layout    = true
+show_login_button       = true
+show_media              = true
+show_session_buttons    = true
+show_unlock_hint        = true
+show_weather            = true

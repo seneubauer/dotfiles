@@ -1,18 +1,53 @@
+[layout_constants]
+top_bar_height      = 34
+
 [font]
-terminal = "ZedMono NFM Extd"
-terminal_size = 11
-widget_mono = "JetBrainsMonoNL NFM"
+terminal            = "ZedMono NFM Extd"
+terminal_size       = 11
+widget_mono         = "JetBrainsMonoNL NFM"
 
 [images]
-avatar = "~/pictures/images/icons/avatar.jpg"
+avatar              = "~/pictures/images/icons/avatar.jpg"
 
 [directory.document]
-notes = "~/documents/notes/main"
+notes               = "~/documents/notes/main"
 
 [directory.wallpaper.dark]
-wp3440 = "~/pictures/images/wallpapers/dark/3440x1440"
-wp1920 = "~/pictures/images/wallpapers/dark/1920x1080"
+wp3440              = "~/pictures/images/wallpapers/dark/3440x1440"
+wp1920              = "~/pictures/images/wallpapers/dark/1920x1080"
 
 [directory.wallpaper.light]
-wp3440 = "~/pictures/images/wallpapers/light/3440x1440"
-wp1920 = "~/pictures/images/wallpapers/light/1920x1080"
+wp3440              = "~/pictures/images/wallpapers/light/3440x1440"
+wp1920              = "~/pictures/images/wallpapers/light/1920x1080"
+
+[[widget_definition]]
+stat                = "cpu_freq"
+name                = "dw-cpu-freq"
+
+[[widget_definition]]
+stat                = "cpu_usage"
+name                = "dw-cpu-usage"
+
+[[widget_definition]]
+stat                = "cpu_temp"
+name                = "dw-cpu-temp"
+
+[[widget_definition]]
+stat                = "gpu_vram"
+name                = "dw-gpu-vram"
+
+[[widget_definition]]
+stat                = "gpu_usage"
+name                = "dw-gpu-usage"
+
+[[widget_definition]]
+stat                = "gpu_temp"
+name                = "dw-gpu-temp"
+
+[[widget_definition]]
+stat                = "ram_pct"
+name                = "dw-ram-usage"
+
+[[widget_definition]]
+stat                = "swap_pct"
+name                = "dw-swap-usage"

@@ -31,6 +31,11 @@
 "Mod+Alt+S"             = "workspace-set-layout:scrolling"
 "Mod+Alt+D"             = "workspace-set-layout:dwindle"
 "Mod+Alt+M"             = "workspace-set-layout:master"
+"Mod+1"                 = "workspace-switch:1"
+"Mod+2"                 = "workspace-switch:2"
+"Mod+3"                 = "workspace-switch:3"
+"Mod+4"                 = "workspace-switch:4"
+"Mod+5"                 = "workspace-switch:5"
 
 # overview manip
 "Mod+O"                 = "overview-toggle"

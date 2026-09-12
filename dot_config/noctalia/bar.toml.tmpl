@@ -1,152 +1,102 @@
 {{- $desktop := env "XDG_CURRENT_DESKTOP" -}}
 
 [bar]
-order = [ "top", "side" ]
+order                   = [ "top", "side" ]
 
 [bar.top]
-concave_edge_corners = true
-margin_edge = 0
-margin_ends = 0
-radius = 0
-radius_bottom_left = 6
-radius_bottom_right = 6
-radius_top_left = 0
-radius_top_right = 0
-capsule = false
-capsule_padding = 9.0
-widget_spacing = 12
-position = "top"
-start = [ "control-center", "taskbar" ]
-center = [ "workspaces" ]
+concave_edge_corners    = true
+margin_edge             = 0
+margin_ends             = 0
+radius                  = 0
+radius_bottom_left      = 6
+radius_bottom_right     = 6
+radius_top_left         = 0
+radius_top_right        = 0
+capsule                 = false
+widget_spacing          = 9
+padding                 = 9
+position                = "top"
+start                   = [ "control-center", "workspaces" ]
+center                  = [ "weather", "audio_visualizer", "media" ]
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
-end = [ "tray", "volume", "brightness", "notifications", "clipboard", "network" ]
+end                     = [ "taskbar", "tray", "keybinds", "shell_menu", "panel_menu", "volume", "notifications", "network", "clock", "date" ]
 {{- else if eq .chezmoi.hostname "ainulindale" }}
-end = [ "tray", "battery", "volume", "brightness", "notifications", "clipboard", "network" ]
+end                     = [ "taskbar", "tray", "keybinds", "shell_menu", "panel_menu", "battery", "volume", "notifications", "network", "clock", "date" ]
 {{- end }}
 
 [bar.top.actions]
-middle = "none"
-
-[bar.side]
-concave_edge_corners = true
-margin_edge = 0
-radius = 0
-auto_hide = true
-show_on_workspace_switch = true
-reserve_space = false
-widget_spacing = 12
-capsule = false
-start = [ "update_templates", "toggle_widget_edit", "toggle_widget_visibility" ]
-center = [ "clock" ]
-{{- if eq $desktop "umbriel" }}
-end = [ "open_notes", "gamermode", "keybinds", "bar" ]
-{{- else }}
-end = [ "open_notes", "gamermode", "keybinds" ]
-{{- end }}
-
-{{- if eq .chezmoi.hostname "dwarrowdelf" }}
-
-[bar.side.monitor.DP-1]
-position = "right"
-margin_ends = 300
-radius_bottom_left = 6
-radius_bottom_right = 0
-radius_top_left = 6
-radius_top_right = 0
-
-[bar.side.monitor.HDMI-A-1]
-position = "left"
-margin_ends = 300
-radius_bottom_left = 0
-radius_bottom_right = 6
-radius_top_left = 0
-radius_top_right = 6
-
-{{- else if eq .chezmoi.hostname "ainulindale" }}
-
-position = "right"
-margin_ends = 300
-radius_bottom_left = 6
-radius_bottom_right = 0
-radius_top_left = 6
-radius_top_right = 0
-
-{{- end }}
-
-[widget.workspaces]
-style = "minimal"
-max_label_chars = 3
-anchor = true
+middle                  = "none"
 
 [widget.control-center]
-glyph = "navigation"
+glyph                   = "navigation"
 
-# [widget.audio_visualizer]
-# anchor = true
-# show_when_idle = true
-# width = 256
-# bands = 128
-# capsule = true
-# mirrored = false
+[widget.workspaces]
+style                   = "minimal"
+max_label_chars         = 3
+anchor                  = true
 
-[widget.battery]
-show_label = false
+[widget.weather]
+show_condition          = false
+show_temperature        = false
 
-[widget.volume]
-show_label = false
+[widget.audio_visualizer]
+anchor                  = true
+show_when_idle          = true
+width                   = 256
+bands                   = 128
+capsule                 = true
+mirrored                = false
 
-[widget.brightness]
-show_label = false
+[widget.media]
+title_scroll            = "on_hover"
 
-[widget.network]
-show_label = false
+[widget.taskbar]
+show_all_outputs        = true
 
-[widget.update_templates]
-type = "custom_button"
-glyph = "file-settings"
-
-[widget.update_templates.actions]
-left = "exec noctalia msg templates-apply"
-
-[widget.toggle_widget_edit]
-type = "custom_button"
-glyph = "device-desktop-cog"
-
-[widget.toggle_widget_edit.actions]
-left = "exec noctalia msg desktop-widgets-toggle-edit"
-
-[widget.open_notes]
-type = "custom_button"
-glyph = "notes"
-
-[widget.open_notes.actions]
-left = "exec noctalia msg panel-toggle davemhammer/obsidian:manager"
-
-[widget.toggle_widget_visibility]
-type = "custom_button"
-glyph = "device-desktop"
-
-[widget.toggle_widget_visibility.actions]
-left = "exec noctalia msg desktop-widgets-toggle"
+[widget.tray]
+drawer                  = true
 
 [widget.keybinds]
-type = "custom_button"
-glyph = "keyboard"
+type                    = "custom_button"
+glyph                   = "keyboard"
 
 [widget.keybinds.actions]
 {{- if eq $desktop "umbriel" }}
-left = "exec umbriel msg cheatsheet-toggle"
+left                    = "exec umbriel msg cheatsheet-toggle"
 {{- else if eq $desktop "niri" }}
-left = "exec niri msg action show-hotkey-overlay"
+left                    = "exec niri msg action show-hotkey-overlay"
 {{- end }}
 
-[widget.gamermode]
-type = "nomadcxx/gamer-mode:gamermode"
+[widget.shell_menu]
+type                    = "custom_button"
+glyph                   = "notes"
+
+[widget.shell_menu.actions]
+left                    = "none"
+
+[widget.panel_menu]
+type                    = "custom_button"
+glyph                   = "notes"
+
+[widget.panel_menu.actions]
+left                    = "none"
+
+[widget.battery]
+show_label              = false
+
+[widget.volume]
+show_label              = false
+
+[widget.notifications]
+hide_when_no_unread     = true
+
+[widget.network]
+show_label              = false
 
 [widget.clock]
-anchor = true
-format = "{:%H:%M}"
-tooltip_format = "{:%Y-%m-%d}"
+format                  = "{:%H:%M}"
+tooltip_format          = ""
 
-[widget.bar]
-type = "noctalia/umbriel-companion:bar"
+[widget.date]
+format                  = "{:%Y-%m-%d}"
+tooltip_format          = "{:%A, %B %d}"

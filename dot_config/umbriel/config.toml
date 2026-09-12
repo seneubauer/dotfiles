@@ -13,7 +13,3 @@ files = [
     "src/workspaces.toml",
     "noctalia.toml"
 ]
-
-[events]
-lid_close = "notify-send 'lid closed'"
-lid_open = "notify-send 'lid open'"
