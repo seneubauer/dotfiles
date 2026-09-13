@@ -124,7 +124,7 @@ binds {
 
     // noctalia shell
     Mod+E                       { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+I                       { spawn-sh "noctalia msg panel-toggle control-center:" }
+    Mod+I                       { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Z                       { spawn-sh "noctalia msg settings-toggle"; }
     Mod+V                       { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+W                       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
@@ -159,8 +159,8 @@ binds {
     Mod+Q                       { close-window; }
     Mod+K                       { focus-window-up; }
     Mod+J                       { focus-window-down; }
-    Mod+[                       { consume-or-expel-column-left; }
-    Mod+]                       { consume-or-expel-column-right; }
+    Mod+bracketleft             { consume-or-expel-column-left; }
+    Mod+bracketright            { consume-or-expel-column-right; }
     Mod+A                       { set-column-width 0.333; }
     Mod+S                       { set-column-width 0.5; }
     Mod+D                       { set-column-width 0.667; }
