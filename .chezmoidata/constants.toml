@@ -5,6 +5,8 @@ top_bar_height      = 34
 terminal            = "ZedMono NFM Extd"
 terminal_size       = 11
 widget_mono         = "JetBrainsMonoNL NFM"
+menu                = "JetBrainsMonoNL NFM"
+menu_size           = 14
 
 [images]
 avatar              = "~/pictures/images/icons/avatar.jpg"

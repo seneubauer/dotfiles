@@ -1,7 +1,7 @@
 {{- $desktop := env "XDG_CURRENT_DESKTOP" -}}
 
 [bar]
-order                   = [ "top", "side" ]
+order                   = [ "top" ]
 
 [bar.top]
 concave_edge_corners    = true
@@ -74,14 +74,14 @@ type                    = "custom_button"
 glyph                   = "terminal-2"
 
 [widget.shell_menu.actions]
-left                    = "none"
+left                    = "exec ~/.config/fuzzel/shell-commands.sh"
 
 [widget.panel_menu]
 type                    = "custom_button"
-glyph                   = "topology-star-3"
+glyph                   = "background"
 
 [widget.panel_menu.actions]
-left                    = "none"
+left                    = "exec ~/.config/fuzzel/panel-commands.sh"
 
 [widget.battery]
 show_label              = false
