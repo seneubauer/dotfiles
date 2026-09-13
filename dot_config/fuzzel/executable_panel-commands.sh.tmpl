@@ -1,16 +1,16 @@
 commands() {
     cat <<EOF
-desktop-widgets-toggle
-desktop-widgets-toggle-edit
-templates-apply
+umbriel
+obsidian
+gamer-mode
 EOF
 }
 
 run_command() {
     case "$1" in
-        "desktop-widgets-toggle") noctalia msg desktop-widgets-toggle ;;
-        "desktop-widgets-toggle-edit") noctalia msg desktop-widgets-toggle-edit ;;
-        "templates-apply") noctalia msg templates-apply ;;
+        "umbriel")      noctalia msg panel-toggle noctalia/umbriel-companion:panel ;;
+        "obsidian")     noctalia msg panel-toggle davemhammer/obsidian:manager ;;
+        "gamer-mode")   noctalia msg panel-toggle nomadcxx/gamer-mode:main ;;
     esac
 }
 
