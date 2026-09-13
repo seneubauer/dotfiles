@@ -20,6 +20,7 @@
 "Mod+Shift+Alt+L"       = "column-move-to-output-right"
 "Mod+Shift+Alt+K"       = "column-move-to-output-up"
 "Mod+Shift+Alt+J"       = "column-move-to-output-down"
+"Mod+M"                 = "column-center"
 
 # window manip
 "Mod+Shift+A"           = "window-toggle-floating"
@@ -32,6 +33,12 @@
 "Mod+J"                 = "window-focus-down"
 "Mod+bracketleft"       = "window-consume-or-expel-left"
 "Mod+bracketright"      = "window-consume-or-expel-right"
+"Mod+A"                 = "window-set-width:0.333"
+"Mod+S"                 = "window-set-width:0.5"
+"Mod+D"                 = "window-set-width:0.667"
+"Mod+F"                 = "window-set-width:1.0"
+"Mod+R"                 = "window-cycle-width"
+"Mod+T"                 = "window-cycle-height"
 
 # workspace manip
 "Mod+Ctrl+Alt+H"        = "workspace-move-to-output-left"
@@ -62,15 +69,6 @@
 "Mod+Space"             = "scratchpad-toggle"
 "Mod+Shift+Space"       = "window-toggle-scratchpad"
 "Mod+Tab"               = "scratchpad-focus-next"
-
-# column manip
-"Mod+A"                 = "window-set-width:0.333"
-"Mod+S"                 = "window-set-width:0.5"
-"Mod+D"                 = "window-set-width:0.667"
-"Mod+F"                 = "window-set-width:1.0"
-"Mod+R"                 = "window-cycle-width"
-"Mod+T"                 = "window-cycle-height"
-"Mod+M"                 = "column-center"
 
 # system manip
 "Mod+Shift+minus"       = "cheatsheet-toggle"

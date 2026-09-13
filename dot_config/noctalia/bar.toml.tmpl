@@ -21,7 +21,7 @@ center                  = [ "weather", "audio_visualizer", "media" ]
 {{- if eq .chezmoi.hostname "dwarrowdelf" }}
 end                     = [ "taskbar", "tray", "keybinds", "shell_menu", "panel_menu", "volume", "notifications", "network", "clock", "date" ]
 {{- else if eq .chezmoi.hostname "ainulindale" }}
-end                     = [ "taskbar", "tray", "keybinds", "shell_menu", "panel_menu", "battery", "volume", "notifications", "network", "clock", "date" ]
+end                     = [ "taskbar", "tray", "battery",  "keybinds", "shell_menu", "panel_menu", "volume", "notifications", "network", "clock", "date" ]
 {{- end }}
 
 [bar.top.actions]
