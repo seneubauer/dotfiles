@@ -6,7 +6,8 @@ lines                           = 10
 dpi-aware                       = no
 icon-theme                      = Papirus-Dark
 show-actions                    = yes
-exit-on-keyboard-focus-loss     = no
+keyboard-focus                  = on-demand
+exit-on-keyboard-focus-loss     = yes
 hide-before-typing              = no
 include                         = ~/.config/fuzzel/themes/noctalia
 
@@ -16,5 +17,6 @@ radius                          = 6
 selection-radius                = 6
 
 [key-bindings]
-prev                            = Ctrl+j
-next                            = Ctrl+k
+delete-line-forward             = none
+prev                            = Down Control+j
+next                            = Up Control+k

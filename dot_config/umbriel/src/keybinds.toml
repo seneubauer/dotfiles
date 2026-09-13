@@ -11,6 +11,10 @@
 "Mod+W"                 = "spawn:noctalia msg panel-toggle wallpaper"
 "Mod+Shift+Q"           = "spawn:noctalia msg panel-toggle session"
 
+# custom shell
+"Mod+N"                 = "spawn:~/.config/fuzzel/shell-commands.sh"
+"Mod+P"                 = "spawn:~/.config/fuzzel/panel-commands.sh"
+
 # column manip
 "Mod+Shift+H"           = "column-move-left"
 "Mod+Shift+L"           = "column-move-right"
