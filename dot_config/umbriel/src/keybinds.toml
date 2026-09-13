@@ -4,7 +4,7 @@
 "Mod+Return"            = "spawn:alacritty"
 
 # noctalia shell
-"Mod"                   = "spawn:noctalia msg panel-toggle launcher"
+"Mod+E"                 = "spawn:noctalia msg panel-toggle launcher"
 "Mod+I"                 = "spawn:noctalia msg panel-toggle control-center"
 "Mod+Z"                 = "spawn:noctalia msg settings-toggle"
 "Mod+V"                 = "spawn:noctalia msg panel-toggle clipboard"
@@ -21,28 +21,7 @@
 "Mod+Shift+Alt+K"       = "column-move-to-output-up"
 "Mod+Shift+Alt+J"       = "column-move-to-output-down"
 
-# workspace manip
-"Mod+Ctrl+Shift+H"      = "workspace-move-to-output-left"
-"Mod+Ctrl+Shift+L"      = "workspace-move-to-output-right"
-"Mod+Ctrl+Shift+K"      = "workspace-move-to-output-up"
-"Mod+Ctrl+Shift+J"      = "workspace-move-to-output-down"
-"Mod+Alt+J"             = "workspace-next"
-"Mod+Alt+K"             = "workspace-previous"
-"Mod+Alt+S"             = "workspace-set-layout:scrolling"
-"Mod+Alt+D"             = "workspace-set-layout:dwindle"
-"Mod+Alt+M"             = "workspace-set-layout:master"
-"Mod+1"                 = "workspace-switch:1"
-"Mod+2"                 = "workspace-switch:2"
-"Mod+3"                 = "workspace-switch:3"
-"Mod+4"                 = "workspace-switch:4"
-"Mod+5"                 = "workspace-switch:5"
-
-# overview manip
-"Mod+O"                 = "overview-toggle"
-
 # window manip
-"Mod+Ctrl+J"            = "window-move-to-workspace-next"
-"Mod+Ctrl+K"            = "window-move-to-workspace-previous"
 "Mod+Shift+A"           = "window-toggle-floating"
 "Mod+Shift+S"           = "window-toggle-fullscreen"
 "Mod+Shift+D"           = "window-toggle-maximize"
@@ -53,6 +32,31 @@
 "Mod+J"                 = "window-focus-down"
 "Mod+bracketleft"       = "window-consume-or-expel-left"
 "Mod+bracketright"      = "window-consume-or-expel-right"
+
+# workspace manip
+"Mod+Ctrl+Alt+H"        = "workspace-move-to-output-left"
+"Mod+Ctrl+Alt+L"        = "workspace-move-to-output-right"
+"Mod+Ctrl+Alt+K"        = "workspace-move-to-output-up"
+"Mod+Ctrl+Alt+J"        = "workspace-move-to-output-down"
+"Mod+Ctrl+J"            = "workspace-next"
+"Mod+Ctrl+K"            = "workspace-previous"
+"Mod+Ctrl+S"            = "workspace-set-layout:scrolling"
+"Mod+Ctrl+D"            = "workspace-set-layout:dwindle"
+"Mod+Ctrl+M"            = "workspace-set-layout:master"
+"Mod+1"                 = "workspace-switch:1"
+"Mod+2"                 = "workspace-switch:2"
+"Mod+3"                 = "workspace-switch:3"
+"Mod+4"                 = "workspace-switch:4"
+"Mod+5"                 = "workspace-switch:5"
+
+# output manip
+"Mod+Alt+H"             = "output-focus-left"
+"Mod+Alt+L"             = "output-focus-right"
+"Mod+Alt+K"             = "output-focus-up"
+"Mod+Alt+J"             = "output-focus-down"
+
+# overview manip
+"Mod+O"                 = "overview-toggle"
 
 # scratchpad mapip
 "Mod+Space"             = "scratchpad-toggle"
