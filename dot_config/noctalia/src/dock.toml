@@ -1,0 +1,11 @@
+[dock]
+background_opacity  = 0.75
+reserve_space       = false
+auto_hide           = true
+radius              = 6
+enabled             = true
+icon_size           = 28
+launcher_position   = "start"
+magnification       = false
+shadow              = false
+show_dots           = true

@@ -1,4 +1,14 @@
 {{- $desktop := env "XDG_CURRENT_DESKTOP" -}}
+{{- $wm_companion       := "" -}}
+{{- $battery            := "" -}}
+
+{{- if eq .chezmoi.hostname "ainulindale" -}}
+{{- $battery            = "battery" -}}
+{{- end -}}
+
+{{- if eq $desktop "umbriel" -}}
+{{- $wm_companion       = "wm_companion" -}}
+{{- end -}}
 
 [bar]
 order                   = [ "top" ]
@@ -18,11 +28,7 @@ padding                 = 9
 position                = "top"
 start                   = [ "control-center", "workspaces" ]
 center                  = [ "weather", "audio_visualizer", "media" ]
-{{- if eq .chezmoi.hostname "dwarrowdelf" }}
-end                     = [ "taskbar", "tray", "keybinds", "shell_menu", "panel_menu", "volume", "notifications", "network", "clock", "date" ]
-{{- else if eq .chezmoi.hostname "ainulindale" }}
-end                     = [ "taskbar", "tray", "battery",  "keybinds", "shell_menu", "panel_menu", "volume", "notifications", "network", "clock", "date" ]
-{{- end }}
+end                     = [ "tray", {{ $battery | quote }}, "volume", "notifications", "network", {{ $wm_companion | quote }}, "gamermode", "clock", "date" ]
 
 [bar.top.actions]
 middle                  = "none"
@@ -52,36 +58,8 @@ title_scroll            = "on_hover"
 hide_artist             = true
 show_progress           = true
 
-[widget.taskbar]
-show_all_outputs        = true
-
 [widget.tray]
 drawer                  = true
-
-[widget.keybinds]
-type                    = "custom_button"
-glyph                   = "keyboard"
-
-[widget.keybinds.actions]
-{{- if eq $desktop "umbriel" }}
-left                    = "exec umbriel msg cheatsheet-toggle"
-{{- else if eq $desktop "niri" }}
-left                    = "exec niri msg action show-hotkey-overlay"
-{{- end }}
-
-[widget.shell_menu]
-type                    = "custom_button"
-glyph                   = "terminal-2"
-
-[widget.shell_menu.actions]
-left                    = "exec ~/.config/fuzzel/shell-commands.sh"
-
-[widget.panel_menu]
-type                    = "custom_button"
-glyph                   = "background"
-
-[widget.panel_menu.actions]
-left                    = "exec ~/.config/fuzzel/panel-commands.sh"
 
 [widget.battery]
 show_label              = false
@@ -102,3 +80,10 @@ tooltip_format          = ""
 [widget.date]
 format                  = "{:%Y-%m-%d}"
 tooltip_format          = "{:%A, %B %d}"
+
+[widget.wm_companion]
+display_mode            = "Layout"
+type                    = "noctalia/umbriel-companion:bar"
+
+[widget.gamermode]
+type                    = "nomadcxx/gamer-mode:gamermode"

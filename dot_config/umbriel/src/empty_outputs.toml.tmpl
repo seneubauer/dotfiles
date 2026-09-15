@@ -1,47 +1,47 @@
 {{- if eq .chezmoi.hostname "ainulindale" }}
 
 [output.eDP-1]
-enabled = true
-mode = "1920x1080@60.010"
-position = [0, 0]
-scale = 1.00
-transform = "normal"
-vrr = "disabled"
-tearing = true
-direct_scanout = true
-hdr = "auto"
-sdr_white = 203
-# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
-workspaces = 5
+enabled         = true
+mode            = "1920x1080@60.010"
+position        = [0, 0]
+scale           = 1.00
+transform       = "normal"
+vrr             = "disabled"
+tearing         = true
+direct_scanout  = true
+hdr             = "auto"
+sdr_white       = 203
+# workspaces    = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+workspaces      = 5
 
 {{- else if eq .chezmoi.hostname "dwarrowdelf" }}
 
 [output.DP-1]
-enabled = true
-mode = "3440x1440@144"
-position = [1920, 0]
-scale = 1.00
-transform = "normal"
-vrr = "disabled"
-tearing = true
-direct_scanout = true
-hdr = "auto"
-sdr_white = 203
-# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT", "GAM" ]
-workspaces = 5
+enabled         = true
+mode            = "3440x1440@144"
+position        = [1920, 0]
+scale           = 1.00
+transform       = "normal"
+vrr             = "disabled"
+tearing         = true
+direct_scanout  = true
+hdr             = "auto"
+sdr_white       = 203
+# workspaces    = [ "GEN", "SOC", "WEB", "DEV", "ENT", "GAM" ]
+workspaces      = 5
 
 [output.HDMI-A-1]
-enabled = true
-mode = "1920x1080@60.010"
-position = [0, 0]
-scale = 1.00
-transform = "normal"
-vrr = "disabled"
-tearing = true
-direct_scanout = true
-hdr = "auto"
-sdr_white = 203
-# workspaces = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
-workspaces = 5
+enabled         = true
+mode            = "1920x1080@60.010"
+position        = [0, 0]
+scale           = 1.00
+transform       = "normal"
+vrr             = "disabled"
+tearing         = true
+direct_scanout  = true
+hdr             = "auto"
+sdr_white       = 203
+# workspaces    = [ "GEN", "SOC", "WEB", "DEV", "ENT" ]
+workspaces      = 5
 
 {{- end }}

@@ -1,6 +1,7 @@
 [general]
 autostart = [
-    "noctalia"
+    "noctalia",
+    "~/.config/umbriel/submap-subscription.sh"
 ]
 
 mod_key                 = "Super"

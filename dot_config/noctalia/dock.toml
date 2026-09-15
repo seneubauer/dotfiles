@@ -1,8 +1,0 @@
-[dock]
-background_opacity = 0.85
-enabled = false
-icon_size = 36
-launcher_position = "start"
-magnification = false
-shadow = false
-show_dots = true

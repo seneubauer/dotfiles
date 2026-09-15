@@ -1,92 +1,174 @@
 [keybinds]
 
 # generics
-"Mod+Return"            = "spawn:alacritty"
+"Mod+Return"                = "spawn:alacritty"
 
 # noctalia shell
-"Mod+E"                 = "spawn:noctalia msg panel-toggle launcher"
-"Mod+I"                 = "spawn:noctalia msg panel-toggle control-center"
-"Mod+Z"                 = "spawn:noctalia msg settings-toggle"
-"Mod+V"                 = "spawn:noctalia msg panel-toggle clipboard"
-"Mod+W"                 = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+Shift+Q"           = "spawn:noctalia msg panel-toggle session"
+"Mod+."                     = "spawn:noctalia msg panel-toggle launcher"
+"Mod+I"                     = "spawn:noctalia msg panel-toggle control-center"
+"Mod+Comma"                 = "spawn:noctalia msg settings-toggle"
+"Mod+W"                     = "spawn:noctalia msg panel-toggle wallpaper"
+"Alt+Tab"                   = "spawn:noctalia msg window-switcher"
 
-# custom shell
-"Mod+N"                 = "spawn:~/.config/fuzzel/shell-commands.sh"
-"Mod+P"                 = "spawn:~/.config/fuzzel/panel-commands.sh"
+# submap: entry points
+"Mod+N"                     = "submap:noctalia"
+"submap[noctalia],Y"        = { action = "submap:system", repeat = false }
+"submap[noctalia],T"        = { action = "submap:theme", repeat = false }
+"submap[noctalia],M"        = { action = "submap:media", repeat = false }
+"submap[noctalia],S"        = { action = "submap:screenshot", repeat = false }
+"submap[noctalia],W"        = { action = "submap:widgets", repeat = false }
+"submap[noctalia],P"        = { action = "submap:power", repeat = false }
+"submap[noctalia],Escape"   = "submap:reset"
+
+"Mod+U"                     = "submap:umbriel"
+"submap[umbriel],A"         = { action = "submap:window", repeat = false }
+"submap[umbriel],S"         = { action = "submap:column", repeat = false }
+"submap[umbriel],D"         = { action = "submap:workspace", repeat = false }
+"submap[umbriel],Escape"    = "submap:reset"
+
+# submap: system
+"submap[system],D"          = { action = "notification-dnd-toggle", submap = "reset" }
+"submap[system],S"          = { action = "caffeine-toggle", submap = "reset" }
+"submap[system],C"          = { action = "cheatsheet-toggle", submap = "reset" }
+"submap[system],Escape"      = "submap:reset"
+
+# submap: theme
+"submap[theme],D"           = { action = "spawn:noctalia msg theme-mode-set dark", submap = "reset" }
+"submap[theme],L"           = { action = "spawn:noctalia msg theme-mode-set light", submap = "reset" }
+"submap[theme],U"           = { action = "spawn:noctalia msg templates-apply", submap = "reset" }
+"submap[theme],Escape"      = "submap:reset"
+
+# submap: media
+"submap[media],J"           = { action = "spawn:noctalia msg media next", submap = "reset" }
+"submap[media],K"           = { action = "spawn:noctalia msg media previous", submap = "reset" }
+"submap[media],P"           = { action = "spawn:noctalia msg media toggle", submap = "reset" }
+"submap[media],S"           = { action = "spawn:noctalia msg media stop", submap = "reset" }
+"submap[media],Escape"      = "submap:reset"
+
+# submap: screenshot
+"submap[screenshot],R"      = { action = "spawn:noctalia msg screenshot-region", submap = "reset" }
+"submap[screenshot],F"      = { action = "spawn:noctalia msg screenshot-fullscreen", submap = "reset" }
+"submap[screenshot],A"      = { action = "spawn:noctalia msg screenshot-annotate", submap = "reset" }
+"submap[screenshot],M"      = { action = "spawn:noctalia msg annotate", submap = "reset" }
+"submap[screenshot],Escape" = "submap:reset"
+
+# submap: desktop widgets
+"submap[widgets],T"         = { action = "spawn:noctalia msg desktop-widgets-toggle", submap = "reset" }
+"submap[widgets],E"         = { action = "spawn:noctalia msg desktop-widgets-toggle-edit", submap = "reset" }
+"submap[widgets],Escape"    = "submap:reset"
+
+# submap: power profile
+"submap[power],P"           = { action = "spawn:noctalia msg power-set performance", submap = "reset" }
+"submap[power],B"           = { action = "spawn:noctalia msg power-set balanced", submap = "reset" }
+"submap[power],E"           = { action = "spawn:noctalia msg power-set power-saver", submap = "reset" }
+"submap[power],Escape"      = "submap:reset"
+
+# submap: window
+"submap[window],M"          = { action = "submap:wd_mode", repeat = false }
+"submap[window],W"          = { action = "submap:wd_width", repeat = false }
+"submap[window],H"          = { action = "submap:wd_height", repeat = false }
+"submap[window],Escape"     = "submap:reset"
+
+# submap: window mode
+"submap[wd_mode],F"         = { action = "window-toggle-floating", submap = "reset" }
+"submap[wd_mode],S"         = { action = "window-toggle-fullscreen", submap = "reset" }
+"submap[wd_mode],D"         = { action = "window-toggle-maximize", submap = "reset" }
+"submap[wd_mode],Escape"    = "submap:reset"
+
+# submap: window width
+"submap[wd_width],A"        = { action = "window-set-width:0.333", submap = "reset" }
+"submap[wd_width],S"        = { action = "window-set-width:0.5", submap = "reset" }
+"submap[wd_width],D"        = { action = "window-set-width:0.667", submap = "reset" }
+"submap[wd_width],F"        = { action = "window-set-width:1.0", submap = "reset" }
+"submap[wd_width],Escape"   = "submap:reset"
+
+# submap: window height
+"submap[wd_height],A"       = { action = "window-set-height:0.333", submap = "reset" }
+"submap[wd_height],S"       = { action = "window-set-height:0.5", submap = "reset" }
+"submap[wd_height],D"       = { action = "window-set-height:0.667", submap = "reset" }
+"submap[wd_height],F"       = { action = "window-set-height:1.0", submap = "reset" }
+"submap[wd_height],Escape"  = "submap:reset"
+
+# submap: column
+"submap[column],H"          = { action = "column-move-to-output-left", submap = "reset" }
+"submap[column],L"          = { action = "column-move-to-output-right", submap = "reset" }
+"submap[column],K"          = { action = "column-move-to-output-up", submap = "reset" }
+"submap[column],J"          = { action = "column-move-to-output-down", submap = "reset" }
+"submap[column],1"          = { action = "column-move-to-workspace:1", submap = "reset" }
+"submap[column],2"          = { action = "column-move-to-workspace:2", submap = "reset" }
+"submap[column],3"          = { action = "column-move-to-workspace:3", submap = "reset" }
+"submap[column],4"          = { action = "column-move-to-workspace:4", submap = "reset" }
+"submap[column],5"          = { action = "column-move-to-workspace:5", submap = "reset" }
+"submap[column],Escape"     = "submap:reset"
+
+# submap: workspace
+"submap[workspace],M"       = { action = "submap:ws_move", repeat = false }
+"submap[workspace],L"       = { action = "submap:ws_layout", repeat = false }
+
+# submap: workspace movement
+"submap[ws_move],H"         = { action = "workspace-move-to-output-left", submap = "reset" }
+"submap[ws_move],L"         = { action = "workspace-move-to-output-right", submap = "reset" }
+"submap[ws_move],K"         = { action = "workspace-move-to-output-up", submap = "reset" }
+"submap[ws_move],J"         = { action = "workspace-move-to-output-down", submap = "reset" }
+"submap[ws_move],Escape"    = "submap:reset"
+
+# submap: workspace layout
+"submap[ws_layout],M"       = { action = "workspace-set-layout:master", submap = "reset" }
+"submap[ws_layout],S"       = { action = "workspace-set-layout:scrolling", submap = "reset" }
+"submap[ws_layout],D"       = { action = "workspace-set-layout:dwindle", submap = "reset" }
+"submap[ws_layout],Escape"  = "submap:reset"
 
 # column manip
-"Mod+Shift+H"           = "column-move-left"
-"Mod+Shift+L"           = "column-move-right"
-"Mod+Shift+J"           = "column-move-to-workspace-next"
-"Mod+Shift+K"           = "column-move-to-workspace-previous"
-"Mod+Shift+Alt+H"       = "column-move-to-output-left"
-"Mod+Shift+Alt+L"       = "column-move-to-output-right"
-"Mod+Shift+Alt+K"       = "column-move-to-output-up"
-"Mod+Shift+Alt+J"       = "column-move-to-output-down"
-"Mod+M"                 = "column-center"
+"Mod+Shift+H"               = "column-move-left"
+"Mod+Shift+L"               = "column-move-right"
+"Mod+Shift+J"               = "column-move-to-workspace-next"
+"Mod+Shift+K"               = "column-move-to-workspace-previous"
+"Mod+M"                     = "column-center"
 
 # window manip
-"Mod+Shift+A"           = "window-toggle-floating"
-"Mod+Shift+S"           = "window-toggle-fullscreen"
-"Mod+Shift+D"           = "window-toggle-maximize"
-"Mod+Q"                 = "window-close"
-"Mod+H"                 = "window-focus-left"
-"Mod+L"                 = "window-focus-right"
-"Mod+K"                 = "window-focus-up"
-"Mod+J"                 = "window-focus-down"
-"Mod+bracketleft"       = "window-consume-or-expel-left"
-"Mod+bracketright"      = "window-consume-or-expel-right"
-"Mod+A"                 = "window-set-width:0.333"
-"Mod+S"                 = "window-set-width:0.5"
-"Mod+D"                 = "window-set-width:0.667"
-"Mod+F"                 = "window-set-width:1.0"
-"Mod+R"                 = "window-cycle-width"
-"Mod+T"                 = "window-cycle-height"
+"Mod+Q"                     = "window-close"
+"Mod+H"                     = "window-focus-left"
+"Mod+L"                     = "window-focus-right"
+"Mod+K"                     = "window-focus-up"
+"Mod+J"                     = "window-focus-down"
+"Mod+bracketleft"           = "window-consume-or-expel-left"
+"Mod+bracketright"          = "window-consume-or-expel-right"
+"Mod+R"                     = "window-cycle-width"
+"Mod+T"                     = "window-cycle-height"
 
 # workspace manip
-"Mod+Ctrl+Alt+H"        = "workspace-move-to-output-left"
-"Mod+Ctrl+Alt+L"        = "workspace-move-to-output-right"
-"Mod+Ctrl+Alt+K"        = "workspace-move-to-output-up"
-"Mod+Ctrl+Alt+J"        = "workspace-move-to-output-down"
-"Mod+Ctrl+J"            = "workspace-next"
-"Mod+Ctrl+K"            = "workspace-previous"
-"Mod+Ctrl+S"            = "workspace-set-layout:scrolling"
-"Mod+Ctrl+D"            = "workspace-set-layout:dwindle"
-"Mod+Ctrl+M"            = "workspace-set-layout:master"
-"Mod+1"                 = "workspace-switch:1"
-"Mod+2"                 = "workspace-switch:2"
-"Mod+3"                 = "workspace-switch:3"
-"Mod+4"                 = "workspace-switch:4"
-"Mod+5"                 = "workspace-switch:5"
+"Mod+Ctrl+J"                = "workspace-next"
+"Mod+Ctrl+K"                = "workspace-previous"
+"Mod+1"                     = "workspace-switch:1"
+"Mod+2"                     = "workspace-switch:2"
+"Mod+3"                     = "workspace-switch:3"
+"Mod+4"                     = "workspace-switch:4"
+"Mod+5"                     = "workspace-switch:5"
 
 # output manip
-"Mod+Alt+H"             = "output-focus-left"
-"Mod+Alt+L"             = "output-focus-right"
-"Mod+Alt+K"             = "output-focus-up"
-"Mod+Alt+J"             = "output-focus-down"
+"Mod+Alt+H"                 = "output-focus-left"
+"Mod+Alt+L"                 = "output-focus-right"
+"Mod+Alt+K"                 = "output-focus-up"
+"Mod+Alt+J"                 = "output-focus-down"
 
 # overview manip
-"Mod+O"                 = "overview-toggle"
+"Mod+O"                     = "overview-toggle"
 
 # scratchpad mapip
-"Mod+Space"             = "scratchpad-toggle"
-"Mod+Shift+Space"       = "window-toggle-scratchpad"
-"Mod+Tab"               = "scratchpad-focus-next"
-
-# system manip
-"Mod+Shift+minus"       = "cheatsheet-toggle"
+"Mod+Space"                 = "scratchpad-toggle"
+"Mod+Shift+Space"           = "window-toggle-scratchpad"
+"Mod+Tab"                   = "scratchpad-focus-next"
 
 # volume control
-"XF86AudioRaiseVolume"  = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-"XF86AudioLowerVolume"  = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-"XF86AudioMute"         = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+"XF86AudioRaiseVolume"      = "spawn:noctalia msg volume-up"
+"XF86AudioLowerVolume"      = "spawn:noctalia msg volume-down"
+"XF86AudioMute"             = "spawn:noctalia msg volume-mute"
 
 # playback control
-"XF86AudioPlay"         = "spawn:playerctl play-pause"
-"XF86AudioNext"         = "spawn:playerctl next"
-"XF86AudioPrev"         = "spawn:playerctl previous"
+"XF86AudioPlay"             = "spawn:playerctl play-pause"
+"XF86AudioNext"             = "spawn:playerctl next"
+"XF86AudioPrev"             = "spawn:playerctl previous"
 
 # brightness control
-"XF86MonBrightnessUp"   = "spawn:brightnessctl set +5%"
-"XF86MonBrightnessDown" = "spawn:brightnessctl set -5%"
+"XF86MonBrightnessUp"       = "spawn:noctalia msg brightness-up"
+"XF86MonBrightnessDown"     = "spawn:noctalia msg brightness-down"

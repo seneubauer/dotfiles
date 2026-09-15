@@ -1,0 +1,14 @@
+[include]
+files = [
+    "src/bar.toml",
+    "src/dock.toml",
+    "src/idle.toml",
+    "src/lockscreen_widgets.toml",
+    "src/osd.toml",
+    "src/plugins.toml",
+    "src/settings.toml",
+    "src/shell.toml",
+    "src/theme.toml",
+    "src/wallpaper.toml",
+    "src/widgets.toml"
+]
