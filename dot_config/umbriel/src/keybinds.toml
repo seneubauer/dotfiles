@@ -4,7 +4,7 @@
 "Mod+Return"                = "spawn:alacritty"
 
 # noctalia shell
-"Mod+."                     = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Period"                = "spawn:noctalia msg panel-toggle launcher"
 "Mod+I"                     = "spawn:noctalia msg panel-toggle control-center"
 "Mod+Comma"                 = "spawn:noctalia msg settings-toggle"
 "Mod+W"                     = "spawn:noctalia msg panel-toggle wallpaper"
@@ -27,9 +27,9 @@
 "submap[umbriel],Escape"    = "submap:reset"
 
 # submap: system
-"submap[system],D"          = { action = "notification-dnd-toggle", submap = "reset" }
-"submap[system],S"          = { action = "caffeine-toggle", submap = "reset" }
-"submap[system],C"          = { action = "cheatsheet-toggle", submap = "reset" }
+"submap[system],D"          = { action = "spawn:noctalia msg notification-dnd-toggle", submap = "reset" }
+"submap[system],S"          = { action = "spawn:noctalia msg caffeine-toggle", submap = "reset" }
+"submap[system],C"          = { action = "spawn:noctalia msg cheatsheet-toggle", submap = "reset" }
 "submap[system],Escape"      = "submap:reset"
 
 # submap: theme
@@ -70,35 +70,35 @@
 "submap[window],Escape"     = "submap:reset"
 
 # submap: window mode
-"submap[wd_mode],F"         = { action = "window-toggle-floating", submap = "reset" }
-"submap[wd_mode],S"         = { action = "window-toggle-fullscreen", submap = "reset" }
-"submap[wd_mode],D"         = { action = "window-toggle-maximize", submap = "reset" }
+"submap[wd_mode],F"         = { action = "spawn:noctalia msg window-toggle-floating", submap = "reset" }
+"submap[wd_mode],S"         = { action = "spawn:noctalia msg window-toggle-fullscreen", submap = "reset" }
+"submap[wd_mode],D"         = { action = "spawn:noctalia msg window-toggle-maximize", submap = "reset" }
 "submap[wd_mode],Escape"    = "submap:reset"
 
 # submap: window width
-"submap[wd_width],A"        = { action = "window-set-width:0.333", submap = "reset" }
-"submap[wd_width],S"        = { action = "window-set-width:0.5", submap = "reset" }
-"submap[wd_width],D"        = { action = "window-set-width:0.667", submap = "reset" }
-"submap[wd_width],F"        = { action = "window-set-width:1.0", submap = "reset" }
+"submap[wd_width],A"        = { action = "spawn:noctalia msg window-set-width:0.333", submap = "reset" }
+"submap[wd_width],S"        = { action = "spawn:noctalia msg window-set-width:0.5", submap = "reset" }
+"submap[wd_width],D"        = { action = "spawn:noctalia msg window-set-width:0.667", submap = "reset" }
+"submap[wd_width],F"        = { action = "spawn:noctalia msg window-set-width:1.0", submap = "reset" }
 "submap[wd_width],Escape"   = "submap:reset"
 
 # submap: window height
-"submap[wd_height],A"       = { action = "window-set-height:0.333", submap = "reset" }
-"submap[wd_height],S"       = { action = "window-set-height:0.5", submap = "reset" }
-"submap[wd_height],D"       = { action = "window-set-height:0.667", submap = "reset" }
-"submap[wd_height],F"       = { action = "window-set-height:1.0", submap = "reset" }
+"submap[wd_height],A"       = { action = "spawn:noctalia msg window-set-height:0.333", submap = "reset" }
+"submap[wd_height],S"       = { action = "spawn:noctalia msg window-set-height:0.5", submap = "reset" }
+"submap[wd_height],D"       = { action = "spawn:noctalia msg window-set-height:0.667", submap = "reset" }
+"submap[wd_height],F"       = { action = "spawn:noctalia msg window-set-height:1.0", submap = "reset" }
 "submap[wd_height],Escape"  = "submap:reset"
 
 # submap: column
-"submap[column],H"          = { action = "column-move-to-output-left", submap = "reset" }
-"submap[column],L"          = { action = "column-move-to-output-right", submap = "reset" }
-"submap[column],K"          = { action = "column-move-to-output-up", submap = "reset" }
-"submap[column],J"          = { action = "column-move-to-output-down", submap = "reset" }
-"submap[column],1"          = { action = "column-move-to-workspace:1", submap = "reset" }
-"submap[column],2"          = { action = "column-move-to-workspace:2", submap = "reset" }
-"submap[column],3"          = { action = "column-move-to-workspace:3", submap = "reset" }
-"submap[column],4"          = { action = "column-move-to-workspace:4", submap = "reset" }
-"submap[column],5"          = { action = "column-move-to-workspace:5", submap = "reset" }
+"submap[column],H"          = { action = "spawn:noctalia msg column-move-to-output-left", submap = "reset" }
+"submap[column],L"          = { action = "spawn:noctalia msg column-move-to-output-right", submap = "reset" }
+"submap[column],K"          = { action = "spawn:noctalia msg column-move-to-output-up", submap = "reset" }
+"submap[column],J"          = { action = "spawn:noctalia msg column-move-to-output-down", submap = "reset" }
+"submap[column],1"          = { action = "spawn:noctalia msg column-move-to-workspace:1", submap = "reset" }
+"submap[column],2"          = { action = "spawn:noctalia msg column-move-to-workspace:2", submap = "reset" }
+"submap[column],3"          = { action = "spawn:noctalia msg column-move-to-workspace:3", submap = "reset" }
+"submap[column],4"          = { action = "spawn:noctalia msg column-move-to-workspace:4", submap = "reset" }
+"submap[column],5"          = { action = "spawn:noctalia msg column-move-to-workspace:5", submap = "reset" }
 "submap[column],Escape"     = "submap:reset"
 
 # submap: workspace
@@ -106,16 +106,16 @@
 "submap[workspace],L"       = { action = "submap:ws_layout", repeat = false }
 
 # submap: workspace movement
-"submap[ws_move],H"         = { action = "workspace-move-to-output-left", submap = "reset" }
-"submap[ws_move],L"         = { action = "workspace-move-to-output-right", submap = "reset" }
-"submap[ws_move],K"         = { action = "workspace-move-to-output-up", submap = "reset" }
-"submap[ws_move],J"         = { action = "workspace-move-to-output-down", submap = "reset" }
+"submap[ws_move],H"         = { action = "spawn:noctalia msg workspace-move-to-output-left", submap = "reset" }
+"submap[ws_move],L"         = { action = "spawn:noctalia msg workspace-move-to-output-right", submap = "reset" }
+"submap[ws_move],K"         = { action = "spawn:noctalia msg workspace-move-to-output-up", submap = "reset" }
+"submap[ws_move],J"         = { action = "spawn:noctalia msg workspace-move-to-output-down", submap = "reset" }
 "submap[ws_move],Escape"    = "submap:reset"
 
 # submap: workspace layout
-"submap[ws_layout],M"       = { action = "workspace-set-layout:master", submap = "reset" }
-"submap[ws_layout],S"       = { action = "workspace-set-layout:scrolling", submap = "reset" }
-"submap[ws_layout],D"       = { action = "workspace-set-layout:dwindle", submap = "reset" }
+"submap[ws_layout],M"       = { action = "spawn:noctalia msg workspace-set-layout:master", submap = "reset" }
+"submap[ws_layout],S"       = { action = "spawn:noctalia msg workspace-set-layout:scrolling", submap = "reset" }
+"submap[ws_layout],D"       = { action = "spawn:noctalia msg workspace-set-layout:dwindle", submap = "reset" }
 "submap[ws_layout],Escape"  = "submap:reset"
 
 # column manip

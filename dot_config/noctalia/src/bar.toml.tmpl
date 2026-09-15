@@ -1,6 +1,7 @@
 {{- $desktop := env "XDG_CURRENT_DESKTOP" -}}
 {{- $wm_companion       := "" -}}
 {{- $battery            := "" -}}
+{{- $keybind_ipc        := "" -}}
 
 {{- if eq .chezmoi.hostname "ainulindale" -}}
 {{- $battery            = "battery" -}}
@@ -8,6 +9,9 @@
 
 {{- if eq $desktop "umbriel" -}}
 {{- $wm_companion       = "wm_companion" -}}
+{{- $keybind_ipc        = "exec umbriel msg cheatsheet-toggle" -}}
+{{- else if eq $desktop "niri" -}}
+{{- $keybind_ipc        = "exec niri msg show-hotkey-overlay" -}}
 {{- end -}}
 
 [bar]
@@ -28,7 +32,7 @@ padding                 = 9
 position                = "top"
 start                   = [ "control-center", "workspaces" ]
 center                  = [ "weather", "audio_visualizer", "media" ]
-end                     = [ "tray", {{ $battery | quote }}, "volume", "notifications", "network", {{ $wm_companion | quote }}, "gamermode", "clock", "date" ]
+end                     = [ "tray", {{ $battery | quote }}, "keybinds", "volume", "notifications", "network", {{ $wm_companion | quote }}, "gamermode", "clock", "date" ]
 
 [bar.top.actions]
 middle                  = "none"
@@ -80,6 +84,13 @@ tooltip_format          = ""
 [widget.date]
 format                  = "{:%Y-%m-%d}"
 tooltip_format          = "{:%A, %B %d}"
+
+[widget.keybinds]
+type                    = "custom_button"
+glyph                   = "keyboard"
+
+[widget.keybinds.actions]
+left                    = {{ $keybind_ipc | quote }}
 
 [widget.wm_companion]
 display_mode            = "Layout"

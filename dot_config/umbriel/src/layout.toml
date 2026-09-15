@@ -1,7 +1,6 @@
 [layout]
 gap                     = 8
 width_presets           = [ 0.333, 0.5, 0.667, 1.0 ]
-height_presets          = [ 0.333, 0.5, 0.667, 1.0 ]
 
 [layout.struts]
 left                    = 0
