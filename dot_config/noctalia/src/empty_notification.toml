@@ -1,0 +1,15 @@
+[notification]
+enable_daemon               = true
+show_app_name               = true
+show_actions                = true
+position                    = "top_right"
+layer                       = "top"
+scale                       = 1.0
+background_opacity          = 0.85
+border                      = true
+offset_x                    = 20
+offset_y                    = 20
+collapse_on_dismis          = true
+keep_dismissed_in_history   = true
+max_visible                 = 0
+history_retention_hours     = 0

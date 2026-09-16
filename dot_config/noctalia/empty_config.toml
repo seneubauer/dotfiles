@@ -10,5 +10,6 @@ files = [
     "src/shell.toml",
     "src/theme.toml",
     "src/wallpaper.toml",
-    "src/widgets.toml"
+    "src/widgets.toml",
+    "src/notification.toml"
 ]
