@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "window",
+        "body": "M: mode\nW: width\nH: height",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

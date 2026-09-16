@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "noctalia",
+        "body": "A: window\nS: column\nD: workspace",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

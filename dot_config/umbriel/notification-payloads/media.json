@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "media",
+        "body": "J: next\nK: previous\nP: play/pause\nS: stop",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

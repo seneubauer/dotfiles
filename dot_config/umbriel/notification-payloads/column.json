@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "column",
+        "body": "H: to left screen\nL: to right screen\nK: to upper screen\nJ: to lower screen\n1: to workspace 1\n2: to workspace 2\n3: to workspace 3\n4: to workspace 4\n5: to workspace 5",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

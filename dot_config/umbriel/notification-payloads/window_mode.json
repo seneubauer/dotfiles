@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "window_mode",
+        "body": "F: floating\nS: fullscreen\nD: maximize",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

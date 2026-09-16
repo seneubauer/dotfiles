@@ -2,9 +2,6 @@
 umbriel subscribe submap | while read -r line; do
     SUBMAP=$(echo $line | jq -r '.data')
     if [ ! $SUBMAP = "null" ]; then
-        PAYLOAD=$(jq --arg key "$SUBMAP" '.[$key]' ~/.config/umbriel/notification-payloads.json)
-        echo "SUBMAP: $SUBMAP"
-        echo "PAYLOAD: $PAYLOAD"
-        #noctalia msg notification-show $PAYLOAD
+        noctalia msg notification-show "$(cat ~/.config/umbriel/notification-payloads/$SUBMAP.json)"
     fi
 done

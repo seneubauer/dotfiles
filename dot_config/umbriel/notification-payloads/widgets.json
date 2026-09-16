@@ -1,0 +1,8 @@
+{
+        "app_name": "Umbriel",
+        "summary": "widgets",
+        "body": "T: show/hide\nE: edit mode",
+        "urgency": "low",
+        "timeout_ms": 4000,
+        "icon": "circle-check"
+    }

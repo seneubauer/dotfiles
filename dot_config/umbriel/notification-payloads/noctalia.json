@@ -1,0 +1,8 @@
+{
+    "app_name": "Umbriel",
+    "summary": "noctalia",
+    "body": "Y: system\nT: theme\nM: media\nS: screenshot\nW: widgets\nP: power",
+    "urgency": "low",
+    "timeout_ms": 4000,
+    "icon": "circle-check"
+}
