@@ -1,6 +1,6 @@
 {
         "app_name": "Umbriel",
-        "summary": "noctalia",
+        "summary": "umbriel",
         "body": "A: window\nS: column\nD: workspace",
         "urgency": "low",
         "timeout_ms": 4000,
