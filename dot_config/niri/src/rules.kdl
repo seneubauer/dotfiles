@@ -1,0 +1,29 @@
+layer-rule {
+    match namespace="^noctalia$"
+    place-within-backdrop true
+}
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+layer-rule {
+    match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+    background-effect {
+        xray false
+    }
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+window-rule {
+    geometry-corner-radius 6
+    clip-to-geometry true
+}
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
+}

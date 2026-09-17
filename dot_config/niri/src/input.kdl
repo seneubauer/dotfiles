@@ -1,0 +1,16 @@
+input {
+    keyboard {
+        xkb {}
+    }
+
+    mouse {
+        accel-profile "flat"
+        accel-speed 0.0
+    }
+
+    touchpad {
+        accel-profile "flat"
+        accel-speed 0.0
+        disabled-on-external-mouse
+    }
+}

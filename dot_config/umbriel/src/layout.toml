@@ -1,6 +1,6 @@
 [layout]
-gap                     = 8
-width_presets           = [ 0.333, 0.5, 0.667, 1.0 ]
+gap                     = 9
+extent_presets          = [ 0.333, 0.5, 0.667 ]
 
 [layout.struts]
 left                    = 0
@@ -9,9 +9,9 @@ top                     = 0
 bottom                  = 0
 
 [layout.scrolling]
-default_width_fraction  = 0.5
+default_extent_fraction = 0.5
 center_underfull_strip  = true
-center_focused          = "on_overflow"
+center_focused          = "never"
 
 [layout.dwindle]
 preserve_split          = false
@@ -20,3 +20,5 @@ preserve_split          = false
 position                = "left"
 default_width_fraction  = 0.55
 new_on_top              = true
+new_becomes_master      = false
+new_exists_fullscreen   = false

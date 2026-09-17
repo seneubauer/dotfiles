@@ -1,47 +1,8 @@
 spawn-at-startup "noctalia"
-
-screenshot-path "~/pictures/niri-screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 prefer-no-csd
-
-environment {
-    GTK_THEME "Papirus:dark"
-    QT_QPA_PLATFORM "wayland"
-    QT_QPA_PLATFORMTHEME "qt6ct"
-}
 
 xwayland-satellite {
     path "xwayland-satellite"
-}
-
-overview {
-    zoom 0.5
-    
-    workspace-shadow {
-        softness 40
-        spread 10
-        offset x=0 y=10
-    }
-}
-
-input {
-    keyboard {
-        xkb {
-            
-        }
-
-        // numlock
-    }
-
-    mouse {
-	    accel-profile "flat"
-	    accel-speed 0.0
-    }
-
-    touchpad {
-        accel-profile "flat"
-        accel-speed 0.0
-        disabled-on-external-mouse
-    }
 }
 
 cursor {
@@ -49,113 +10,21 @@ cursor {
     xcursor-size 28
 }
 
-{{- if eq .chezmoi.hostname "dwarrowdelf" }}
-output "HDMI-A-1" {
-    mode "1920x1080@60.000"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-}
-
-output "DP-1" {
-    mode "3440x1440@143.975"
-    scale 1
-    transform "normal"
-    position x=1920 y=0
-}
-{{- else if eq .chezmoi.hostname "ainulindale" }}
-output "eDP-1" {
-    mode "1920x1080@60.010"
-    scale 1
-    transform "normal"
-    position x=0 y=0
-}
-{{- end}}
-
-layout {
-    gaps 9
-    center-focused-column "never"
-
-    preset-column-widths {
-        proportion 0.33333
-        proportion 0.5
-        proportion 0.66667
-    }
-
-    default-column-width { proportion 0.5; }
-
-    focus-ring {
-        width 2
-    }
-
-    border {
-        off
-    }
-
-    shadow {
-        on
-        softness 30
-        spread 5
-        offset x=0 y=5
-    }
-
-    struts {
-        
-    }
-}
-
 hotkey-overlay {
     skip-at-startup
-}
-
-animations {
-    slowdown 1
-}
-
-window-rule {
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    block-out-from "screen-capture"
-}
-
-layer-rule {
-    match namespace="^noctalia$"
-    place-within-backdrop true
-}
-
-layer-rule {
-    match namespace="^noctalia-backdrop"
-    place-within-backdrop true
-}
-
-window-rule {
-    geometry-corner-radius 6
-    clip-to-geometry true
-}
-
-window-rule {
-    background-effect {
-        blur true
-        xray false
-    }
-}
-
-layer-rule {
-    match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
-    background-effect {
-        xray false
-    }
-}
-
-blur {
-    passes 2
-    offset 3.0
-    noise 0.03
-    saturation 1.0
 }
 
 debug {
     honor-xdg-activation-with-invalid-serial
 }
 
+include "./src/animations.kdl"
+include "./src/blur.kdl"
+include "./src/environment.kdl"
+include "./src/input.kdl"
 include "./src/keybinds.kdl"
+include "./src/layout.kdl"
+include "./src/output.kdl"
+include "./src/overview.kdl"
+include "./src/rules.kdl"
 include "./noctalia.kdl"

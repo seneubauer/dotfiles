@@ -1,0 +1,276 @@
+{{- $desktop                    := env "XDG_CURRENT_DESKTOP" -}}
+
+{{- $theme_light                := "noctalia msg theme-mode-set light" -}}
+{{- $theme_dark                 := "noctalia msg theme-mode-set dark" -}}
+{{- $templates_update           := "noctalia msg templates-apply" -}}
+
+{{- $media_next                 := "noctalia msg media next" -}}
+{{- $media_previous             := "noctalia msg media previous" -}}
+{{- $media_toggle               := "noctalia msg media toggle" -}}
+{{- $media_stop                 := "noctalia msg media stop" -}}
+
+{{- $desktop_widgets_toggle     := "noctalia msg desktop-widgets-toggle" -}}
+{{- $desktop_widgets_edit       := "noctalia msg desktop-widgets-toggle-edit" -}}
+
+{{- $screenshot_region          := "noctalia msg screenshot-region" -}}
+{{- $screenshot_fullscreen      := "noctalia msg screenshot-fullscreen" -}}
+{{- $screenshot_annotate        := "noctalia msg screenshot-annotate" -}}
+
+{{- $window_floating            := "" -}}
+{{- $window_fullscreen          := "" -}}
+{{- $window_maximize            := "" -}}
+
+{{- $window_height_0            := "" -}}
+{{- $window_height_1            := "" -}}
+{{- $window_height_2            := "" -}}
+{{- $window_height_3            := "" -}}
+
+{{- $window_width_0             := "" -}}
+{{- $window_width_1             := "" -}}
+{{- $window_width_2             := "" -}}
+{{- $window_width_3             := "" -}}
+
+{{- $column_move_to_output_l    := "" -}}
+{{- $column_move_to_output_r    := "" -}}
+{{- $column_move_to_output_u    := "" -}}
+{{- $column_move_to_output_d    := "" -}}
+
+{{- $workspace_move_to_output_l := "" -}}
+{{- $workspace_move_to_output_r := "" -}}
+{{- $workspace_move_to_output_u := "" -}}
+{{- $workspace_move_to_output_d := "" -}}
+
+{{- $workspace_mode_master      := "" -}}
+{{- $workspace_mode_dwindle     := "" -}}
+{{- $workspace_mode_scrolling   := "" -}}
+
+{{- if eq $desktop "umbriel" -}}
+
+{{- $window_floating            = "umbriel msg window-toggle-floating" -}}
+{{- $window_fullscreen          = "umbriel msg window-toggle-fullscreen" -}}
+{{- $window_maximize            = "umbriel msg window-toggle-maximize" -}}
+
+{{- $window_height_0            = "umbriel msg window-set-height:0.333" -}}
+{{- $window_height_1            = "umbriel msg window-set-height:0.500" -}}
+{{- $window_height_2            = "umbriel msg window-set-height:0.667" -}}
+{{- $window_height_3            = "umbriel msg window-set-height:1.000" -}}
+
+{{- $window_width_0             = "umbriel msg window-set-width:0.333" -}}
+{{- $window_width_1             = "umbriel msg window-set-width:0.500" -}}
+{{- $window_width_2             = "umbriel msg window-set-width:0.667" -}}
+{{- $window_width_3             = "umbriel msg window-set-width:1.000" -}}
+
+{{- $column_move_to_output_l    = "umbriel msg column-move-to-output-left" -}}
+{{- $column_move_to_output_r    = "umbriel msg column-move-to-output-right" -}}
+{{- $column_move_to_output_u    = "umbriel msg column-move-to-output-up" -}}
+{{- $column_move_to_output_d    = "umbriel msg column-move-to-output-down" -}}
+
+{{- $workspace_move_to_output_l = "umbriel msg workspace-move-to-output-left" -}}
+{{- $workspace_move_to_output_r = "umbriel msg workspace-move-to-output-right" -}}
+{{- $workspace_move_to_output_u = "umbriel msg workspace-move-to-output-up" -}}
+{{- $workspace_move_to_output_d = "umbriel msg workspace-move-to-output-down" -}}
+
+{{- $workspace_mode_master      = "umbriel msg workspace-set-layout:master" -}}
+{{- $workspace_mode_dwindle     = "umbriel msg workspace-set-layout:dwindle" -}}
+{{- $workspace_mode_scrolling   = "umbriel msg workspace-set-layout:scrolling" -}}
+
+{{- else if eq $desktop "niri" -}}
+
+{{- $window_floating            = "niri msg action toggle-window-floating" -}}
+{{- $window_fullscreen          = "niri msg action fullscreen-window" -}}
+{{- $window_maximize            = "niri msg action fullscreen-window" -}}
+
+{{- $window_height_0            = "niri msg action set-window-height \"33.33%\"" -}}
+{{- $window_height_1            = "niri msg action set-window-height \"50.00%\"" -}}
+{{- $window_height_2            = "niri msg action set-window-height \"66.67%\"" -}}
+{{- $window_height_3            = "niri msg action set-window-height \"100.0%\"" -}}
+
+{{- $window_width_0             = "niri msg action set-window-width \"33.33%\"" -}}
+{{- $window_width_1             = "niri msg action set-window-width \"50.00%\"" -}}
+{{- $window_width_2             = "niri msg action set-window-width \"66.67%\"" -}}
+{{- $window_width_3             = "niri msg action set-window-width \"100.0%\"" -}}
+
+{{- $column_move_to_output_l    = "niri msg action move-column-to-monitor-left" -}}
+{{- $column_move_to_output_r    = "niri msg action move-column-to-monitor-right" -}}
+{{- $column_move_to_output_u    = "niri msg action move-column-to-monitor-up" -}}
+{{- $column_move_to_output_d    = "niri msg action move-column-to-monitor-down" -}}
+
+{{- $workspace_move_to_output_l = "niri msg action move-workspace-to-monitor-left" -}}
+{{- $workspace_move_to_output_r = "niri msg action move-workspace-to-monitor-right" -}}
+{{- $workspace_move_to_output_u = "niri msg action move-workspace-to-monitor-up" -}}
+{{- $workspace_move_to_output_d = "niri msg action move-workspace-to-monitor-down" -}}
+
+{{- $workspace_mode_master      = "echo 0" -}}
+{{- $workspace_mode_dwindle     = "echo 0" -}}
+{{- $workspace_mode_scrolling   = "echo 0" -}}
+
+{{- end -}}
+
+# theme
+font: JetBrainsMono Nerd Font 12
+background: "{{ "{{colors.background.default.hex}}e6" }}"
+color: "{{ "{{colors.on_surface.default.hex}}" }}"
+border: "{{ "{{colors.primary.default.hex}}" }}"
+separator: " ➜ "
+border_width: 2
+corner_r: 10
+padding: 15
+rows_per_column: 5
+column_padding: 25
+
+# position
+anchor: center 
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 0
+
+# behavior
+inhibit_compositor_keyboard_shortcuts: true
+auto_kbd_layout: true
+
+menu:
+  - key: "n"
+    desc: Noctalia
+    submenu:
+      - key: "t"
+        desc: Theme
+        submenu:
+          - key: "l"
+            desc: Light
+            cmd: {{ $theme_light }}
+          - key: "d"
+            desc: Dark
+            cmd: {{ $theme_dark }}
+          - key: "u"
+            desc: Update Templates
+            cmd: {{ $templates_update }}
+      - key: "m"
+        desc: Media
+        submenu:
+          - key: "j"
+            desc: Next
+            cmd: {{ $media_next }}
+          - key: "k"
+            desc: Previous
+            cmd: {{ $media_previous }}
+          - key: "p"
+            desc: Play/Pause
+            cmd: {{ $media_toggle }}
+          - key: "s"
+            desc: Stop
+            cmd: {{ $media_stop }}
+      - key: "d"
+        desc: Desktop
+        submenu:
+          - key: "t"
+            desc: Toggle
+            cmd: {{ $desktop_widgets_toggle }}
+          - key: "e"
+            desc: Edit
+            cmd: {{ $desktop_widgets_edit }}
+      - key: "s"
+        desc: Screenshot
+        submenu:
+          - key: "r"
+            desc: Region
+            cmd: {{ $screenshot_region }}
+          - key: "f"
+            desc: Fullscreen
+            cmd: {{ $screenshot_fullscreen }}
+          - key: "a"
+            desc: Annotate
+            cmd: {{ $screenshot_annotate }}
+  - key: "l"
+    desc: Layout
+    submenu:
+      - key: "w"
+        desc: Window
+        submenu:
+          - key: "l"
+            desc: Floating
+            cmd: {{ $window_floating }}
+          - key: "f"
+            desc: Fullscreen
+            cmd: {{ $window_fullscreen }}
+          - key: "m"
+            desc: Maximize
+            cmd: {{ $window_maximize }}
+      - key: "s"
+        desc: Workspace
+        submenu:
+          - key: "m"
+            desc: Master
+            cmd: {{ $workspace_mode_master }}
+          - key: "d"
+            desc: Dwindle
+            cmd: {{ $workspace_mode_dwindle }}
+          - key: "s"
+            desc: Scrolling
+            cmd: {{ $workspace_mode_scrolling }}
+  - key: "r"
+    desc: Resize
+    submenu:
+      - key: "h"
+        desc: Height
+        submenu:
+          - key: "a"
+            desc: 33.3%
+            cmd: {{ $window_height_0 }}
+          - key: "s"
+            desc: 50.0%
+            cmd: {{ $window_height_1 }}
+          - key: "d"
+            desc: 66.7%
+            cmd: {{ $window_height_2 }}
+          - key: "f"
+            desc: 100.0%
+            cmd: {{ $window_height_3 }}
+      - key: "w"
+        desc: Width
+        submenu:
+          - key: "a"
+            desc: 33.3%
+            cmd: {{ $window_width_0 }}
+          - key: "s"
+            desc: 50.0%
+            cmd: {{ $window_width_1 }}
+          - key: "d"
+            desc: 66.7%
+            cmd: {{ $window_width_2 }}
+          - key: "f"
+            desc: 100.0%
+            cmd: {{ $window_width_3 }}
+  - key: "m"
+    desc: Move to Monitor
+    submenu:
+      - key: "c"
+        desc: Column
+        submenu:
+          - key: "h"
+            desc: Left
+            cmd: {{ $column_move_to_output_l }}
+          - key: "l"
+            desc: Right
+            cmd: {{ $column_move_to_output_r }}
+          - key: "k"
+            desc: Up
+            cmd: {{ $column_move_to_output_u }}
+          - key: "j"
+            desc: Down
+            cmd: {{ $column_move_to_output_d }}
+      - key: "s"
+        desc: Workspace
+        submenu:
+          - key: "h"
+            desc: Left
+            cmd: {{ $workspace_move_to_output_l }}
+          - key: "l"
+            desc: Right
+            cmd: {{ $workspace_move_to_output_r }}
+          - key: "k"
+            desc: Up
+            cmd: {{ $workspace_move_to_output_u }}
+          - key: "j"
+            desc: Down
+            cmd: {{ $workspace_move_to_output_d }}

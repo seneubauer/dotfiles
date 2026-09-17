@@ -12,6 +12,9 @@ binds {
     Mod+W                       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+Shift+Q                 { spawn-sh "noctalia msg panel-toggle session"; }
 
+    // submap
+    Mod+U                       { spawn-sh "wlr-which-key"; }
+
     // column manip
     Mod+Shift+C                 { center-column; }
     Mod+Shift+M                 { maximize-column; }
