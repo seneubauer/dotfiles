@@ -1,33 +1,38 @@
 [theme]
-builtin = "Eldritch"
-community_palette = "Everforest"
-custom_palette = ""
-mode = "dark"
-source = "wallpaper"
-wallpaper_scheme = "soft"
+builtin                     = "Eldritch"
+community_palette           = "Everforest"
+custom_palette              = ""
+mode                        = "dark"
+source                      = "wallpaper"
+wallpaper_scheme            = "soft"
 
 [theme.templates]
-builtin_ids = [ "niri", "cava", "qt", "umbriel" ]
-community_ids = [ "brave-origin", "neovim", "obsidian", "steam", "fastfetch", "papirus-icons", "yazi" ]
-enable_builtin_templates = true
-enable_community_templates = true
+builtin_ids                 = [ "niri", "cava", "qt", "umbriel" ]
+community_ids               = [ "brave-origin", "neovim", "obsidian", "steam", "fastfetch", "papirus-icons", "yazi" ]
+enable_builtin_templates    = true
+enable_community_templates  = true
 
 [theme.templates.user.alacritty]
-input_path = "~/.config/noctalia/templates/alacritty.toml"
-output_path = "~/.config/alacritty/themes/noctalia.toml"
-enabled = true
+input_path                  = "~/.config/noctalia/templates/alacritty.toml"
+output_path                 = "~/.config/alacritty/themes/noctalia.toml"
+enabled                     = true
 
 [theme.templates.user.ncspot]
-input_path = "~/.config/noctalia/templates/ncspot.toml"
-output_path = "~/.config/ncspot/config.toml"
-enabled = true
+input_path                  = "~/.config/noctalia/templates/ncspot.toml"
+output_path                 = "~/.config/ncspot/config.toml"
+enabled                     = true
 
 [theme.templates.user.starship]
-input_path = "~/.config/noctalia/templates/starship.toml"
-output_path = "~/.config/starship.toml"
-enabled = true
+input_path                  = "~/.config/noctalia/templates/starship.toml"
+output_path                 = "~/.config/starship.toml"
+enabled                     = true
 
 [theme.templates.user.fuzzel]
-input_path = "~/.config/noctalia/templates/fuzzel.ini"
-output_path = "~/.config/fuzzel/themes/noctalia"
-enabled = true
+input_path                  = "~/.config/noctalia/templates/fuzzel.ini"
+output_path                 = "~/.config/fuzzel/themes/noctalia"
+enabled                     = true
+
+[theme.templates.user.wlr-which-key]
+input_path                  = "~/.config/noctalia/templates/wlr-which-key.yaml"
+output_path                 = "~/.config/wlr-which-key/config.yaml"
+enabled                     = true
