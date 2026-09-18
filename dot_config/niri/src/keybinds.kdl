@@ -13,7 +13,7 @@ binds {
     Mod+Shift+Q                 { spawn-sh "noctalia msg panel-toggle session"; }
 
     // submap
-    Mod+N                       { spawn-sh "wlr-which-key ~/.config/wlr-which-key/wlr-which-key-noctalia.yaml"; }
+    Mod+N                       { spawn-sh "wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"; }
     Mod+C                       { spawn-sh "~/.config/wlr-which-key/wlr-which-key-caller.sh"; }
 
     // column manip
