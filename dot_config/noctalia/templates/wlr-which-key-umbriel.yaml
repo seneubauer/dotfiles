@@ -48,21 +48,6 @@ menu:
         submenu:
           - key: "a"
             desc: 33.3%
-            cmd: umbriel msg window-set-primary-extent:0.333
-          - key: "s"
-            desc: 50.0%
-            cmd: umbriel msg window-set-primary-extent:0.500
-          - key: "d"
-            desc: 66.7%
-            cmd: umbriel msg window-set-primary-extent:0.667
-          - key: "f"
-            desc: 100.0%
-            cmd: umbriel msg window-set-primary-extent:1.000
-      - key: "w"
-        desc: Width
-        submenu:
-          - key: "a"
-            desc: 33.3%
             cmd: umbriel msg window-set-secondary-extent:0.333
           - key: "s"
             desc: 50.0%
@@ -73,6 +58,21 @@ menu:
           - key: "f"
             desc: 100.0%
             cmd: umbriel msg window-set-secondary-extent:1.000
+      - key: "w"
+        desc: Width
+        submenu:
+          - key: "a"
+            desc: 33.3%
+            cmd: umbriel msg window-set-primary-extent:0.333
+          - key: "s"
+            desc: 50.0%
+            cmd: umbriel msg window-set-primary-extent:0.500
+          - key: "d"
+            desc: 66.7%
+            cmd: umbriel msg window-set-primary-extent:0.667
+          - key: "f"
+            desc: 100.0%
+            cmd: umbriel msg window-set-primary-extent:1.000
   - key: "m"
     desc: Move to Monitor
     submenu:
