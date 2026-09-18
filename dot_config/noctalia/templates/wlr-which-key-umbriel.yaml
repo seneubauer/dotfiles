@@ -30,10 +30,16 @@ menu:
         submenu:
           - key: "l"
             desc: Floating
-            cmd: niri msg action toggle-window-floating
+            cmd: umbriel msg window-toggle-floating
           - key: "f"
             desc: Fullscreen
-            cmd: niri msg action fullscreen-window
+            cmd: umbriel msg window-toggle-fullscreen
+          - key: "m"
+            desc: Maximize
+            cmd: umbriel msg window-toggle-maximize
+          - key: "p"
+            desc: Pin
+            cmd: umbriel msg window-toggle-pinned
   - key: "r"
     desc: Resize
     submenu:
@@ -42,31 +48,31 @@ menu:
         submenu:
           - key: "a"
             desc: 33.3%
-            cmd: niri msg action set-window-height "33.%"
+            cmd: umbriel msg window-set-primary-extent:0.333
           - key: "s"
             desc: 50.0%
-            cmd: niri msg action set-window-height "50.0%"
+            cmd: umbriel msg window-set-primary-extent:0.500
           - key: "d"
             desc: 66.7%
-            cmd: niri msg action set-window-height "66.7%"
+            cmd: umbriel msg window-set-primary-extent:0.667
           - key: "f"
             desc: 100.0%
-            cmd: niri msg action set-window-height "100.0%"
+            cmd: umbriel msg window-set-primary-extent:1.000
       - key: "w"
         desc: Width
         submenu:
           - key: "a"
             desc: 33.3%
-            cmd: niri msg action set-window-width "33.3%"
+            cmd: umbriel msg window-set-secondary-extent:0.333
           - key: "s"
             desc: 50.0%
-            cmd: niri msg action set-window-width "50.0%"
+            cmd: umbriel msg window-set-secondary-extent:0.500
           - key: "d"
             desc: 66.7%
-            cmd: niri msg action set-window-width "66.7%"
+            cmd: umbriel msg window-set-secondary-extent:0.667
           - key: "f"
             desc: 100.0%
-            cmd: niri msg action set-window-width "100.0%"
+            cmd: umbriel msg window-set-secondary-extent:1.000
   - key: "m"
     desc: Move to Monitor
     submenu:
@@ -75,28 +81,28 @@ menu:
         submenu:
           - key: "h"
             desc: Left
-            cmd: niri msg action move-column-to-monitor-left
+            cmd: umbriel msg column-move-to-output-left
           - key: "l"
             desc: Right
-            cmd: niri msg action move-column-to-monitor-right
+            cmd: umbriel msg column-move-to-output-right
           - key: "k"
             desc: Up
-            cmd: niri msg action move-column-to-monitor-up
+            cmd: umbriel msg column-move-to-output-up
           - key: "j"
             desc: Down
-            cmd: niri msg action move-column-to-monitor-down
+            cmd: umbriel msg column-move-to-output-down
       - key: "s"
         desc: Workspace
         submenu:
           - key: "h"
             desc: Left
-            cmd: niri msg action move-workspace-to-monitor-left
+            cmd: umbriel msg workspace-move-to-output-left
           - key: "l"
             desc: Right
-            cmd: niri msg action move-workspace-to-monitor-right
+            cmd: umbriel msg workspace-move-to-output-right
           - key: "k"
             desc: Up
-            cmd: niri msg action move-workspace-to-monitor-up
+            cmd: umbriel msg workspace-move-to-output-up
           - key: "j"
             desc: Down
-            cmd: niri msg action move-workspace-to-monitor-down
+            cmd: umbriel msg workspace-move-to-output-down

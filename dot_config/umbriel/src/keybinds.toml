@@ -9,115 +9,11 @@
 "Mod+Comma"                     = "spawn:noctalia msg settings-toggle"
 "Mod+W"                         = "spawn:noctalia msg panel-toggle wallpaper"
 "Alt+Tab"                       = "spawn:noctalia msg window-switcher"
+"Mod+Shift+Q"                   = "spawn:noctalia msg panel-toggle session"
 
-# submap: entry points
-"Mod+N"                         = "submap:noctalia"
-"submap[noctalia],Y"            = { action = "submap:system", repeat = false }
-"submap[noctalia],T"            = { action = "submap:theme", repeat = false }
-"submap[noctalia],M"            = { action = "submap:media", repeat = false }
-"submap[noctalia],S"            = { action = "submap:screenshot", repeat = false }
-"submap[noctalia],W"            = { action = "submap:widgets", repeat = false }
-"submap[noctalia],P"            = { action = "submap:power", repeat = false }
-"submap[noctalia],Escape"       = "submap:reset"
-
-"Mod+U"                         = "submap:umbriel"
-"submap[umbriel],A"             = { action = "submap:window", repeat = false }
-"submap[umbriel],S"             = { action = "submap:column", repeat = false }
-"submap[umbriel],D"             = { action = "submap:workspace", repeat = false }
-"submap[umbriel],Escape"        = "submap:reset"
-
-# submap: system
-"submap[system],D"              = { action = "spawn:noctalia msg notification-dnd-toggle", submap = "reset" }
-"submap[system],S"              = { action = "spawn:noctalia msg caffeine-toggle", submap = "reset" }
-"submap[system],C"              = { action = "spawn:noctalia msg cheatsheet-toggle", submap = "reset" }
-"submap[system],Escape"         = "submap:reset"
-
-# submap: theme
-"submap[theme],D"               = { action = "spawn:noctalia msg theme-mode-set dark", submap = "reset" }
-"submap[theme],L"               = { action = "spawn:noctalia msg theme-mode-set light", submap = "reset" }
-"submap[theme],U"               = { action = "spawn:noctalia msg templates-apply", submap = "reset" }
-"submap[theme],Escape"          = "submap:reset"
-
-# submap: media
-"submap[media],J"               = { action = "spawn:noctalia msg media next", submap = "reset" }
-"submap[media],K"               = { action = "spawn:noctalia msg media previous", submap = "reset" }
-"submap[media],P"               = { action = "spawn:noctalia msg media toggle", submap = "reset" }
-"submap[media],S"               = { action = "spawn:noctalia msg media stop", submap = "reset" }
-"submap[media],Escape"          = "submap:reset"
-
-# submap: screenshot
-"submap[screenshot],R"          = { action = "spawn:noctalia msg screenshot-region", submap = "reset" }
-"submap[screenshot],F"          = { action = "spawn:noctalia msg screenshot-fullscreen", submap = "reset" }
-"submap[screenshot],A"          = { action = "spawn:noctalia msg screenshot-annotate", submap = "reset" }
-"submap[screenshot],M"          = { action = "spawn:noctalia msg annotate", submap = "reset" }
-"submap[screenshot],Escape"     = "submap:reset"
-
-# submap: desktop widgets
-"submap[widgets],T"             = { action = "spawn:noctalia msg desktop-widgets-toggle", submap = "reset" }
-"submap[widgets],E"             = { action = "spawn:noctalia msg desktop-widgets-toggle-edit", submap = "reset" }
-"submap[widgets],Escape"        = "submap:reset"
-
-# submap: power profile
-"submap[power],P"               = { action = "spawn:noctalia msg power-set performance", submap = "reset" }
-"submap[power],B"               = { action = "spawn:noctalia msg power-set balanced", submap = "reset" }
-"submap[power],E"               = { action = "spawn:noctalia msg power-set power-saver", submap = "reset" }
-"submap[power],Escape"          = "submap:reset"
-
-# submap: window
-"submap[window],M"              = { action = "submap:window_mode", repeat = false }
-"submap[window],W"              = { action = "submap:window_width", repeat = false }
-"submap[window],H"              = { action = "submap:window_height", repeat = false }
-"submap[window],Escape"         = "submap:reset"
-
-# submap: window mode
-"submap[window_mode],F"         = { action = "spawn:noctalia msg window-toggle-floating", submap = "reset" }
-"submap[window_mode],S"         = { action = "spawn:noctalia msg window-toggle-fullscreen", submap = "reset" }
-"submap[window_mode],D"         = { action = "spawn:noctalia msg window-toggle-maximize", submap = "reset" }
-"submap[window_mode],Escape"    = "submap:reset"
-
-# submap: window width
-"submap[window_width],A"        = { action = "spawn:noctalia msg window-set-width:0.333", submap = "reset" }
-"submap[window_width],S"        = { action = "spawn:noctalia msg window-set-width:0.5", submap = "reset" }
-"submap[window_width],D"        = { action = "spawn:noctalia msg window-set-width:0.667", submap = "reset" }
-"submap[window_width],F"        = { action = "spawn:noctalia msg window-set-width:1.0", submap = "reset" }
-"submap[window_width],Escape"   = "submap:reset"
-
-# submap: window height
-"submap[window_height],A"       = { action = "spawn:noctalia msg window-set-height:0.333", submap = "reset" }
-"submap[window_height],S"       = { action = "spawn:noctalia msg window-set-height:0.5", submap = "reset" }
-"submap[window_height],D"       = { action = "spawn:noctalia msg window-set-height:0.667", submap = "reset" }
-"submap[window_height],F"       = { action = "spawn:noctalia msg window-set-height:1.0", submap = "reset" }
-"submap[window_height],Escape"  = "submap:reset"
-
-# submap: column
-"submap[column],H"              = { action = "spawn:noctalia msg column-move-to-output-left", submap = "reset" }
-"submap[column],L"              = { action = "spawn:noctalia msg column-move-to-output-right", submap = "reset" }
-"submap[column],K"              = { action = "spawn:noctalia msg column-move-to-output-up", submap = "reset" }
-"submap[column],J"              = { action = "spawn:noctalia msg column-move-to-output-down", submap = "reset" }
-"submap[column],1"              = { action = "spawn:noctalia msg column-move-to-workspace:1", submap = "reset" }
-"submap[column],2"              = { action = "spawn:noctalia msg column-move-to-workspace:2", submap = "reset" }
-"submap[column],3"              = { action = "spawn:noctalia msg column-move-to-workspace:3", submap = "reset" }
-"submap[column],4"              = { action = "spawn:noctalia msg column-move-to-workspace:4", submap = "reset" }
-"submap[column],5"              = { action = "spawn:noctalia msg column-move-to-workspace:5", submap = "reset" }
-"submap[column],Escape"         = "submap:reset"
-
-# submap: workspace
-"submap[workspace],M"           = { action = "submap:ws_move", repeat = false }
-"submap[workspace],L"           = { action = "submap:ws_layout", repeat = false }
-"submap[workspace],Escape"      = "submap:reset"
-
-# submap: workspace movement
-"submap[ws_move],H"             = { action = "spawn:noctalia msg workspace-move-to-output-left", submap = "reset" }
-"submap[ws_move],L"             = { action = "spawn:noctalia msg workspace-move-to-output-right", submap = "reset" }
-"submap[ws_move],K"             = { action = "spawn:noctalia msg workspace-move-to-output-up", submap = "reset" }
-"submap[ws_move],J"             = { action = "spawn:noctalia msg workspace-move-to-output-down", submap = "reset" }
-"submap[ws_move],Escape"        = "submap:reset"
-
-# submap: workspace layout
-"submap[ws_layout],M"           = { action = "spawn:noctalia msg workspace-set-layout:master", submap = "reset" }
-"submap[ws_layout],S"           = { action = "spawn:noctalia msg workspace-set-layout:scrolling", submap = "reset" }
-"submap[ws_layout],D"           = { action = "spawn:noctalia msg workspace-set-layout:dwindle", submap = "reset" }
-"submap[ws_layout],Escape"      = "submap:reset"
+# submaps
+"Mod+N"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/wlr-which-key-noctalia.yaml"
+"Mod+C"                         = "spawn:~/.config/wlr-which-key/wlr-which-key-caller.sh"
 
 # column manip
 "Mod+Shift+H"                   = "column-move-left"
@@ -161,8 +57,8 @@
 "Mod+Tab"                       = "scratchpad-focus-next"
 
 # volume control
-"XF86AudioRaiseVolume"          = "spawn:noctalia msg volume-up"
-"XF86AudioLowerVolume"          = "spawn:noctalia msg volume-down"
+"XF86AudioRaiseVolume"          = "spawn:noctalia msg volume-up 5"
+"XF86AudioLowerVolume"          = "spawn:noctalia msg volume-down 5"
 "XF86AudioMute"                 = "spawn:noctalia msg volume-mute"
 
 # playback control
@@ -171,5 +67,5 @@
 "XF86AudioPrev"                 = "spawn:playerctl previous"
 
 # brightness control
-"XF86MonBrightnessUp"           = "spawn:noctalia msg brightness-up"
-"XF86MonBrightnessDown"         = "spawn:noctalia msg brightness-down"
+"XF86MonBrightnessUp"           = "spawn:noctalia msg brightness-up 5"
+"XF86MonBrightnessDown"         = "spawn:noctalia msg brightness-down 5"
