@@ -33,7 +33,7 @@ output_path                 = "~/.config/fuzzel/themes/noctalia"
 enabled                     = true
 
 [theme.templates.user.wlr-which-key-noctalia]
-input_path                  = "~/.config/noctalia/templates/wlr-which-ey-noctalia.yaml"
+input_path                  = "~/.config/noctalia/templates/wlr-which-key-noctalia.yaml"
 output_path                 = "~/.config/wlr-which-key/config-noctalia.yaml"
 enabled                     = true
 
