@@ -42,7 +42,7 @@ input_path                  = "~/.config/noctalia/templates/wlr-which-key-niri.y
 output_path                 = "~/.config/wlr-which-key/config-niri.yaml"
 enabled                     = true
 
-[theme.templates.usr.wlr-which-key-umbriel]
+[theme.templates.user.wlr-which-key-umbriel]
 input_path                  = "~/.config/noctalia/templates/wlr-which-key-umbriel.yaml"
 output_path                 = "~/.config/wlr-which-key/config-umbriel.yaml"
 enabled                     = true

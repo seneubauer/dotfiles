@@ -12,7 +12,7 @@
 "Mod+Shift+Q"                   = "spawn:noctalia msg panel-toggle session"
 
 # submaps
-"Mod+N"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/wlr-which-key-noctalia.yaml"
+"Mod+N"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"
 "Mod+C"                         = "spawn:~/.config/wlr-which-key/wlr-which-key-caller.sh"
 
 # column manip
@@ -30,8 +30,8 @@
 "Mod+J"                         = "window-focus-down"
 "Mod+bracketleft"               = "window-consume-or-expel-left"
 "Mod+bracketright"              = "window-consume-or-expel-right"
-"Mod+R"                         = "window-cycle-width"
-"Mod+T"                         = "window-cycle-height"
+"Mod+R"                         = "window-cycle-primary-extent"
+"Mod+T"                         = "window-cycle-secondary-extent"
 
 # workspace manip
 "Mod+Ctrl+J"                    = "workspace-next"
