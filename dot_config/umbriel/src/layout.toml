@@ -1,6 +1,6 @@
 [layout]
 gap                     = 9
-extent_presets          = [ 0.333, 0.5, 0.667 ]
+extent_presets          = [ 0.333, 0.5, 0.667, 1.0 ]
 
 [layout.struts]
 left                    = 0
