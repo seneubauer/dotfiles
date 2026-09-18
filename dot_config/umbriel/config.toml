@@ -1,6 +1,8 @@
 [include]
+files = ["noctalia.toml"]
+
+[include.optional]
 files = [
-    "noctalia.toml",
     "src/animation.toml",
     "src/appearance.toml",
     "src/environment.toml",
