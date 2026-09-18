@@ -1,8 +1,0 @@
-{
-    "app_name": "Umbriel",
-    "summary": "workspace",
-    "body": "M: move\nL: layout",
-    "urgency": "low",
-    "timeout_ms": 4000,
-    "icon": "circle-check"
-}

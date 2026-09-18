@@ -32,7 +32,17 @@ input_path                  = "~/.config/noctalia/templates/fuzzel.ini"
 output_path                 = "~/.config/fuzzel/themes/noctalia"
 enabled                     = true
 
-[theme.templates.user.wlr-which-key]
-input_path                  = "~/.config/noctalia/templates/wlr-which-key.yaml"
-output_path                 = "~/.config/wlr-which-key/config.yaml"
+[theme.templates.user.wlr-which-key-noctalia]
+input_path                  = "~/.config/noctalia/templates/wlr-which-ey-noctalia.yaml"
+output_path                 = "~/.config/wlr-which-key/config-noctalia.yaml"
+enabled                     = true
+
+[theme.templates.user.wlr-which-key-niri]
+input_path                  = "~/.config/noctalia/templates/wlr-which-key-niri.yaml"
+output_path                 = "~/.config/wlr-which-key/config-niri.yaml"
+enabled                     = true
+
+[theme.templates.usr.wlr-which-key-umbriel]
+input_path                  = "~/.config/noctalia/templates/wlr-which-key-umbriel.yaml"
+output_path                 = "~/.config/wlr-which-key/config-umbriel.yaml"
 enabled                     = true

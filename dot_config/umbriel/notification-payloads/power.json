@@ -1,8 +1,0 @@
-{
-        "app_name": "Umbriel",
-        "summary": "power",
-        "body": "P: performance\nB: balanced\nE: power-saver",
-        "urgency": "low",
-        "timeout_ms": 4000,
-        "icon": "circle-check"
-    }

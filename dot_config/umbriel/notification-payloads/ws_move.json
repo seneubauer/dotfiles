@@ -1,8 +1,0 @@
-{
-        "app_name": "Umbriel",
-        "summary": "ws_move",
-        "body": "H: to output left\nL: to output right\nK: to output up\nJ: to output down",
-        "urgency": "low",
-        "timeout_ms": 4000,
-        "icon": "circle-check"
-    }

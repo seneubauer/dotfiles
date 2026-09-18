@@ -1,8 +1,0 @@
-{
-    "app_name": "Umbriel",
-    "summary": "theme",
-    "body": "D: dark mode\nL: light mode\nU: update templates",
-    "urgency": "low",
-    "timeout_ms": 4000,
-    "icon": "circle-check"
-}

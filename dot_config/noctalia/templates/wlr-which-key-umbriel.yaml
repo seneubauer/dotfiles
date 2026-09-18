@@ -1,0 +1,102 @@
+# theme
+font: JetBrainsMono Nerd Font 12
+background: "{{colors.background.default.hex}}e6"
+color: "{{colors.on_surface.default.hex}}"
+border: "{{colors.primary.default.hex}}"
+separator: " ➜ "
+border_width: 2
+corner_r: 10
+padding: 15
+rows_per_column: 5
+column_padding: 25
+
+# position
+anchor: center 
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 0
+
+# behavior
+inhibit_compositor_keyboard_shortcuts: true
+auto_kbd_layout: true
+
+menu:
+  - key: "l"
+    desc: Layout
+    submenu:
+      - key: "w"
+        desc: Window
+        submenu:
+          - key: "l"
+            desc: Floating
+            cmd: niri msg action toggle-window-floating
+          - key: "f"
+            desc: Fullscreen
+            cmd: niri msg action fullscreen-window
+  - key: "r"
+    desc: Resize
+    submenu:
+      - key: "h"
+        desc: Height
+        submenu:
+          - key: "a"
+            desc: 33.3%
+            cmd: niri msg action set-window-height "33.%"
+          - key: "s"
+            desc: 50.0%
+            cmd: niri msg action set-window-height "50.0%"
+          - key: "d"
+            desc: 66.7%
+            cmd: niri msg action set-window-height "66.7%"
+          - key: "f"
+            desc: 100.0%
+            cmd: niri msg action set-window-height "100.0%"
+      - key: "w"
+        desc: Width
+        submenu:
+          - key: "a"
+            desc: 33.3%
+            cmd: niri msg action set-window-width "33.3%"
+          - key: "s"
+            desc: 50.0%
+            cmd: niri msg action set-window-width "50.0%"
+          - key: "d"
+            desc: 66.7%
+            cmd: niri msg action set-window-width "66.7%"
+          - key: "f"
+            desc: 100.0%
+            cmd: niri msg action set-window-width "100.0%"
+  - key: "m"
+    desc: Move to Monitor
+    submenu:
+      - key: "c"
+        desc: Column
+        submenu:
+          - key: "h"
+            desc: Left
+            cmd: niri msg action move-column-to-monitor-left
+          - key: "l"
+            desc: Right
+            cmd: niri msg action move-column-to-monitor-right
+          - key: "k"
+            desc: Up
+            cmd: niri msg action move-column-to-monitor-up
+          - key: "j"
+            desc: Down
+            cmd: niri msg action move-column-to-monitor-down
+      - key: "s"
+        desc: Workspace
+        submenu:
+          - key: "h"
+            desc: Left
+            cmd: niri msg action move-workspace-to-monitor-left
+          - key: "l"
+            desc: Right
+            cmd: niri msg action move-workspace-to-monitor-right
+          - key: "k"
+            desc: Up
+            cmd: niri msg action move-workspace-to-monitor-up
+          - key: "j"
+            desc: Down
+            cmd: niri msg action move-workspace-to-monitor-down

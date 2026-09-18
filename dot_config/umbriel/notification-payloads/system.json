@@ -1,8 +1,0 @@
-{
-    "app_name": "Umbriel",
-    "summary": "system",
-    "body": "D: do-not-disturb\nS: caffeine\nC: cheatsheet",
-    "urgency": "low",
-    "timeout_ms": 4000,
-    "icon": "circle-check"
-}
