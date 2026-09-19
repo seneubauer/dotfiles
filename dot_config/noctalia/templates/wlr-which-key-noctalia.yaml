@@ -22,7 +22,22 @@ inhibit_compositor_keyboard_shortcuts: true
 auto_kbd_layout: true
 
 menu:
-  - key: "t"
+  - key: "p"
+    desc: Plugins
+    submenu:
+      - key: "g"
+        desc: Gamer-Mode
+        cmd: noctalia msg panel-toggle nomadcxx/gamer-mode:main
+      - key: "d"
+        desc: Obsidian
+        cmd: noctalia msg panel-toggle davemhammer/obsidian:manager
+      - key: "u"
+        desc: Umbriel Companion
+        cmd: noctalia msg panel-toggle noctalia/umbriel-companion:panel
+      - key: "s"
+        desc: Sticky Notes
+        cmd: noctalia msg panel-toggle ahmedossamdev/sticky-notes:panel
+ - key: "t"
     desc: Theme
     submenu:
       - key: "l"

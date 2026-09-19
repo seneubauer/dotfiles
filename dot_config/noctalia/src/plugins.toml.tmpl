@@ -4,7 +4,9 @@ enabled = [
     "noctalia/umbriel-companion",
     "davemhammer/obsidian",
     "nomadcxx/gamer-mode",
-    "notfinaldev/youtube-search"
+    "notfinaldev/youtube-search",
+    "ahmedhossamdev/sticky-notes",
+    "nightwatch75/todo"
 ]
 
 [[plugins.source]]
@@ -24,10 +26,23 @@ panel_placement     = "floating"
 panel_position      = "center"
 
 [plugin_settings."davemhammer/obsidian"]
+panel_placement     = "floating"
+panel_position      = "center"
 vault_path          = {{ .directory.document.notes | quote }}
 daily_folder        = "daily"
 git_commit_message  = "from daily"
 show_dirty          = true
 
 [plugin_settings."nomadcxx/gamer-mode"]
-main_placement      = "center"
+panel_placement     = "floating"
+panel_position      = "center"
+
+[plugin_settings."ahmedhossamdev/sticky-notes"]
+panel_placement     = "floating"
+panel_position      = "center"
+save_path           = {{ .directory.document.sticky_notes | quote }}
+
+[plugin_settings."nightwatch75/todo"]
+panel_placement     = "floating"
+panel_position      = "center"
+todo_folder         = {{ .directory.document.notes | quote }}

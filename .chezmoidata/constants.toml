@@ -13,6 +13,7 @@ avatar              = "~/pictures/images/icons/avatar.jpg"
 
 [directory.document]
 notes               = "~/documents/notes/main"
+sticky_notes        = "~/documents/notes/main/sticky-notes"
 
 [directory.wallpaper.dark]
 wp3440              = "~/pictures/images/wallpapers/dark/3440x1440"

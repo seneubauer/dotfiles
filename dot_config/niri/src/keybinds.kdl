@@ -3,6 +3,7 @@ binds {
 
     // generics
     Mod+Return                  { spawn "alacritty"; }
+    Mod+Shift+Minus             { spawn-sh "show-hotkey-overlay"; }
 
     // noctalia shell
     Mod+Period                  { spawn-sh "noctalia msg panel-toggle launcher"; }

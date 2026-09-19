@@ -1,0 +1,27 @@
+{{- $battery            := "" -}}
+{{- if eq .chezmoi.hostname "ainulindale" }}
+{{- $battery            = "battery" -}}
+{{- end -}}
+
+[bar]
+order                   = [ "top" ]
+
+[bar.top]
+concave_edge_corners    = true
+margin_edge             = 0
+margin_ends             = 0
+radius                  = 0
+radius_bottom_left      = 6
+radius_bottom_right     = 6
+radius_top_left         = 0
+radius_top_right        = 0
+capsule                 = false
+widget_spacing          = 9
+padding                 = 9
+position                = "top"
+start                   = [ "control-center", "workspaces" ]
+center                  = [ "weather", "audio_visualizer", "media" ]
+end                     = [ "tray", {{ $battery | quote }}, "todo", "volume", "notifications", "network", "clock", "date" ]
+
+[bar.top.actions]
+middle                  = "none"
