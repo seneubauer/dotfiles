@@ -10,6 +10,10 @@ binds {
     Mod+I                       { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Comma                   { spawn-sh "noctalia msg settings-toggle"; }
     Mod+W                       { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+S                       { spawn-sh "noctalia msg panel-toggle ahmedhossamdev/sticky-notes:panel"; }
+    Mod+D                       { spawn-sh "noctalia msg panel-toggle nigthwatch75/todo:todo"; }
+    Mod+F                       { spawn-sh "noctalia msg panel-toggle davemhammer/obsidian:manager"; }
+    Mod+G                       { spawn-sh "noctalia msg panel-toggle nomadcxx/gamer-mode:main:"; }
     Alt+Tab                     { spawn-sh "noctalia msg window-switcher"; }
     Mod+Shift+Q                 { spawn-sh "noctalia msg panel-toggle session"; }
 

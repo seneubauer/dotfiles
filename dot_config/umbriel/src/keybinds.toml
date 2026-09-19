@@ -9,6 +9,11 @@
 "Mod+I"                         = "spawn:noctalia msg panel-toggle control-center"
 "Mod+Comma"                     = "spawn:noctalia msg settings-toggle"
 "Mod+W"                         = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+S"                         = "spawn:noctalia msg panel-toggle ahmedhossamdev/sticky-notes:panel"
+"Mod+D"                         = "spawn:noctalia msg panel-toggle nightwatch75/todo:todo"
+"Mod+F"                         = "spawn:noctalia msg panel-toggle davemhammer/obsidian:manager"
+"Mod+G"                         = "spawn:noctalia msg panel-toggle nomadcxx/gamer-mode:main"
+"Mod+U"                         = "spawn:noctalia msg panel-toggle noctalia/umbriel-companion:panel"
 "Alt+Tab"                       = "spawn:noctalia msg window-switcher"
 "Mod+Shift+Q"                   = "spawn:noctalia msg panel-toggle session"
 
