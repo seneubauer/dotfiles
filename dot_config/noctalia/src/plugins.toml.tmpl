@@ -10,39 +10,37 @@ enabled = [
 ]
 
 [[plugins.source]]
-enabled             = true
-kind                = "git"
-location            = "https://github.com/noctalia-dev/official-plugins"
-name                = "official"
+enabled                 = true
+kind                    = "git"
+location                = "https://github.com/noctalia-dev/official-plugins"
+name                    = "official"
 
 [[plugins.source]]
-enabled             = true
-kind                = "git"
-location            = "https://github.com/noctalia-dev/community-plugins"
-name                = "community"
+enabled                 = true
+kind                    = "git"
+location                = "https://github.com/noctalia-dev/community-plugins"
+name                    = "community"
 
 [plugin_settings."noctalia/umbriel-companion"]
-panel_placement     = "floating"
-panel_position      = "center"
+panel_placement         = "floating"
+panel_position          = "center"
 
 [plugin_settings."davemhammer/obsidian"]
-panel_placement     = "floating"
-panel_position      = "center"
-vault_path          = {{ .directory.document.notes | quote }}
-daily_folder        = "daily"
-git_commit_message  = "from daily"
-show_dirty          = true
+panel_placement         = "floating"
+panel_position          = "center"
+vault_path              = {{ .directory.document.notes | quote }}
+daily_folder            = "daily"
+git_commit_message      = "from daily"
+show_dirty              = true
 
 [plugin_settings."nomadcxx/gamer-mode"]
-panel_placement     = "floating"
-panel_position      = "center"
+panel_placement         = "floating"
+panel_position          = "center"
 
 [plugin_settings."ahmedhossamdev/sticky-notes"]
-panel_placement     = "floating"
-panel_position      = "center"
-save_path           = {{ .directory.document.sticky_notes | quote }}
-
-[plugin_settings."nightwatch75/todo"]
-panel_placement     = "floating"
-panel_position      = "center"
-todo_folder         = {{ .directory.document.notes | quote }}
+panel_placement         = "floating"
+panel_position          = "center"
+font_size               = 13
+show_count              = true
+use_wallpaper_colors    = true
+save_path               = {{ .directory.document.sticky_notes | quote }}

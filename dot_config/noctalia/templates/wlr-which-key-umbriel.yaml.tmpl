@@ -1,25 +1,25 @@
 # theme
-font: JetBrainsMono Nerd Font 12
-background: "{{colors.background.default.hex}}e6"
-color: "{{colors.on_surface.default.hex}}"
-border: "{{colors.primary.default.hex}}"
-separator: " ➜ "
-border_width: 2
-corner_r: 6
-padding: 9
-rows_per_column: 5
-column_padding: 25
+font: {{ .wlr_which_key.font }} {{ .wlr_which_key.font_size }}
+background: "{{ "{{colors.background.default.hex}}e6" }}"
+color: "{{ "{{colors.on_surface.default.hex}}" }}"
+border: "{{ "{{colors.primary.default.hex}}" }}"
+separator: {{ .wlr_which_key.separator | quote }}
+border_width: {{ .wlr_which_key.border_width }}
+corner_r: {{ .wlr_which_key.border_radius }}
+padding: {{ .wlr_which_key.padding }}
+rows_per_column: {{ .wlr_which_key.rows_per_column }}
+column_padding: {{ .wlr_which_key.column_padding }}
 
 # position
-anchor: center 
-margin_right: 0
-margin_bottom: 0
-margin_left: 0
-margin_top: 0
+anchor: {{ .wlr_which_key.anchor }}
+margin_right: {{ .wlr_which_key.margin_right }}
+margin_bottom: {{ .wlr_which_key.margin_bottom }}
+margin_left: {{ .wlr_which_key.margin_left }}
+margin_top: {{ .wlr_which_key.margin_top }}
 
 # behavior
-inhibit_compositor_keyboard_shortcuts: true
-auto_kbd_layout: true
+inhibit_compositor_keyboard_shortcuts: {{ .wlr_which_key.inhibit_comp }}
+auto_kbd_layout: {{ .wlr_which_key.auto_kdb_layout }}
 
 menu:
   - key: "l"

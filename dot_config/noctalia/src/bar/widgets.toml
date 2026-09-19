@@ -46,5 +46,5 @@ tooltip_format          = ""
 format                  = "{:%Y-%m-%d}"
 tooltip_format          = "{:%A, %B %d}"
 
-[widget.todo]
-type                    = "nightwatch75/todo:todo"
+[widget.sticky_notes]
+type                    = "ahmedhossamdev/sticky-notes:bar"

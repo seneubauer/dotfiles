@@ -23,6 +23,23 @@ wp1920              = "~/pictures/images/wallpapers/dark/1920x1080"
 wp3440              = "~/pictures/images/wallpapers/light/3440x1440"
 wp1920              = "~/pictures/images/wallpapers/light/1920x1080"
 
+[wlr_which_key]
+font                = "JetBrainsMonoNL NFM"
+font_size           = 14
+separator           = " :: "
+border_width        = 2
+border_radius       = 6
+padding             = 9
+rows_per_column     = 8
+column_padding      = 16
+anchor              = "center"
+margin_left         = 0
+margin_top          = 0
+margin_right        = 0
+margin_bottom       = 0
+inhibit_comp        = "true"
+auto_kdb_layout     = "true"
+
 [[widget_definition]]
 stat                = "cpu_freq"
 name                = "dw-cpu-freq"
