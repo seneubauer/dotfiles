@@ -2,7 +2,7 @@
 
 # generics
 "Mod+Return"                    = "spawn:alacritty"
-"Mod+Shift+Minus"               = "spawn:cheatsheet-toggle"
+"Mod+Shift+Minus"               = "cheatsheet-toggle"
 
 # noctalia shell
 "Mod+Period"                    = "spawn:noctalia msg panel-toggle launcher"
