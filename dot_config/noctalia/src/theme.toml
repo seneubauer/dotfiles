@@ -8,7 +8,7 @@ wallpaper_scheme            = "soft"
 
 [theme.templates]
 builtin_ids                 = [ "niri", "cava", "qt", "umbriel" ]
-community_ids               = [ "brave-origin", "neovim", "obsidian", "steam", "fastfetch", "papirus-icons", "yazi" ]
+community_ids               = [ "brave-origin", "neovim", "obsidian", "steam", "papirus-icons", "yazi" ]
 enable_builtin_templates    = true
 enable_community_templates  = true
 
@@ -30,6 +30,11 @@ enabled                     = true
 [theme.templates.user.fuzzel]
 input_path                  = "~/.config/noctalia/templates/fuzzel.ini"
 output_path                 = "~/.config/fuzzel/themes/noctalia"
+enabled                     = true
+
+[theme.templates.user.fastfetch]
+input_path                  = "~/.config/noctalia/templates/fastfetch.jsonc"
+output_path                 = "~/.config/fastfetch/config.jsonc"
 enabled                     = true
 
 [theme.templates.user.wlr-which-key-noctalia]
