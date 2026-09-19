@@ -3,16 +3,29 @@
     "logo": {
         "type": "auto",
         "source": "arch",
-        "width": 65,
-        "height": 35,
+        "width": 45,
+        "height": 30,
         "padding": {
-            "top": 0,
-            "left": 0,
+            "top": 1,
+            "left": 2,
             "right": 2
         },
         "color": {
-            "1": "blue",
-            "2": "green"
+            "1": "{{colors.primary.default.hex}}",
+            "2": "{{colors.secondary.default.hex}}"
+        }
+    },
+    "display": {
+        "color": {
+            "keys": "{{colors.primary.default.hex}}",
+            "title": "{{colors.secondary.default.hex}}"
+        },
+        "percent": {
+            "color": {
+                "green": "{{colors.tertiary.default.hex}}",
+                "yellow": "{{colors.primary_fixed_dim.default.hex}}",
+                "red": "{{colors.error.default.hex}}"
+            }
         }
     },
     "modules": [
@@ -24,12 +37,9 @@
         "uptime",
         "packages",
         "shell",
-        "display",
         "de",
         "wm",
         "wmtheme",
-        "theme",
-        "icons",
         "font",
         "cursor",
         "terminal",
