@@ -37,6 +37,11 @@ input_path                  = "~/.config/noctalia/templates/fastfetch.jsonc"
 output_path                 = "~/.config/fastfetch/config.jsonc"
 enabled                     = true
 
+[theme.templates.user.obsidian_extra]
+input_path                  = "~/.config/noctalia/templates/obsidian.css"
+output_path                 = "~/documents/notes/main/.obsidian/snippets/noctalia.css"
+enabled                     = true
+
 [theme.templates.user.wlr-which-key-system]
 input_path                  = "~/.config/noctalia/templates/wlr-which-key-system.yaml"
 output_path                 = "~/.config/wlr-which-key/config-system.yaml"

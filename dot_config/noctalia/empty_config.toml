@@ -2,15 +2,16 @@
 files = [
     "src/bar/top.toml",
     "src/bar/widgets.toml",
+    "src/control_center.toml",
     "src/desktop/widgets.toml",
     "src/dock.toml",
     "src/idle.toml",
     "src/lockscreen_widgets.toml",
+    "src/notification.toml",
     "src/osd.toml",
     "src/plugins.toml",
     "src/settings.toml",
     "src/shell.toml",
     "src/theme.toml",
-    "src/wallpaper.toml",
-    "src/notification.toml"
+    "src/wallpaper.toml"
 ]
