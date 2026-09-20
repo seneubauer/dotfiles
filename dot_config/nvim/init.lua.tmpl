@@ -4,9 +4,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.number = true
-vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr-o:hor20"
-vim.opt.wildmode = "longest:full,full"
-vim.opt.wildoptions:append("pum")
+vim.opt.termguicolors = true
 
 -- show errors on next-line for cursor attention
 
@@ -28,12 +26,27 @@ vim.lsp.enable({"lua_ls"})
 vim.lsp.enable({"clangd"})
 
 -- enable directory tree
+require('nvim-tree').setup({
+    sort = {
+        sorter = "case_sensitive"
+    },
+    view = {
+        width = 30
+    },
+    renderer = {
+        group_empty = true
+    },
+    filters = {
+        dotfiles = true
+    }
+})
 
 -- set custom keymaps
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle nvim-tree' })
 
 -- enable treesitting
 require('nvim-treesitter').setup({
-    ensure_installed = { "hpp", "cpp" },
+    ensure_installed = { "hpp", "cpp", "ls", "py" },
     highlight = {
         enable = true
     }
@@ -41,7 +54,14 @@ require('nvim-treesitter').setup({
 
 -- enable autocompletion w/ blink.cmp
 require('blink.cmp').setup({
-    keymap = { preset = "default" },
+    keymap = {
+        preset = "default",
+        ['<C-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<C-e>'] = { 'hide' },
+        ['<C-y>'] = { 'select_and_accept' },
+        ['<C-n>'] = { 'select_next', 'fallback' },
+        ['<C-p>'] = { 'select_prev', 'fallback' }
+    },
     sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' }
     },
@@ -49,6 +69,32 @@ require('blink.cmp').setup({
     appearance = {
         use_nvim_cmp_as_default = true,
         nerd_font_variant = 'mono'
+    },
+    completion = {
+        list = {
+            selection = {
+                preselect = false,
+                auto_insert = true
+            }
+        },
+        menu = {
+            border = 'single',
+            draw = {
+                treesitter = { 'lsp' }
+            }
+        },
+        documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 200,
+            window = { border = 'none' }
+        },
+        ghost_text = {
+            enabled = true
+        }
+    },
+    signature = {
+        enabled = true,
+        window = { border = 'none' }
     }
 })
 
