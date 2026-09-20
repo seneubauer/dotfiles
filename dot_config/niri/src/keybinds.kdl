@@ -17,6 +17,7 @@ binds {
     Mod+Shift+Q                 { spawn-sh "noctalia msg panel-toggle session"; }
 
     // submap
+    Mod+Y                       { spawn-sh "wlr-which-key ~/.config/wlr-which-key/config-system.yaml"; }
     Mod+N                       { spawn-sh "wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"; }
     Mod+C                       { spawn-sh "~/.config/wlr-which-key/wlr-which-key-caller.sh"; }
 
@@ -27,6 +28,7 @@ binds {
     Mod+Shift+K                 { move-column-to-workspace-up; }
     Mod+H                       { focus-column-left; }
     Mod+L                       { focus-column-right; }
+    Mod+M                       { center-column; }
     Mod+Shift+1                 { move-column-to-workspace 1; }
     Mod+Shift+2                 { move-column-to-workspace 2; }
     Mod+Shift+3                 { move-column-to-workspace 3; }

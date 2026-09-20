@@ -32,6 +32,9 @@ show_label              = false
 [widget.volume]
 show_label              = false
 
+[widget.brightness]
+show_label              = false
+
 [widget.notifications]
 hide_when_no_unread     = false
 

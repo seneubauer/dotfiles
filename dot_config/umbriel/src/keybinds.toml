@@ -17,6 +17,7 @@
 "Mod+Shift+Q"                   = "spawn:noctalia msg panel-toggle session"
 
 # submaps
+"Mod+Y"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/config-system.yaml"
 "Mod+N"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"
 "Mod+C"                         = "spawn:~/.config/wlr-which-key/wlr-which-key-caller.sh"
 

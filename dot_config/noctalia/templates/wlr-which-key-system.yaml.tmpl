@@ -1,0 +1,36 @@
+# theme
+font: {{ .wlr_which_key.font }} {{ .wlr_which_key.font_size }}
+background: "{{ "{{colors.background.default.hex}}e6" }}"
+color: "{{ "{{colors.on_surface.default.hex}}" }}"
+border: "{{ "{{colors.primary.default.hex}}" }}"
+separator: {{ .wlr_which_key.separator | quote }}
+border_width: {{ .wlr_which_key.border_width }}
+corner_r: {{ .wlr_which_key.border_radius }}
+padding: {{ .wlr_which_key.padding }}
+rows_per_column: {{ .wlr_which_key.rows_per_column }}
+column_padding: {{ .wlr_which_key.column_padding }}
+
+# position
+anchor: {{ .wlr_which_key.anchor }}
+margin_right: {{ .wlr_which_key.margin_right }}
+margin_bottom: {{ .wlr_which_key.margin_bottom }}
+margin_left: {{ .wlr_which_key.margin_left }}
+margin_top: {{ .wlr_which_key.margin_top }}
+
+# behavior
+inhibit_compositor_keyboard_shortcuts: {{ .wlr_which_key.inhibit_comp }}
+auto_kbd_layout: {{ .wlr_which_key.auto_kdb_layout }}
+
+menu:
+  - key: "p"
+    desc: Power
+    submenu:
+      - key: "p"
+        desc: Performance
+        cmd: powerprofilesctl set performance
+      - key: "b"
+        desc: Balanced
+        cmd: powerprofilesctl set balanced
+      - key: "e"
+        desc: Efficiency
+        cmd: powerprofilesctl set power-saver
