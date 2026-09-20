@@ -20,10 +20,20 @@ vim.lsp.config['clangd'] = {
     cmd = { 'clangd', '--background-index', '--clang-tidy' },
     capabilities = capabilities
 }
+vim.lsp.config['cmake'] = {
+    cmd = { 'cmake-language-server' },
+    filetypes = { 'cmake' },
+    root_dir = util.root_pattern('CMakePresets.json', 'build', '.git'),
+    single_file_support = true,
+    init_options = {
+        buildDirectory = "build"
+    }
+}
 
 -- enable lsp
 vim.lsp.enable({"lua_ls"})
 vim.lsp.enable({"clangd"})
+vim.lsp.enable({"cmake"})
 
 -- enable directory tree
 require('nvim-tree').setup({
