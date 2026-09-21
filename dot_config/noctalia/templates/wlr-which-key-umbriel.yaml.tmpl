@@ -40,6 +40,18 @@ menu:
           - key: "p"
             desc: Pin
             cmd: umbriel msg window-toggle-pinned
+      - key: "s"
+        desc: Workspace
+        submenu:
+          - key: "m"
+            desc: Master
+            cmd: umbriel msg workspace-set-layout:master
+          - key: "d"
+            desc: Dwindle
+            cmd: umbriel msg workspace-set-layout:dwindle
+          - key: "s"
+            desc: Scrolling
+            cmd: umbriel msg workspace-set-layout:scrolling
   - key: "r"
     desc: Resize
     submenu:
