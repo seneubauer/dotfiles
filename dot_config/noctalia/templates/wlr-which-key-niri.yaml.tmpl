@@ -34,6 +34,12 @@ menu:
           - key: "f"
             desc: Fullscreen
             cmd: niri msg action fullscreen-window
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "l" ~/.config/wlr-which-key/config-niri.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-niri.yaml
   - key: "r"
     desc: Resize
     submenu:
@@ -52,6 +58,9 @@ menu:
           - key: "f"
             desc: 100.0%
             cmd: niri msg action set-window-height "100.0%"
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-niri.yaml
       - key: "w"
         desc: Width
         submenu:
@@ -67,6 +76,12 @@ menu:
           - key: "f"
             desc: 100.0%
             cmd: niri msg action set-window-width "100.0%"
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-niri.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-niri.yaml
   - key: "m"
     desc: Move to Monitor
     submenu:
@@ -85,6 +100,9 @@ menu:
           - key: "j"
             desc: Down
             cmd: niri msg action move-column-to-monitor-down
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "m" ~/.config/wlr-which-key/config-niri.yaml
       - key: "s"
         desc: Workspace
         submenu:
@@ -100,3 +118,9 @@ menu:
           - key: "j"
             desc: Down
             cmd: niri msg action move-workspace-to-monitor-down
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "m" ~/.config/wlr-which-key/config-niri.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-niri.yaml

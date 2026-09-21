@@ -40,6 +40,9 @@ menu:
           - key: "p"
             desc: Pin
             cmd: umbriel msg window-toggle-pinned
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "l" ~/.config/wlr-which-key/config-umbriel.yaml
       - key: "s"
         desc: Workspace
         submenu:
@@ -52,6 +55,12 @@ menu:
           - key: "s"
             desc: Scrolling
             cmd: umbriel msg workspace-set-layout:scrolling
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "l" ~/.config/wlr-which-key/config-umbriel.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-umbriel.yaml
   - key: "r"
     desc: Resize
     submenu:
@@ -70,6 +79,9 @@ menu:
           - key: "f"
             desc: 100.0%
             cmd: umbriel msg window-set-secondary-extent:1.000
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-umbriel.yaml
       - key: "w"
         desc: Width
         submenu:
@@ -85,6 +97,12 @@ menu:
           - key: "f"
             desc: 100.0%
             cmd: umbriel msg window-set-primary-extent:1.000
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-umbriel.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-umbriel.yaml
   - key: "m"
     desc: Move to Monitor
     submenu:
@@ -103,6 +121,9 @@ menu:
           - key: "j"
             desc: Down
             cmd: umbriel msg column-move-to-output-down
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "m" ~/.config/wlr-which-key/config-umbriel.yaml
       - key: "s"
         desc: Workspace
         submenu:
@@ -118,3 +139,9 @@ menu:
           - key: "j"
             desc: Down
             cmd: umbriel msg workspace-move-to-output-down
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "m" ~/.config/wlr-which-key/config-umbriel.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-umbriel.yaml

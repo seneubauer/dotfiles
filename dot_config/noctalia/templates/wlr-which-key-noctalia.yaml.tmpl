@@ -25,15 +25,18 @@ menu:
   - key: "t"
     desc: Theme
     submenu:
-     -  key: "l"
+      - key: "l"
         desc: Light
         cmd: noctalia msg theme-mode-set light
-     -  key: "d"
+      - key: "d"
         desc: Dark
         cmd: noctalia msg theme-mode-set dark
-     -  key: "u"
+      - key: "u"
         desc: Update Templates
         cmd: noctalia msg templates-apply
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
   - key: "m"
     desc: Media
     submenu:
@@ -49,6 +52,9 @@ menu:
       - key: "s"
         desc: Stop
         cmd: noctalia msg media stop
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
   - key: "d"
     desc: Desktop
     submenu:
@@ -58,6 +64,9 @@ menu:
       - key: "e"
         desc: Edit
         cmd: noctalia msg desktop-widgets-toggle-edit
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
   - key: "n"
     desc: Notes
     submenu:
@@ -67,6 +76,9 @@ menu:
       - key: "p"
         desc: Publish
         cmd: ~/.config/wlr-which-key/notes-publish.sh
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
   - key: "s"
     desc: Screenshot
     submenu:
@@ -79,3 +91,6 @@ menu:
       - key: "a"
         desc: Annotate
         cmd: noctalia msg screenshot-annotate
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
