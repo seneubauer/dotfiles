@@ -15,6 +15,9 @@ avatar              = "~/pictures/images/icons/avatar.jpg"
 notes               = "~/documents/notes/main"
 sticky_notes        = "~/documents/notes/main/sticky-notes"
 
+[directory.media]
+screen_recordings   = "~/videos/recordings"
+
 [directory.wallpaper.dark]
 wp3440              = "~/pictures/images/wallpapers/dark/3440x1440"
 wp1920              = "~/pictures/images/wallpapers/dark/1920x1080"

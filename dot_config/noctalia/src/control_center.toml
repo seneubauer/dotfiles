@@ -4,20 +4,17 @@ show_session_button     = false
 show_shortcut_labels    = true
 sidebar_section         = "none"
 
-[control_center.calendar]
-show_events_card        = false
-
 [[control_center.shortcuts]]
-type                    = "notification"
+type                    = "screen_recorder"
 
 [[control_center.shortcuts]]
 type                    = "mic_mute"
-
-[[control_center.shortcuts]]
-type                    = "screen_time"
 
 [[control_center.shortcuts]]
 type                    = "power_profile"
 
 [[control_center.shortcuts]]
 type                    = "session"
+
+[control_center.calendar]
+show_events_card        = false

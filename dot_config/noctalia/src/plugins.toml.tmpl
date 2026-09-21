@@ -2,6 +2,7 @@
 enabled = [
     "noctalia/translator",
     "noctalia/umbriel-companion",
+    "noctalia/screen_recorder",
     "davemhammer/obsidian",
     "nomadcxx/gamer-mode",
     "notfinaldev/youtube-search",
@@ -23,6 +24,11 @@ name                    = "community"
 [plugin_settings."noctalia/umbriel-companion"]
 panel_placement         = "floating"
 panel_position          = "center"
+
+[plugin_settings."noctalia/screen_recorder"]
+directory               = {{ .directory.media.screen_recordings | quote }}
+frame_rate              = 60
+video_codec             = "h264"
 
 [plugin_settings."davemhammer/obsidian"]
 panel_placement         = "floating"

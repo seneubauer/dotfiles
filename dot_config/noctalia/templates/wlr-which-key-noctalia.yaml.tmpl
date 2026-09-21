@@ -94,3 +94,36 @@ menu:
       - key: "BackSpace"
         desc: Go Back
         cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
+  - key: "r"
+    desc: Record
+    submenu:
+      - key: "s"
+        desc: Screen
+        submenu:
+          - key: "b"
+            desc: Begin
+            cmd: noctalia msg plugin noctalia/screen_recorder:service all start
+          - key: "e"
+            desc: End
+            cmd: noctalia msg plugin noctalia/screen_recorder:service all stop
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-noctalia.yaml
+      - key: "p"
+        desc: Playback
+        submenu:
+          - key: "b"
+            desc: Begin
+            cmd: noctalia msg plugin noctalia/screen_recorder:service all replay-start
+          - key: "e"
+            desc: End
+            cmd: noctalia msg plugin noctalia/screen_recorder:service all replay-stop
+          - key: "s"
+            desc: Save
+            cmd: noctalia msg plugin noctalia/screen_recorder:service replay-save
+          - key: "BackSpace"
+            desc: Go Back
+            cmd: wlr-which-key -k "r" ~/.config/wlr-which-key/config-noctalia.yaml
+      - key: "BackSpace"
+        desc: Go Back
+        cmd: wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml
