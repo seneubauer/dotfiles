@@ -1,7 +1,7 @@
 [control_center]
 hidden_tabs             = [ "monitor", "bluetooth" ]
 show_session_button     = false
-show_shortcut_labels    = true
+show_shortcut_labels    = false
 sidebar_section         = "none"
 
 [[control_center.shortcuts]]
@@ -17,4 +17,4 @@ type                    = "power_profile"
 type                    = "session"
 
 [control_center.calendar]
-show_events_card        = true
+show_events_card        = false
