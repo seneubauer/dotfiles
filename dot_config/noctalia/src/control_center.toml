@@ -5,7 +5,7 @@ show_shortcut_labels    = true
 sidebar_section         = "none"
 
 [[control_center.shortcuts]]
-type                    = "screen_recorder"
+type                    = "noctalia/screen_recorder:toggle"
 
 [[control_center.shortcuts]]
 type                    = "mic_mute"
@@ -17,4 +17,4 @@ type                    = "power_profile"
 type                    = "session"
 
 [control_center.calendar]
-show_events_card        = false
+show_events_card        = true
