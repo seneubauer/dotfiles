@@ -5,7 +5,7 @@
         "label": "Zellij",
         "items": [
             {
-                "cmd": "zellij options --default-cwd ~/projects/repos/usu-log",
+                "cmd": "zellij --layout ~/.config/zellij/layouts/cpp-cmake.kdl options --default-cwd ~/projects/repos/usu-log",
                 "description": "Project directory for usu-log",
                 "glyph": "bookmark",
                 "label": "usu-log",
@@ -14,7 +14,7 @@
                 "type": "bookmark"
             },
             {
-                "cmd": "zellij options --default-cwd ~/projects/repos/simple-sql-api",
+                "cmd": "zellij --layout ~/.config/zellij/layouts/cpp-cmake.kdl options --default-cwd ~/projects/repos/simple-sql-api",
                 "description": "Project directory for simple-sql-api",
                 "glyph": "bookmark",
                 "label": "simple-sql-api",

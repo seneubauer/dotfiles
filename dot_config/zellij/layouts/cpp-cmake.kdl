@@ -1,0 +1,7 @@
+layout {
+    pane command="nvim ."
+    pane split_direction="vertical" {
+        pane command="nvim ."
+        pane
+    }
+}
