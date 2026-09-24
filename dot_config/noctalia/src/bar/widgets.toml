@@ -51,8 +51,3 @@ tooltip_format          = "{:%A, %B %d}"
 
 [widget.sticky_notes]
 type                    = "ahmedhossamdev/sticky-notes:bar"
-
-[widget.bookmarks]
-text                    = ""
-tooltip                 = ""
-type                    = "dunarand/bookmarks:bar"
