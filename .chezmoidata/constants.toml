@@ -11,6 +11,9 @@ menu_size           = 14
 [images]
 avatar              = "~/pictures/images/icons/avatar.jpg"
 
+[file]
+bookmarks           = "~/documents/bookmarks/data.json"
+
 [directory.document]
 notes               = "~/documents/notes/main"
 sticky_notes        = "~/documents/notes/main/sticky-notes"

@@ -1,0 +1,27 @@
+[
+    {
+        "type": "folder",
+        "glyph": "folder",
+        "label": "Zellij",
+        "items": [
+            {
+                "cmd": "zellij options --default-cwd ~/projects/repos/usu-log",
+                "description": "Project directory for usu-log",
+                "glyph": "bookmark",
+                "label": "usu-log",
+                "runInBackground": false,
+                "runInTerminal": true,
+                "type": "bookmark"
+            },
+            {
+                "cmd": "zellij options --default-cwd ~/projects/repos/simple-sql-api",
+                "description": "Project directory for simple-sql-api",
+                "glyph": "bookmark",
+                "label": "simple-sql-api",
+                "runInBackground": false,
+                "runInTerminal": true,
+                "type": "bookmark"
+            }
+        ]
+    }
+]

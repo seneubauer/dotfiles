@@ -6,7 +6,8 @@ enabled = [
     "davemhammer/obsidian",
     "nomadcxx/gamer-mode",
     "notfinaldev/youtube-search",
-    "ahmedhossamdev/sticky-notes"
+    "ahmedhossamdev/sticky-notes",
+    "dunarand/bookmarks"
 ]
 
 [[plugins.source]]
@@ -46,6 +47,11 @@ panel_position          = "center"
 panel_placement         = "floating"
 panel_position          = "center"
 font_size               = 13
-show_count              = true
+show_count              = false
 use_wallpaper_colors    = false
 save_path               = {{ .directory.document.sticky_notes | quote }}
+
+[plugin_settings."dunarand/bookmarks"]
+panel_placement         = "floating"
+panel_position          = "center"
+data_path               = {{ .file.bookmarks | quote }}

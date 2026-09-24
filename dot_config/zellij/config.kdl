@@ -1,0 +1,100 @@
+theme "noctalia"
+show_startup_tips false
+show_release_notes false
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
+keybinds {
+    normal {
+        bind "Ctrl l" { SwitchToMode "locked"; }
+        bind "Ctrl p" { SwitchToMode "pane"; }
+        bind "Ctrl t" { SwitchToMode "tab"; }
+        bind "Ctrl r" { SwitchToMode "resize"; }
+        bind "Ctrl m" { SwitchToMode "move"; }
+    }
+
+    locked {
+        bind "b" { SwitchToMode "normal"; }
+    }
+
+    pane {
+        bind "Enter" { NewPane; }
+        bind "n" { NewPane; SwitchToMode "normal"; }
+        bind "r" { SwitchToMode "renamepane"; PaneNameInput 0; }
+        bind "Shift f" { ToggleFocusNoUiFullscreen; SwitchToMode "normal"; }
+        bind "h" { MoveFocus "Left"; }
+        bind "l" { MoveFocus "Right"; }
+        bind "j" { MoveFocus "Down"; }
+        bind "k" { MoveFocus "Up"; }
+        bind "b" { SwitchToMode "normal"; }
+    }
+
+    renamepane {
+        bind "esc" { UndoRenamePane; SwitchToMode "pane"; }
+    }
+
+    tab {
+        bind "Enter" { NewTab; }
+        bind "n" { NewTab; SwitchToMode "normal"; }
+        bind "r" { SwitchToMode "renametab"; TabNameInput 0; }
+        bind "h" { GoToPreviousTab; }
+        bind "l" { GoToNextTab; }
+        bind "1" { GoToTab 1; SwitchToMode "normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "normal"; }
+        bind "4" { GoToTab 4; SwitchToMode "normal"; }
+        bind "5" { GoToTab 5; SwitchToMode "normal"; }
+        bind "6" { GoToTab 6; SwitchToMode "normal"; }
+        bind "7" { GoToTab 7; SwitchToMode "normal"; }
+        bind "8" { GoToTab 8; SwitchToMode "normal"; }
+        bind "9" { GoToTab 9; SwitchToMode "normal"; }
+        bind "b" { SwitchToMode "normal"; }
+    }
+
+    renametab {
+        bind "esc" { UndoRenameTab; SwitchToMode "tab"; }
+    }
+
+    resize {
+        bind "h" { Resize "Increase left"; }
+        bind "l" { Resize "Increase right"; }
+        bind "j" { Resize "Increase down"; }
+        bind "k" { Resize "Increase up"; }
+        bind "H" { Resize "Decrease left"; }
+        bind "L" { Resize "Decrease right"; }
+        bind "J" { Resize "Decrease down"; }
+        bind "K" { Resize "Decrease up"; }
+        bind "b" { SwitchToMode "normal"; }
+    }
+
+    move {
+        bind "h" { MovePane "left"; }
+        bind "l" { MovePane "right"; }
+        bind "j" { MovePane "down"; }
+        bind "k" { MovePane "up"; }
+        bind "b" { SwitchToMode "normal"; }
+    }
+
+}
+
+load_plugins {
+    zellij:link
+}
+
+plugins {
+    about location="zellij:about"
+    compact-bar location="zellij:compact-bar"
+    configuration location="zellij:configuration"
+    filepicker location="zellij:strider" { cwd "/"; }
+    plugin-managre location="zellij:plugin-manager"
+    session-manager location="zellij:session-manager"
+    status-bar location="zellij:status-bar"
+    strider location="zellij:strider"
+    tab-bar location="zellij:tab-bar"
+    welcome-screen location="zellij:session-manager" { welcome_screen false; }
+}
