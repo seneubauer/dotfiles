@@ -4,4 +4,7 @@ layout {
         pane command="nvim" { args "."; }
         pane
     }
+    pane size=1 borderless=true {
+        plugin location="zellij:status-bar"
+    }
 }
