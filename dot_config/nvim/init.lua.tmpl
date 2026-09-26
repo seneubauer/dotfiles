@@ -6,8 +6,6 @@ vim.opt.softtabstop = 4
 vim.opt.number = true
 vim.opt.termguicolors = true
 
--- show errors on next-line for cursor attention
-
 -- enable code-completion
 local capabilities = vim.tbl_deep_extend(
     'force',
@@ -23,10 +21,6 @@ vim.lsp.config("clangd", {
 vim.lsp.config("neocmake", {
     capabilities = capabilities
 })
--- vim.lsp.config['clangd'] = {
---    cmd = { 'clangd', '--background-index', '--clang-tidy' },
---    capabilities = capabilities
--- }
 
 -- enable lsp
 vim.lsp.enable({"lua_ls"})
@@ -106,8 +100,15 @@ require('blink.cmp').setup({
     }
 })
 
+-- add border to buffer
+-- require("winborder").setup({
+--    style = "rounded"
+-- })
+
 -- add transparency plugin
-vim.g.transparent_enabled = true
+-- vim.g.transparent_enabled = true
+
+-- [[
 require("transparent").setup({
     groups = {
         'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
@@ -120,6 +121,7 @@ require("transparent").setup({
     exclude_groups = {},
     on_clear = function() end
 })
+-- ]]
 
 -- set color scheme
 local ok, matugen = pcall(require, 'matugen')
