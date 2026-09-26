@@ -59,8 +59,8 @@
 "Mod+O"                         = "overview-toggle"
 
 # scratchpad mapip
-"Mod+Space"                     = "scratchpad-toggle"
-"Mod+Shift+Space"               = "window-toggle-scratchpad"
+"Mod+Shift+Space"               = "scratchpad-toggle"
+"Mod+Space"                     = "window-toggle-scratchpad"
 "Mod+Tab"                       = "scratchpad-focus-next"
 
 # volume control
