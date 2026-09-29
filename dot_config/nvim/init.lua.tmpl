@@ -58,11 +58,11 @@ require('nvim-treesitter').setup({
 require('blink.cmp').setup({
     keymap = {
         preset = "default",
-        ['<C-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
-        ['<C-e>'] = { 'hide' },
-        ['<C-y>'] = { 'select_and_accept' },
-        ['<C-n>'] = { 'select_next', 'fallback' },
-        ['<C-p>'] = { 'select_prev', 'fallback' }
+        ['<A-Space>'] = { 'show', 'show_documentation', 'hide_documentation' },
+        ['<A-e>'] = { 'hide' },
+        ['<A-y>'] = { 'select_and_accept' },
+        ['<A-n>'] = { 'select_next', 'fallback' },
+        ['<A-p>'] = { 'select_prev', 'fallback' }
     },
     sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' }

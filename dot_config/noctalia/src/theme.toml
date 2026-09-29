@@ -52,6 +52,11 @@ input_path                  = "~/.config/noctalia/templates/wlr-which-key-noctal
 output_path                 = "~/.config/wlr-which-key/config-noctalia.yaml"
 enabled                     = true
 
+[theme.templates.user.wlr-which-key-plugins]
+input_path                  = "~/.config/noctalia/templates/wlr-which-key-plugins.yaml"
+output_path                 = "~/.config/wlr-which-key/config-plugins.yaml"
+enabled                     = true
+
 [theme.templates.user.wlr-which-key-niri]
 input_path                  = "~/.config/noctalia/templates/wlr-which-key-niri.yaml"
 output_path                 = "~/.config/wlr-which-key/config-niri.yaml"
