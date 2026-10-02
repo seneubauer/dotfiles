@@ -48,6 +48,7 @@ binds {
     Mod+bracketright            { consume-or-expel-window-right; }
     Mod+R                       { switch-preset-column-width; }
     Mod+T                       { switch-preset-window-height; }
+    Mod+F                       { fullscreen-window; }
 
     // workspace manip
     Mod+Ctrl+J                  { focus-workspace-down; }

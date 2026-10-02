@@ -17,6 +17,8 @@ alias drogonctll="drogon_ctl"
 # exports
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 export PATH="$HOME/.local/bin:$PATH"
+export XCURSOR_THEME="Vimix-cursors"
+export XCURSOR_SIZE=28
 
 # configure syntax highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -24,12 +26,12 @@ ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
 
 # configure deja
-export DEJA_CYCLE_KEY='^I'
+export DEJA_CYCLE_KEY='^[[Z'
 export DEJA_TOGGLE_KEY='^X'
 export DEJA_CYCLE_FUZZY_KEY='^[[1;2C'
 export DEJA_CYCLE_FUZZY_BACK_KEY='^[[1;2D'
 export DEJA_TOGGLE_EMPTY_KEY='^[[1;2A'
-export DEJA_ACCEPT_KEY=
+export DEJA_ACCEPT_KEY='^I'
 export DEJA_WORD_ACCEPT_KEY=
 export DEJA_DISMISS_KEY=
 
