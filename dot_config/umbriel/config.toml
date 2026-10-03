@@ -1,6 +1,3 @@
-[include]
-files = ["noctalia.toml"]
-
 [include.optional]
 files = [
     "src/animation.toml",
@@ -13,5 +10,6 @@ files = [
     "src/outputs.toml",
     "src/overview.toml",
     "src/rules.toml",
-    "src/workspaces.toml"
+    "src/workspaces.toml",
+    "noctalia.toml",
 ]
