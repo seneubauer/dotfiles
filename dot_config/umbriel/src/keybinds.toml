@@ -1,26 +1,26 @@
 [keybinds]
 
 # generics
-"Mod+Return"                    = "spawn:alacritty"
+"Mod+Return"                    = "spawn alacritty"
 "Mod+Shift+Minus"               = "cheatsheet-toggle"
 
 # noctalia shell
-"Mod+Period"                    = "spawn:noctalia msg panel-toggle launcher"
-"Mod+I"                         = "spawn:noctalia msg panel-toggle control-center"
-"Mod+Comma"                     = "spawn:noctalia msg settings-toggle"
-"Mod+W"                         = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+S"                         = "spawn:noctalia msg panel-toggle ahmedhossamdev/sticky-notes:panel"
-"Mod+F"                         = "spawn:noctalia msg panel-toggle davemhammer/obsidian:manager"
-"Mod+G"                         = "spawn:noctalia msg panel-toggle nomadcxx/gamer-mode:main"
-"Mod+U"                         = "spawn:noctalia msg panel-toggle noctalia/umbriel-companion:panel"
-"Mod+B"                         = "spawn:noctalia msg panel-toggle dunarand/bookmarks:panel"
-"Alt+Tab"                       = "spawn:noctalia msg window-switcher"
-"Mod+Shift+Q"                   = "spawn:noctalia msg panel-toggle session"
+"Mod+Period"                    = "spawn noctalia msg panel-toggle launcher"
+"Mod+I"                         = "spawn noctalia msg panel-toggle control-center"
+"Mod+Comma"                     = "spawn noctalia msg settings-toggle"
+"Mod+W"                         = "spawn noctalia msg panel-toggle wallpaper"
+"Mod+S"                         = "spawn noctalia msg panel-toggle ahmedhossamdev/sticky-notes:panel"
+"Mod+F"                         = "spawn noctalia msg panel-toggle davemhammer/obsidian:manager"
+"Mod+G"                         = "spawn noctalia msg panel-toggle nomadcxx/gamer-mode:main"
+"Mod+U"                         = "spawn noctalia msg panel-toggle noctalia/umbriel-companion:panel"
+"Mod+B"                         = "spawn noctalia msg panel-toggle dunarand/bookmarks:panel"
+"Alt+Tab"                       = "spawn noctalia msg window-switcher"
+"Mod+Shift+Q"                   = "spawn noctalia msg panel-toggle session"
 
 # submaps
-"Mod+Y"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/config-system.yaml"
-"Mod+N"                         = "spawn:wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"
-"Mod+C"                         = "spawn:~/.config/wlr-which-key/wlr-which-key-caller.sh"
+"Mod+Y"                         = "spawn wlr-which-key ~/.config/wlr-which-key/config-system.yaml"
+"Mod+N"                         = "spawn wlr-which-key ~/.config/wlr-which-key/config-noctalia.yaml"
+"Mod+C"                         = "spawn ~/.config/wlr-which-key/wlr-which-key-caller.sh"
 
 # column manip
 "Mod+Shift+H"                   = "column-move-left"
@@ -43,11 +43,11 @@
 # workspace manip
 "Mod+Ctrl+J"                    = "workspace-next"
 "Mod+Ctrl+K"                    = "workspace-previous"
-"Mod+1"                         = "workspace-switch:1"
-"Mod+2"                         = "workspace-switch:2"
-"Mod+3"                         = "workspace-switch:3"
-"Mod+4"                         = "workspace-switch:4"
-"Mod+5"                         = "workspace-switch:5"
+"Mod+1"                         = "workspace-switch 1"
+"Mod+2"                         = "workspace-switch 2"
+"Mod+3"                         = "workspace-switch 3"
+"Mod+4"                         = "workspace-switch 4"
+"Mod+5"                         = "workspace-switch 5"
 
 # output manip
 "Mod+Alt+H"                     = "output-focus-left"
@@ -64,15 +64,15 @@
 "Mod+Tab"                       = "scratchpad-focus-next"
 
 # volume control
-"XF86AudioRaiseVolume"          = "spawn:noctalia msg volume-up 5"
-"XF86AudioLowerVolume"          = "spawn:noctalia msg volume-down 5"
-"XF86AudioMute"                 = "spawn:noctalia msg volume-mute"
+"XF86AudioRaiseVolume"          = "spawn noctalia msg volume-up 5"
+"XF86AudioLowerVolume"          = "spawn noctalia msg volume-down 5"
+"XF86AudioMute"                 = "spawn noctalia msg volume-mute"
 
 # playback control
-"XF86AudioPlay"                 = "spawn:playerctl play-pause"
-"XF86AudioNext"                 = "spawn:playerctl next"
-"XF86AudioPrev"                 = "spawn:playerctl previous"
+"XF86AudioPlay"                 = "spawn playerctl play-pause"
+"XF86AudioNext"                 = "spawn playerctl next"
+"XF86AudioPrev"                 = "spawn playerctl previous"
 
 # brightness control
-"XF86MonBrightnessUp"           = "spawn:noctalia msg brightness-up 5"
-"XF86MonBrightnessDown"         = "spawn:noctalia msg brightness-down 5"
+"XF86MonBrightnessUp"           = "spawn noctalia msg brightness-up 5"
+"XF86MonBrightnessDown"         = "spawn noctalia msg brightness-down 5"

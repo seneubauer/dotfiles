@@ -32,9 +32,6 @@ duration_ms     = 250
 curve           = "snappy"
 dim             = 0.5
 blur            = false
-scale           = 0.0
-maximize        = false
-fullscreen      = false
 
 [animation.border]
 enabled         = false
