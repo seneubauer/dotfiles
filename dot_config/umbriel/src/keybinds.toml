@@ -39,7 +39,7 @@
 "Mod+bracketright"              = "window-consume-or-expel-right"
 "Mod+R"                         = "window-cycle-primary-extent"
 "Mod+T"                         = "window-cycle-secondary-extent"
-"Mod+Shift+F"                   = "window-toggle-maximize-to-edges"
+"Mod+Shift+F"                   = "window-toggle-fullscreen"
 
 # workspace manip
 "Mod+Ctrl+J"                    = "workspace-next"
